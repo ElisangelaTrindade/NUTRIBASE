@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #local apps
-    'management.apps.ManagementConfig'
+    'management.apps.ManagementConfig',
 
     #3rd party
+    'cpffield',
 ]
 
 MIDDLEWARE = [
