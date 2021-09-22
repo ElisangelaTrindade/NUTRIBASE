@@ -71,6 +71,22 @@ class Patient(models.Model):
     def __unicode__(self):
         return self.user.first_name + ' ' + self.user.last_name
 
+class Employee(models.Model):
+    register_by = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
+    type = models.CharField(max_length=50,db_column='type')
+    cpf = cpffield.CPFField('CPF', max_length=14, unique=True)
+    birthday = models.DateField()
+    email = models.CharField(max_length=150,db_column='email_patient')
+    street = models.CharField(max_length=50)
+    city = models.OneToOneField(City, on_delete=models.CASCADE)
+    zip_code = models.CharField(max_length=9,default = '')
+
+    def __unicode__(self):
+        return self.user.first_name + ' ' + self.user.last_name
+
+
+# irei por telefones de contato?
+# tenho que atualizar as tabelas
 
 
 
