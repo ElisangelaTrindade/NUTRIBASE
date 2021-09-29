@@ -125,7 +125,7 @@ CREATE TABLE `funcionario` (
 -- Table structure for table `historico_familiar`
 --
 
-CREATE TABLE `historico_familiar` (
+CREATE TABLE `historico_familiar` ( FEITO
   `ID` int(11) NOT NULL,
   `id_paciente` int(11) DEFAULT NULL,
   `doenca_cardiovascular` varchar(40) NOT NULL,
