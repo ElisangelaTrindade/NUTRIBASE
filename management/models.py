@@ -80,7 +80,9 @@ class Patient(models.Model):
     )
   gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
 
-  def __unicode__(self):
+  class Meta:
+    db_table ='patient'
+    def __unicode__(self):
       return self.user.first_name + ' ' + self.user.last_name
 
 class Employee(models.Model):
@@ -115,22 +117,24 @@ class PatientHealthHistory(models.Model):
   class Meta:
     db_table ='patient_health_history' # preciso de def?
 
-class Food(models.Model):
-  name_group=models.ForeignKey(FoodGroup, on_delete=models.CASCADE)
-  food_name=models.CharField(max_length=100, db_column='food_name')
-  gram_weigh=models.DecimalField(max_digits=8, decimal_places=1, help_text='gram_weight')
-  class Meta:
-    db_table ='food' # preciso de def?
-
 class FoodDiary(models.Model):
   description= models.CharField(max_length=255,db_column='description')
-  #id_patient = models.ForeignKey(Patient,primary_key=True, on_delete=models.CASCADE)#
-  #id_food = models.ForeignKey(Food,primary_key=True, on_delete=models.CASCADE)#??
+  patient = models.OneToOneField(Patient, primary_key=True, on_delete=models.CASCADE)
   #id_type_meal = models.ForeignKey(Meal,primary_key=True, on_delete=models.CASCADE)#
   date_of_consultation=models.DateField()
   gram_weigh=models.DecimalField(max_digits=8, decimal_places=1, help_text='gram_weight')
   class Meta:
     db_table ='food_diary' # preciso de def?
+    
+class Food(models.Model):
+  name_group=models.ForeignKey(FoodGroup, on_delete=models.CASCADE)
+  food_name=models.CharField(max_length=100, db_column='food_name')
+  gram_weigh=models.DecimalField(max_digits=8, decimal_places=1, help_text='gram_weight')
+  food_diary = models.ForeignKey(FoodDiary,primary_key=True, on_delete=models.CASCADE)
+  class Meta:
+    db_table ='food' # preciso de def?
+
+
 
 class DietPlan(models.Model):
   description= models.CharField(max_length=255,db_column='description')
