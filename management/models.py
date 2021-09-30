@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser): # igual modelo padrao com um campo bio a mais
   bio= models.TextField(blank=True)
 
-class State(models.Model): #Tabela Estado
+class State(models.Model):
   name_state = models.CharField(max_length=50,db_column='name_state')
   acrm_state = models.CharField(max_length=3,db_column='acrm_state')
 
@@ -19,9 +19,9 @@ class State(models.Model): #Tabela Estado
     def __str__(self):
       return self.acrm_state
 
-class City(models.Model): #Tabela Estado
-  name_city = models.CharField(max_length=50,db_column='name_city')
-  state = models.OneToOneField(State, primary_key=True, on_delete=models.CASCADE)
+class City(models.Model):
+  state = models.ForeignKey(State, on_delete=models.CASCADE)
+  name_city = models.CharField(max_length=50, db_column='name_city')
 
   class Meta:
     db_table ='city'
@@ -53,8 +53,20 @@ class FoodGroup(models.Model):
   class Meta:
     db_table ='food_group' # parei de por o def aqui
 
+class FamilyHealthHistory(models.Model):
+  obesity = models.CharField(max_length=100, db_column='obesity ')
+  cardiovascular_disease = models.CharField(max_length=100, db_column='cardiovascular_disease')
+  hypertension = models.CharField(max_length=100, db_column='hypertension')
+  cancer = models.CharField(max_length=100, db_column='cancer')
+  diabetes = models.CharField(max_length=100, db_column='diabetes')
+  dyslipidemia = models.CharField(max_length=100, db_column='dyslipidemia')
+
+  class Meta:
+    db_table ='family_health_history' # preciso de def?
+
 class Patient(models.Model):
   register_by = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
+  family_health_history = models.ForeignKey(FamilyHealthHistory, on_delete=models.CASCADE)
   cpf = cpffield.CPFField('CPF', max_length=14, unique=True)
   birthday = models.DateField()
   email = models.CharField(max_length=150,db_column='email_patient')
@@ -90,20 +102,8 @@ class Employee(models.Model):
 # irei por telefones de contato aqui mesmo?
 # tenho que atualizar as tabelas?
 
-class FamilyHealthHistory(models.Model):
-  #id_patient = models.ForeignKey(Patient,primary_key=True, on_delete=models.CASCADE)#
-  obesity = models.CharField(max_length=100, db_column='obesity ')
-  cardiovascular_disease = models.CharField(max_length=100, db_column='cardiovascular_disease')
-  hypertension = models.CharField(max_length=100, db_column='hypertension')
-  cancer = models.CharField(max_length=100, db_column='cancer')
-  diabetes = models.CharField(max_length=100, db_column='diabetes')
-  dyslipidemia = models.CharField(max_length=100, db_column='dyslipidemia')
-
-  class Meta:
-    db_table ='family_health_history' # preciso de def?
 
 class PatientHealthHistory(models.Model):
-  #id_patient = models.ForeignKey(Patient,primary_key=True, on_delete=models.CASCADE)#
   obesity = models.CharField(max_length=100, db_column='obesity')
   cardiovascular_disease = models.CharField(max_length=100, db_column='cardiovascular_disease')
   hypertension = models.CharField(max_length=100, db_column='hypertension')
@@ -116,7 +116,7 @@ class PatientHealthHistory(models.Model):
     db_table ='patient_health_history' # preciso de def?
 
 class Food(models.Model):
-  id_name_group=models.OneToOneField(FoodGroup, primary_key=True, on_delete=models.CASCADE)
+  name_group=models.ForeignKey(FoodGroup, on_delete=models.CASCADE)
   food_name=models.CharField(max_length=100, db_column='food_name')
   gram_weigh=models.DecimalField(max_digits=8, decimal_places=1, help_text='gram_weight')
   class Meta:
