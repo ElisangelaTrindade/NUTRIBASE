@@ -110,7 +110,6 @@ class DietPlan(models.Model):
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   description= models.CharField(max_length=255,db_column='description')
-  #id_time_meal = models.ForeignKey(Meal, on_delete=models.CASCADE)#
   date_of_creation=models.DateField()
   amount_of_calories=models.DecimalField(max_digits=8, decimal_places=1, help_text='gram_weight')
   gram_weigh=models.DecimalField(max_digits=8, decimal_places=1, help_text='gram_weight')
@@ -150,7 +149,6 @@ class Food(models.Model):
   class Meta:
     db_table ='food' # preciso de def?
 
-
 class FoodConsumption(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   soft_drink = models.CharField(max_length=100, db_column='soft_drink')
@@ -180,10 +178,10 @@ class PreferenciaAlimentar(models.Model):
 
 class NutritionalInformation(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  #id_food_intolerance = models.ForeignKey(FoodIntolerance, on_delete=models.CASCADE)#
-  #id_preferencia_alimentar = models.ForeignKey(PreferenciaAlimentar, on_delete=models.CASCADE)#
-  #id_diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)#
-  #id_food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)#
+  food_intolerance = models.OneToOneField(FoodIntolerance, on_delete=models.CASCADE)
+  preferencia_alimentar = models.OneToOneField(User, on_delete=models.CASCADE)
+  diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)#
+  food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)#
   description= models.CharField(max_length=100, db_column='description')
   class Meta:
     db_table ='nutricional_information' # preciso de def?
