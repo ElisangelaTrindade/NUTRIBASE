@@ -93,8 +93,13 @@ class Employee(models.Model):
     def __unicode__(self):
         return self.user.first_name + ' ' + self.user.last_name
 
-# irei por telefones de contato aqui mesmo?
-# tenho que atualizar as tabelas?
+class Phone(models.Model):
+    patient =models.ForeignKey(Patient, on_delete=models.CASCADE) #ta errado?
+    phone_number = models.CharField(max_length=12)
+    description = models.CharField(max_length=25)
+    
+    def __str__(self):
+        return self.phone_number
 
 class FoodDiary(models.Model):
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -117,6 +122,7 @@ class DietPlan(models.Model):
     db_table ='diet_plan' # preciso de def?
   
 class Meal(models.Model):
+  register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   food_diary = models.ForeignKey(FoodDiary, on_delete=models.CASCADE)
   diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)
   type_meal = models.CharField(max_length=50,db_column='type_meal')
@@ -143,7 +149,7 @@ class FoodGroup(models.Model):
 class Food(models.Model):
   food_group = models.ForeignKey(FoodGroup, on_delete=models.CASCADE)
   diet_plan = models.OneToOneField(DietPlan, on_delete=models.CASCADE)
-  food_name=models.CharField(max_length=100, db_column='food_name')
+  food_name=models.CharField(max_length=50, db_column='food_name')
   gram_weigh=models.DecimalField(max_digits=8, decimal_places=1, help_text='gram_weight')
   
   class Meta:
@@ -151,12 +157,13 @@ class Food(models.Model):
 
 class FoodConsumption(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+  register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   soft_drink = models.CharField(max_length=100, db_column='soft_drink')
   candy = models.CharField(max_length=100, db_column='candy')
   deep_fried = models.CharField(max_length=100, db_column='deep_fried')
   fast_food= models.CharField(max_length=100, db_column='fast_food')
-  #embutido? = models.CharField(max_length=100, db_column='')
-  canned = models.CharField(max_length=100, db_column='canned')
+  processed_food = models.CharField(max_length=100, db_column='processed_food')
+  canned_food = models.CharField(max_length=100, db_column='canned')
   fruits = models.CharField(max_length=100, db_column='fruits')
   vegetables = models.CharField(max_length=100, db_column='vegetables')
   others = models.CharField(max_length=100, db_column='others')
@@ -165,38 +172,44 @@ class FoodConsumption(models.Model):
 
 class FoodIntolerance(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  description= models.CharField(max_length=100, db_column='description')
+  intolerance_description= models.CharField(max_length=255, db_column='description')
   class Meta:
     db_table ='food_intolerance' # preciso de def?
 
-class PreferenciaAlimentar(models.Model):
+class FoodPreferences(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  
-  description= models.CharField(max_length=100, db_column='description')
+  food_description= models.CharField(max_length=100, db_column='description')
   class Meta:
-    db_table ='preferencia_alimentar' # preciso de def?
+    db_table ='food_preferences' # preciso de def?
 
 class NutritionalInformation(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   food_intolerance = models.OneToOneField(FoodIntolerance, on_delete=models.CASCADE)
-  preferencia_alimentar = models.OneToOneField(User, on_delete=models.CASCADE)
+  food_preferences = models.OneToOneField(User, on_delete=models.CASCADE)
   diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)#
   food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)#
-  description= models.CharField(max_length=100, db_column='description')
+  additional_information= models.CharField(max_length=255, db_column='description')
   class Meta:
     db_table ='nutricional_information' # preciso de def?
 
 class AntopometricEvaluation (models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  #id_employee = models.ForeignKey(Employee, on_delete=models.CASCADE)#
-  #weight = models.DecimalField(max_digits=8, decimal_places=1, help_text='KG_weight') #
-  #height = models.DecimalField(max_digits=8, decimal_places=1, help_text='cm_weight')
-  #BMI = models.DecimalField(max_digits=8, decimal_places=1, help_text='cm_weight')#
-  #circumferencia_arm = models.DecimalField(max_digits=8, decimal_places=1, help_text='KG_weight') #
-  #circumferencia_abdomen = models.DecimalField(max_digits=8, decimal_places=1, help_text='KG_weight') #
-  #height = models.DecimalField(max_digits=8, decimal_places=1, help_text='cm_weight')
-  description= models.CharField(max_length=100, db_column='description')
+  register_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  weight = models.DecimalField(max_digits=6, decimal_places=2, help_text='weight') 
+  height = models.CharField(max_length=4,)
+  BMI = models.DecimalField(max_digits=4, decimal_places=2, help_text='bmi')
+  arm_circumference = models.DecimalField(max_digits=4, decimal_places=2, help_text='arm_circumference') 
+  abdomen_circumference = models.DecimalField(max_digits=4, decimal_places=2, help_text='abdomen_circumference') 
+  wrist_circumference = models.DecimalField(max_digits=4, decimal_places=2, help_text='wrist_circumference')
+  others= models.CharField(max_length=100, db_column='description')
   class Meta:
     db_table ='antopometric_evaluation' # preciso de def?
 
-
+class Exercise(models.Model):
+    type = models.CharField(max_length=255)
+    frequency = models.CharField(max_length=255)
+    object_id = models.PositiveIntegerField()
+    
+    def __str__(self):
+        return self.type+ self.patient.frequency
+        
