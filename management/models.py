@@ -120,7 +120,7 @@ class FoodDiary(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   description= models.TextField(db_column='description')
   date_of_consultation=models.DateField()
-  weigh=models.DecimalField(max_digits=4, decimal_places=1, db_column='weigh')
+  weight=models.DecimalField(max_digits=4, decimal_places=1, db_column='weight')
 
   class Meta:
     db_table ='food_diary'
@@ -220,6 +220,7 @@ class LabExam (models.Model): # como fazer upload?
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description')
   date_of_exam=models.DateField()
+  upload=models.FileField( db_column='upload')
   exam_information= models.TextField(db_column='name_exam ')
   class Meta:
     db_table ='lab_exam' # preciso de def?        
