@@ -207,7 +207,7 @@ class AntopometricEvaluation (models.Model):
   arm_circumference = models.DecimalField(max_digits=4, decimal_places=2, help_text='arm_circumference') 
   abdomen_circumference = models.DecimalField(max_digits=4, decimal_places=2, help_text='abdomen_circumference') 
   wrist_circumference = models.DecimalField(max_digits=4, decimal_places=2, help_text='wrist_circumference')
-  others= models.CharField(max_length=100, db_column='description')
+  additional_information= models.CharField(max_length=100, db_column='additional_information=')
   class Meta:
     db_table ='antopometric_evaluation' # preciso de def?
 
@@ -220,4 +220,16 @@ class Lab_Exam (models.Model): # como fazer upload?
   lab_value_found= models.DecimalField(max_digits=6, decimal_places=2, help_text='ab_value_found') 
   additional_information= models.CharField(max_length=100, db_column='dditional_information')
   class Meta:
-    db_table ='exam' # preciso de def?        
+    db_table ='lab_exam' # preciso de def?        
+
+
+class ClinicEvaluation (models.Model):
+  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+  register_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  nails= models.CharField(max_length=100, db_column='nails')
+  skin = models.CharField(max_length=100, db_column='skin')
+  bladder_habits = models.CharField(max_length=100, db_column='bladder_habits')
+  bowel_habits = models.CharField(max_length=100, db_column='bowel_habits') 
+  additional_information= models.CharField(max_length=100, db_column='additional_information=')
+  class Meta:
+    db_table ='clinic_evaluation' # preciso de def?
