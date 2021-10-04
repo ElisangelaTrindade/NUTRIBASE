@@ -212,7 +212,7 @@ class AntopometricEvaluation (models.Model):
     db_table ='antopometric_evaluation' # preciso de def?
 
 
-class Exam (models.Model): # como fazer upload?
+class Lab_Exam (models.Model): # como fazer upload?
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description')
