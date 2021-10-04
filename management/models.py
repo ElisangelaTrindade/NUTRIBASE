@@ -55,16 +55,24 @@ class PatientHealthHistory(models.Model):
   class Meta:
     db_table ='patient_health_history' # preciso de def?
 
+class Exercise(models.Model):
+    type = models.CharField(max_length=255, help_text='type')
+    frequency = models.CharField(max_length=255, help_text='frequency')
+    def __str__(self):
+        return self.type+ self.patient.frequency
+
 class Patient(models.Model):
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   family_health_history = models.ForeignKey(FamilyHealthHistory, on_delete=models.CASCADE)
   patient_health_history = models.ForeignKey(PatientHealthHistory, on_delete=models.CASCADE)
+  exercise=models.ForeignKey(Exercise,on_delete=models.CASCADE)
   cpf = cpffield.CPFField('CPF', max_length=14, unique=True)
   birthday = models.DateField()
   email = models.CharField(max_length=150,db_column='email_patient')
   street = models.CharField(max_length=50)
   city = models.OneToOneField(City, on_delete=models.CASCADE)
   zip_code = models.CharField(max_length=9,default = '')
+  
 
   GENDER_CHOICES = (
       ('M', 'Male'),
@@ -74,7 +82,7 @@ class Patient(models.Model):
 
   class Meta:
     db_table ='patient'
-    def __unicode__(self):
+    def __str__(self):
       return self.user.first_name + ' ' + self.user.last_name
 
 class Employee(models.Model):
@@ -205,11 +213,5 @@ class AntopometricEvaluation (models.Model):
   class Meta:
     db_table ='antopometric_evaluation' # preciso de def?
 
-class Exercise(models.Model):
-    type = models.CharField(max_length=255)
-    frequency = models.CharField(max_length=255)
-    object_id = models.PositiveIntegerField()
-    
-    def __str__(self):
-        return self.type+ self.patient.frequency
+
         
