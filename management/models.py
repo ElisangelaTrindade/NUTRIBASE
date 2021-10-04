@@ -72,7 +72,6 @@ class Patient(models.Model):
   street = models.CharField(max_length=50)
   city = models.OneToOneField(City, on_delete=models.CASCADE)
   zip_code = models.CharField(max_length=9,default = '')
-  
 
   GENDER_CHOICES = (
       ('M', 'Male'),
@@ -153,7 +152,6 @@ class FoodGroup(models.Model):
   class Meta:
     db_table ='food_group' # parei de por o def aqu
 
-
 class Food(models.Model):
   food_group = models.ForeignKey(FoodGroup, on_delete=models.CASCADE)
   diet_plan = models.OneToOneField(DietPlan, on_delete=models.CASCADE)
@@ -214,4 +212,12 @@ class AntopometricEvaluation (models.Model):
     db_table ='antopometric_evaluation' # preciso de def?
 
 
-        
+class Exam (models.Model): # como fazer upload?
+  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+  register_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  name_exam =models.CharField(max_length=100, db_column='description')
+  lab_reference_values= models.DecimalField(max_digits=6, decimal_places=2, help_text='lab_reference_value') 
+  lab_value_found= models.DecimalField(max_digits=6, decimal_places=2, help_text='value_found') 
+  additional_information= models.CharField(max_length=100, db_column='description')
+  class Meta:
+    db_table ='exam' # preciso de def?        
