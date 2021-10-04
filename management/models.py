@@ -217,7 +217,7 @@ class Exam (models.Model): # como fazer upload?
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description')
   lab_reference_values= models.DecimalField(max_digits=6, decimal_places=2, help_text='lab_reference_value') 
-  lab_value_found= models.DecimalField(max_digits=6, decimal_places=2, help_text='value_found') 
-  additional_information= models.CharField(max_length=100, db_column='description')
+  lab_value_found= models.DecimalField(max_digits=6, decimal_places=2, help_text='ab_value_found') 
+  additional_information= models.CharField(max_length=100, db_column='dditional_information')
   class Meta:
     db_table ='exam' # preciso de def?        
