@@ -120,7 +120,7 @@ class Exercise(models.Model):
     def __str__(self):
       return self.phone_number"""
 
-# the class oodDiary was sent to the app phone
+# the class foodDiary was sent to the app fooddiary
 """class FoodDiary(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
@@ -131,7 +131,9 @@ class Exercise(models.Model):
   class Meta:
     db_table ='food_diary'"""
 
-class DietPlan(models.Model):
+
+# the class DietPlan  was sent to the app DietPlan
+"""class DietPlan(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   description= models.TextField(db_column='description')
@@ -139,7 +141,7 @@ class DietPlan(models.Model):
   amount_of_calories=models.DecimalField(max_digits=8, decimal_places=1, db_column='amount_of_calories')
   weigh=models.DecimalField(max_digits=8, decimal_places=1, db_column='weight')
   class Meta:
-    db_table ='diet_plan' 
+    db_table ='diet_plan' """
   
 class Meal(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
