@@ -1,4 +1,5 @@
 from django.db import models
+from cpffield import cpffield
 
 class Patient(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)

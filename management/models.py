@@ -1,5 +1,5 @@
 from django.db import models
-from cpffield import cpffield
+
 from django.contrib.auth.models import AbstractUser
 
 
@@ -7,7 +7,8 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser): # igual modelo padrao com um campo bio a mais
   bio= models.TextField(blank=True)
 
-class State(models.Model):
+# state and city sent to location
+"""class State(models.Model):
   name_state = models.CharField(max_length=50,db_column='name_state')
   acrm_state = models.CharField(max_length=3,db_column='acrm_state')
 
@@ -31,7 +32,7 @@ class City(models.Model):
       return self.name_state
 
     def __str__(self):
-      return self.name_state
+      return self.name_state"""
 
 class FamilyHealthHistory(models.Model):
   obesity = models.BooleanField(db_column='obesity')
