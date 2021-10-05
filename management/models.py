@@ -56,7 +56,8 @@ class PatientHealthHistory(models.Model):
   class Meta:
     db_table ='patient_health_history' 
 
-class Patient(models.Model):
+# the class below was sent to the Patient's app
+ """class Patient(models.Model): 
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   family_health_history = models.ForeignKey(FamilyHealthHistory, on_delete=models.CASCADE)
   patient_health_history = models.ForeignKey(PatientHealthHistory, on_delete=models.CASCADE)
@@ -76,7 +77,7 @@ class Patient(models.Model):
   class Meta:
     db_table ='patient'
     def __str__(self):
-      return self.user.first_name + ' ' + self.user.last_name
+      return self.user.first_name + ' ' + self.user.last_name """
 
 class ExerciseType(models.Model):
   name = models.CharField(max_length=255, db_column='type')
