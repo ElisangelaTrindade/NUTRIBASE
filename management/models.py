@@ -142,13 +142,14 @@ class Exercise(models.Model):
   weigh=models.DecimalField(max_digits=8, decimal_places=1, db_column='weight')
   class Meta:
     db_table ='diet_plan' """
-  
-class Meal(models.Model):
+
+# the class Meal  was sent to the app Meal
+"""class Meal(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   food_diary = models.ForeignKey(FoodDiary, on_delete=models.CASCADE)
   diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)
   type_meal = models.CharField(max_length=50,db_column='type_meal')
-  time_meal = models.DateTimeField(db_column='time_meal')
+  time_meal = models.DateTimeField(db_column='time_meal')"""
 
   class Meta:
     db_table ='meal'
