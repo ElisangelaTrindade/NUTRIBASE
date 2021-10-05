@@ -1,0 +1,30 @@
+diff --git a/db.sqlite3 b/db.sqlite3
+index 16d4b6a..76a209a 100644
+Binary files a/db.sqlite3 and b/db.sqlite3 differ
+diff --git a/management/admin.py b/management/admin.py
+index b5e9d88..303c46c 100644
+--- a/management/admin.py
++++ b/management/admin.py
+@@ -2,14 +2,14 @@ from django.contrib import admin
+ from django.contrib.auth import admin as auth_admin
+ 
+ from .forms import UserChangeForm, UserCreationForm
+-from .models import User
+-# o admin esta exatamente igual so precisa ser personalizado
++from .models import User, Employee
++
++class EmployeeInline(admin.StackedInline):
++    model = Employee
++    can_delete = True
++    verbose_name_plural = 'employee'
+ 
+ @admin.register(User)
+ class UserAdmin(auth_admin.UserAdmin):
+-    form = UserChangeForm
+-    add_form = UserCreationForm
+-    model = User
+-    fieldsets = auth_admin.UserAdmin.fieldsets + (
+-        ("Informações Pessoais", {"fields": ("bio",)}),
+-    )
++    inlines = (EmployeeInline,)
++
