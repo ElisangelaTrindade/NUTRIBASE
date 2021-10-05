@@ -149,12 +149,13 @@ class Exercise(models.Model):
   food_diary = models.ForeignKey(FoodDiary, on_delete=models.CASCADE)
   diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)
   type_meal = models.CharField(max_length=50,db_column='type_meal')
-  time_meal = models.DateTimeField(db_column='time_meal')"""
+  time_meal = models.DateTimeField(db_column='time_meal')
 
   class Meta:
-    db_table ='meal'
+    db_table ='meal'"""
 
-class FoodGroup(models.Model): 
+# the class FoodGroup and Food  was sent to the app food_group
+"""class FoodGroup(models.Model): 
   group = models.CharField(max_length=150,db_column='group')
   weight = models.DecimalField(max_digits=8, decimal_places=1, db_column='weight')
   calories = models.PositiveIntegerField(default=0, db_column='calories')
@@ -169,7 +170,7 @@ class Food(models.Model):
   weigh=models.DecimalField(max_digits=8, decimal_places=1, db_column='weight')
   
   class Meta:
-    db_table ='food' 
+    db_table ='food' """
 
 class FoodConsumption(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)

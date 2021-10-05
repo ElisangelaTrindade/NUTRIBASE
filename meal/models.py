@@ -10,3 +10,4 @@ class Meal(models.Model):
 
   class Meta:
     db_table ='meal'
+
