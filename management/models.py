@@ -92,7 +92,7 @@ class Exercise(models.Model):
   def __str__(self):
     return self.type+ self.patient.frequency"""
 
-# the class Exercise and ExerciseType were sent to the app employee
+# the class Employee was sent to the app employee
 """class Employee(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   hire_date = models.DateField(db_column='hire_date')
@@ -108,8 +108,9 @@ class Exercise(models.Model):
     db_table ='employee'
     def __unicode__(self):
         return self.user.first_name + ' ' + self.user.last_name"""
-
-class Phone(models.Model):
+        
+# the class Phone was sent to the app phone
+"""class Phone(models.Model):
   patient =models.ForeignKey(Patient, on_delete=models.CASCADE) #ta errado?
   phone_number = models.CharField(max_length=14, db_column='phone_number')
   description = models.TextField(db_column='description')
@@ -117,7 +118,7 @@ class Phone(models.Model):
   class Meta: 
     db_table ='phone' 
     def __str__(self):
-      return self.phone_number
+      return self.phone_number"""
         
 class FoodDiary(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
