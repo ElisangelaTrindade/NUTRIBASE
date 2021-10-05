@@ -189,13 +189,15 @@ class FoodPreferences(models.Model):
   class Meta:
     db_table ='food_preferences' 
 
-class NutritionalInformation(models.Model):
+class NutritionalConduct(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   food_intolerance = models.OneToOneField(FoodIntolerance, on_delete=models.CASCADE)
   food_preferences = models.OneToOneField(User, on_delete=models.CASCADE)
-  diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)#
-  food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)#
+  diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)
+  food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)
+  caloric_needs = models.DecimalField(max_digits=4, decimal_places=2, db_column='caloric') 
   additional_information= models.TextField(db_column='additional_information')
+
   class Meta:
     db_table ='nutricional_information' 
 
@@ -215,7 +217,7 @@ class AntopometricEvaluation (models.Model):
     db_table ='antopometric_evaluation' 
 
 
-class LabExam (models.Model): # como fazer upload?
+class LabExam (models.Model): 
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description')
@@ -223,7 +225,7 @@ class LabExam (models.Model): # como fazer upload?
   upload=models.FileField( db_column='upload')
   exam_information= models.TextField(db_column='name_exam ')
   class Meta:
-    db_table ='lab_exam' # preciso de def?        
+    db_table ='lab_exam'        
 
 
 class ClinicEvaluation (models.Model):
@@ -238,3 +240,18 @@ class ClinicEvaluation (models.Model):
   updated=models.DateField()
   class Meta:
     db_table ='clinic_evaluation' 
+
+class GastrointestinalTractSymptoms(models.Model):
+  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+  registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  dysphagia = models.BooleanField (db_column='dysphagia')
+  pain= models.BooleanField(db_column='pain')
+  reflux = models.BooleanField( db_column='reflux')
+  heart_burn= models.BooleanField( db_column='heart_burn')
+  constipation = models.BooleanField( db_column='constipation')
+  nausea= models.BooleanField( db_column='nausea')
+  diarrhea= models.BooleanField( db_column='diarrhea')
+  others = models.TextField(db_column='description')
+  class Meta:
+    db_table ='gastrointestinalt_tract_symptoms' 
+
