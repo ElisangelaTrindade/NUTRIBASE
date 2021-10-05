@@ -80,7 +80,9 @@ class PatientHealthHistory(models.Model):
     def __str__(self):
       return self.user.first_name + ' ' + self.user.last_name """
 
-class ExerciseType(models.Model):
+
+# the class Exercise and ExerciseType was sent to the app Exercise
+"""class ExerciseType(models.Model):
   name = models.CharField(max_length=255, db_column='type')
 
 class Exercise(models.Model):
@@ -88,7 +90,7 @@ class Exercise(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   frequency = models.CharField(max_length=255, db_column='frequency')
   def __str__(self):
-    return self.type+ self.patient.frequency
+    return self.type+ self.patient.frequency"""
 
 
 class Employee(models.Model):
