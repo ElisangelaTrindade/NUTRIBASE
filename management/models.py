@@ -81,7 +81,7 @@ class PatientHealthHistory(models.Model):
       return self.user.first_name + ' ' + self.user.last_name """
 
 
-# the class Exercise and ExerciseType was sent to the app Exercise
+# the class Exercise and ExerciseType were sent to the app Exercise
 """class ExerciseType(models.Model):
   name = models.CharField(max_length=255, db_column='type')
 
@@ -92,8 +92,8 @@ class Exercise(models.Model):
   def __str__(self):
     return self.type+ self.patient.frequency"""
 
-
-class Employee(models.Model):
+# the class Exercise and ExerciseType were sent to the app employee
+"""class Employee(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   hire_date = models.DateField(db_column='hire_date')
   #type = models.CharField(max_length=50,db_column='type')#
@@ -107,7 +107,7 @@ class Employee(models.Model):
   class Meta:
     db_table ='employee'
     def __unicode__(self):
-        return self.user.first_name + ' ' + self.user.last_name
+        return self.user.first_name + ' ' + self.user.last_name"""
 
 class Phone(models.Model):
   patient =models.ForeignKey(Patient, on_delete=models.CASCADE) #ta errado?
