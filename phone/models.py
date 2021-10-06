@@ -1,4 +1,5 @@
 from django.db import models
+from patient.models import Patient
 
 class Phone(models.Model):
   patient =models.ForeignKey(Patient, on_delete=models.CASCADE) 
