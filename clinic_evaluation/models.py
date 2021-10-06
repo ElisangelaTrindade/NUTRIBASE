@@ -27,3 +27,13 @@ class GastrointestinalTractSymptoms(models.Model):
   others = models.TextField(db_column='description')
   class Meta:
     db_table ='gastrointestinalt_tract_symptoms' 
+
+class LabExam (models.Model): 
+  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+  register_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  name_exam =models.CharField(max_length=100, db_column='description')
+  date_of_exam=models.DateField()
+  upload=models.FileField( db_column='upload')
+  exam_information= models.TextField(db_column='name_exam ')
+  class Meta:
+    db_table ='lab_exam'

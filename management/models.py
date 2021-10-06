@@ -230,8 +230,8 @@ class AntopometricEvaluation (models.Model):
   class Meta:
     db_table ='antopometric_evaluation' 
 
-
-class LabExam (models.Model): 
+# the class below LabExams were sent to the ClinicEvaluation's app 
+"""class LabExam (models.Model): 
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description')
@@ -239,7 +239,7 @@ class LabExam (models.Model):
   upload=models.FileField( db_column='upload')
   exam_information= models.TextField(db_column='name_exam ')
   class Meta:
-    db_table ='lab_exam'        
+    db_table ='lab_exam'        """
 
 # the class below ClinicEvaluation, GastrointestinalTractSymptoms were sent to the ClinicEvaluation's app 
 
