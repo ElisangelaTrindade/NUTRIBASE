@@ -1,11 +1,12 @@
 from django.db import models
 
-from django.contrib.auth.models import AbstractUser
+# I created the app User
+"""from django.contrib.auth.models import AbstractUser
 
 
 # Create your models here.
 class User(AbstractUser): # igual modelo padrao com um campo bio a mais
-  bio= models.TextField(blank=True)
+  bio= models.TextField(blank=True)"""
 
 # state and city sent to location
 """class State(models.Model):
@@ -200,8 +201,10 @@ class FoodPreferences(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   description= models.TextField(db_column='description')
   class Meta:
-    db_table ='food_preferences' 
+    db_table ='food_preferences' """
 
+# the classe below NutritionalConduct were sent to the nutricional_information's app
+"""
 class NutritionalConduct(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   food_intolerance = models.OneToOneField(FoodIntolerance, on_delete=models.CASCADE)

@@ -38,8 +38,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     #local apps
     'management.apps.ManagementConfig',
+    'antopometric_evaluation.apps.AntopometricEvaluationConfig',
+    'clinic_evaluation.apps.ClinicEvaluationConfig',
+    'diet_plan.apps.DietPlanConfig',
+    'employee.apps.EmployeeConfig',
+    'exercise.apps.ExerciseConfig',
+    'food_comsuption.apps.FoodConsumptionConfig',
+    'food_diary.apps.FoodDiaryConfig',
+    'food_group.apps.FoodGroupConfig',
+    'health_history.apps.HealthHistoryConfig',
+    'location.apps.LocationConfig',
+    'patient.apps.PatientConfig',
+    'phone.apps.PhoneConfig',
+    'nutritional_conduct.apps.NutricionalConductConfig',
+
 
     #3rd party
     'cpffield',

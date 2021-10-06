@@ -1,6 +1,5 @@
 from django.db import models
 from cpffield import cpffield
-# Create your models here.
 
 class Employee(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
