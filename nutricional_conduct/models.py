@@ -1,7 +1,6 @@
 from django.db import models
 from diet_plan.models import DietPlan
 from food_comsuption.models import FoodConsumption, FoodIntolerance, FoodPreferences
-from user.models import User
 from patient.models import Patient
 
 # Create your models here.
