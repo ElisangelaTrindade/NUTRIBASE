@@ -213,6 +213,8 @@ class NutritionalConduct(models.Model):
   class Meta:
     db_table ='nutricional_information' """
 
+   
+
 class AntopometricEvaluation (models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   registeres_by = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -239,8 +241,9 @@ class LabExam (models.Model):
   class Meta:
     db_table ='lab_exam'        
 
+# the class below ClinicEvaluation, GastrointestinalTractSymptoms were sent to the ClinicEvaluation's app 
 
-class ClinicEvaluation (models.Model):
+"""class ClinicEvaluation (models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   nails= models.CharField(max_length=100, db_column='nails')
@@ -265,5 +268,5 @@ class GastrointestinalTractSymptoms(models.Model):
   diarrhea= models.BooleanField( db_column='diarrhea')
   others = models.TextField(db_column='description')
   class Meta:
-    db_table ='gastrointestinalt_tract_symptoms' 
+    db_table ='gastrointestinalt_tract_symptoms' """
 
