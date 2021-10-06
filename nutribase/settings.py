@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'diet_plan.apps.DietPlanConfig',
     'employee.apps.EmployeeConfig',
     'exercise.apps.ExerciseConfig',
-    'food_comsuption.apps.FoodConsumptionConfig',
+    'food_consumption.apps.FoodConsumptionConfig',
     'food_diary.apps.FoodDiaryConfig',
     'food_group.apps.FoodGroupConfig',
     'health_history.apps.HealthHistoryConfig',
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'patient.apps.PatientConfig',
     'phone.apps.PhoneConfig',
     'nutritional_conduct.apps.NutricionalConductConfig',
+
 
 
     #3rd party

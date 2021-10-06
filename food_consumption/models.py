@@ -30,3 +30,4 @@ class FoodPreferences(models.Model):
   description= models.TextField(db_column='description')
   class Meta:
     db_table ='food_preferences' 
+

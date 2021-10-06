@@ -1,4 +1,4 @@
-from django.contrib import admin
+"""from django.contrib import admin
 from django.contrib.auth import admin as auth_admin
 
 from .forms import UserChangeForm, UserCreationForm
@@ -12,4 +12,4 @@ class UserAdmin(auth_admin.UserAdmin):
     model = User
     fieldsets = auth_admin.UserAdmin.fieldsets + (
         ("Informações Pessoais", {"fields": ("bio",)}),
-    )
+    )"""
