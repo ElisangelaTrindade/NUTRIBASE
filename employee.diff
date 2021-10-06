@@ -1,10 +1,7 @@
-diff --git a/db.sqlite3 b/db.sqlite3
-index 16d4b6a..76a209a 100644
-Binary files a/db.sqlite3 and b/db.sqlite3 differ
-diff --git a/management/admin.py b/management/admin.py
+diff --git a/user/admin.py b/user/admin.py
 index b5e9d88..303c46c 100644
---- a/management/admin.py
-+++ b/management/admin.py
+--- a/user/admin.py
++++ b/user/admin.py
 @@ -2,14 +2,14 @@ from django.contrib import admin
  from django.contrib.auth import admin as auth_admin
  

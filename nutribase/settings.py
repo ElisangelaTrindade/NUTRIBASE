@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'phone.apps.PhoneConfig',
     'nutritional_conduct.apps.NutritionalConductConfig',
     'user.apps.UserConfig',
+    'employee.apps',
 
 
 
