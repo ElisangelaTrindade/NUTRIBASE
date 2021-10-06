@@ -1,4 +1,7 @@
 from django.db import models
+from diet_plan.models import DietPlan
+from food_diary.models import FoodDiary
+from user.models import User
 
 # Create your models here.
 class Meal(models.Model):
