@@ -1,4 +1,5 @@
 from django.db import models
+from diet_plan.models import DietPlan
 
 # Create your models here.
 class FoodGroup(models.Model): 
