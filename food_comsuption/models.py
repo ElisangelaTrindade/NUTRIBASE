@@ -1,4 +1,7 @@
 from django.db import models
+from patient.models import Patient
+from user.models import User
+
 
 # Create your models here.
 class FoodConsumption(models.Model):

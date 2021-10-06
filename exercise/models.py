@@ -1,4 +1,6 @@
 from django.db import models
+from patient.models import Patient
+from user.models import User
 
 class ExerciseType(models.Model):
   name = models.CharField(max_length=255, db_column='type')

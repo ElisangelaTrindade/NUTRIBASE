@@ -1,5 +1,10 @@
 from django.db import models
 from cpffield import cpffield
+from user.models import User
+from location.models import City
+from health_history.models import FamilyHealthHistory, PatientHealthHistory
+
+
 
 class Patient(models.Model):
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
