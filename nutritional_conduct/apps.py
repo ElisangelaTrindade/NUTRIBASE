@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class NutricionalConductConfig(AppConfig):
+class NutritionalConductConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'nutricional_conduct'
+    name = 'nutritional_conduct'

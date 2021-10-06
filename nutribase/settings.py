@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #local apps
-    'management.apps.ManagementConfig',
     'antopometric_evaluation.apps.AntopometricEvaluationConfig',
     'clinic_evaluation.apps.ClinicEvaluationConfig',
     'diet_plan.apps.DietPlanConfig',
@@ -53,7 +52,7 @@ INSTALLED_APPS = [
     'location.apps.LocationConfig',
     'patient.apps.PatientConfig',
     'phone.apps.PhoneConfig',
-    'nutritional_conduct.apps.NutricionalConductConfig',
+    'nutritional_conduct.apps.NutritionalConductConfig',
 
 
 
@@ -146,4 +145,4 @@ MEDIA_ROOT = BASE_DIR.joinpath('staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL ="management.User"
+AUTH_USER_MODEL ="user.User"
