@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'patient.apps.PatientConfig',
     'phone.apps.PhoneConfig',
     'nutritional_conduct.apps.NutritionalConductConfig',
+    'user.apps.UserConfig',
 
 
 
