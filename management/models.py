@@ -34,7 +34,8 @@ class City(models.Model):
     def __str__(self):
       return self.name_state"""
 
-class FamilyHealthHistory(models.Model):
+# the classes below FamilyHealthHistory and PatientHealthHistory were sent to the HealthHistory's app
+"""class FamilyHealthHistory(models.Model):
   obesity = models.BooleanField(db_column='obesity')
   cardiovascular_disease = models.BooleanField( db_column='cardiovascular_disease')
   hypertension = models.BooleanField (db_column='hypertension')
@@ -55,7 +56,7 @@ class PatientHealthHistory(models.Model):
   others = models.TextField (db_column='others')
 
   class Meta:
-    db_table ='patient_health_history' 
+    db_table ='patient_health_history' """
 
 # the class below was sent to the Patient's app
  """class Patient(models.Model): 
