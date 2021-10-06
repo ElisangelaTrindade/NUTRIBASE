@@ -82,7 +82,7 @@ class PatientHealthHistory(models.Model):
       return self.user.first_name + ' ' + self.user.last_name """
 
 
-# the class Exercise and ExerciseType were sent to the app Exercise
+# the classes Exercise and ExerciseType were sent to the app Exercise
 """class ExerciseType(models.Model):
   name = models.CharField(max_length=255, db_column='type')
 
@@ -174,7 +174,7 @@ class Food(models.Model):
     db_table ='food' """
 
 
-# the class below foodComsumption, foodIntolerance and foodPreferences were sent to the foodConsuption's app
+# the classes below foodComsumption, foodIntolerance and foodPreferences were sent to the foodConsuption's app
 """class FoodConsumption(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -215,8 +215,8 @@ class NutritionalConduct(models.Model):
     db_table ='nutricional_information' """
 
    
-
-class AntopometricEvaluation (models.Model):
+# the classe below AntopometricEvaluation were sent to the antopometric_evaluation's app
+"""class AntopometricEvaluation (models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   registeres_by = models.OneToOneField(User, on_delete=models.CASCADE)
   weight = models.DecimalField(max_digits=6, decimal_places=2, db_column='weight') 
@@ -229,7 +229,7 @@ class AntopometricEvaluation (models.Model):
   updated=models.DateField()
   additional_information= models.TextField(db_column='additional_information')
   class Meta:
-    db_table ='antopometric_evaluation' 
+    db_table ='antopometric_evaluation' """
 
 # the class below LabExams were sent to the ClinicEvaluation's app 
 """class LabExam (models.Model): 
@@ -242,7 +242,7 @@ class AntopometricEvaluation (models.Model):
   class Meta:
     db_table ='lab_exam'        """
 
-# the class below ClinicEvaluation, GastrointestinalTractSymptoms were sent to the ClinicEvaluation's app 
+# the classes below ClinicEvaluation, GastrointestinalTractSymptoms were sent to the ClinicEvaluation's app 
 
 """class ClinicEvaluation (models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
