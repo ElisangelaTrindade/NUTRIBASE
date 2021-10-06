@@ -154,7 +154,7 @@ class Exercise(models.Model):
   class Meta:
     db_table ='meal'"""
 
-# the class FoodGroup and Food  was sent to the app food_group
+# the class FoodGroup and Food  were sent to the app food_group
 """class FoodGroup(models.Model): 
   group = models.CharField(max_length=150,db_column='group')
   weight = models.DecimalField(max_digits=8, decimal_places=1, db_column='weight')
@@ -172,7 +172,9 @@ class Food(models.Model):
   class Meta:
     db_table ='food' """
 
-class FoodConsumption(models.Model):
+
+# the class below foodComsumption, foodIntolerance and foodPreferences were sent to the foodConsuption's app
+"""class FoodConsumption(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   soft_drink = models.BooleanField (db_column='soft_drink')
@@ -209,7 +211,7 @@ class NutritionalConduct(models.Model):
   additional_information= models.TextField(db_column='additional_information')
 
   class Meta:
-    db_table ='nutricional_information' 
+    db_table ='nutricional_information' """
 
 class AntopometricEvaluation (models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
