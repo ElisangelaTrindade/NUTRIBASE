@@ -1,3 +1,8 @@
 from django.contrib import admin
+from diet_plan.models import DietPlan
 
-# Register your models here.
+
+admin.site.register(DietPlan)
+
+
+

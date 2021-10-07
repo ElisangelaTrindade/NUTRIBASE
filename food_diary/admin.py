@@ -1,3 +1,5 @@
 from django.contrib import admin
+from food_diary.models import FoodDiary
 
-# Register your models here.
+
+admin.site.register(FoodDiary)

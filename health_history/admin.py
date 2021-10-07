@@ -1,3 +1,9 @@
 from django.contrib import admin
+from health_history.models import FamilyHealthHistory, PatientHealthHistory
 
-# Register your models here.
+
+
+admin.site.register(FamilyHealthHistory)
+admin.site.register(PatientHealthHistory)
+
+

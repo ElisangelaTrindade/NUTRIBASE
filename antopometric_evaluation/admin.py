@@ -1,3 +1,6 @@
 from django.contrib import admin
+from antopometric_evaluation.models import AntopometricEvaluation
 
-# Register your models here.
+
+admin.site.register(AntopometricEvaluation)
+

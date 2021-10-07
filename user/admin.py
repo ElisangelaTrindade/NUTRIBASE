@@ -9,7 +9,6 @@ class EmployeeInline(admin.StackedInline):
     can_delete = True
     verbose_name_plural = 'employee'
 
-
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin):
     inlines = (EmployeeInline,)
