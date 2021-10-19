@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+pyUFbr/__init__.py
+pyUFbr/baseuf.py
+pyUFbr.egg-info/PKG-INFO
+pyUFbr.egg-info/SOURCES.txt
+pyUFbr.egg-info/dependency_links.txt
+pyUFbr.egg-info/top_level.txt

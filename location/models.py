@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class State(models.Model):
   name = models.CharField(max_length=50,db_column='state')
   acrm= models.CharField(max_length=3,db_column='acrm')
@@ -26,3 +25,5 @@ class City(models.Model):
 
     def __str__(self):
       return self.city
+
+

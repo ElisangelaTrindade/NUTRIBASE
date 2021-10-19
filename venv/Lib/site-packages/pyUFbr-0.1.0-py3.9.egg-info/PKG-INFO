@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pyUFbr
+Version: 0.1.0
+Summary: Cidades e estados do Brasil (Tabela IBGE)
+Home-page: https://github.com/sidon/py-ufbr
+Author: Sidon Duarte
+Author-email: sidoncd@gmail.com
+License: MIT License
+Description: UNKNOWN
+Keywords: cidades estados brasil municípios
+Platform: UNKNOWN

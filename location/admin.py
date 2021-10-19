@@ -1,8 +1,5 @@
 from django.contrib import admin
-
-# Register your models here.
-from location.models import State, City
-
+from location.models import City, State
 
 
 admin.site.register(State)

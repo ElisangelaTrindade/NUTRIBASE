@@ -1,0 +1,9 @@
+asgiref==3.4.1
+Django==3.2.7
+django-cpffield==0.1.1
+django-localflavor==3.1
+django-municipios==1.2.1
+python-stdnum==1.17
+pytz==2021.1
+pyUFbr==0.1.0
+sqlparse==0.4.2
