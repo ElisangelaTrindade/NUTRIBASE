@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     'user',
     'employee.apps',
     'meal',
-    'table_taco',
     
     
 

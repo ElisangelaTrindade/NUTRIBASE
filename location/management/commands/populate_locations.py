@@ -313,5 +313,5 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         for state in self.locations:
             new_state, created = State.objects.get_or_create(name=state, acrm=self.locations[state]['acronym'])
-        for city in self.locations[state]['cities']:
-            City.objects.get_or_create(city=city, state=new_state)
+            for city in self.locations[state]['cities']:
+                City.objects.get_or_create(city=city, state=new_state)
