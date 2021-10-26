@@ -5,6 +5,12 @@ class FoodGroup(models.Model):
   group = models.CharField(max_length=150,db_column='group')
   calories = models.PositiveIntegerField(default=0, db_column='calories')
 
+  def label_from_instance(self):
+      return self.group
+
+  def __str__(self):
+    return self.group
+
   class Meta:
     db_table ='food_group' 
 
@@ -22,7 +28,13 @@ class Food(models.Model):
   calories = models.DecimalField(max_digits=6, decimal_places=1, db_column='calories')
   weight = models.DecimalField(max_digits=6, decimal_places=1, db_column='weight')
 
+
+  def label_from_instance(self):
+      return self.food_name
+
+  def __str__(self):
+    return self.food_name
+
+
   class Meta:
-    db_table ='food' 
-
-
+    db_table ='food'
