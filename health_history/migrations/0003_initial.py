@@ -10,25 +10,25 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('food_group', '0001_initial'),
+        ('health_history', '0002_patienthealthhistory_patient'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('diet_plan', '0002_dietplan_patient'),
+        ('patient', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='dietplan',
+            model_name='patienthealthhistory',
             name='registered_by',
             field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
         ),
         migrations.AddField(
-            model_name='dietfood',
-            name='diet',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='diet_plan.dietplan'),
+            model_name='familyhealthhistory',
+            name='patient',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='patient.patient'),
         ),
         migrations.AddField(
-            model_name='dietfood',
-            name='food',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='food_group.food'),
+            model_name='familyhealthhistory',
+            name='registered_by',
+            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
         ),
     ]

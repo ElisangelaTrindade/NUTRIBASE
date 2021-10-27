@@ -2,14 +2,12 @@ from django.db import models
 from cpffield import cpffield
 from user.models import User
 from location.models import City
-from health_history.models import FamilyHealthHistory, PatientHealthHistory
+
 
 class Patient(models.Model):
   first_name= models.CharField(blank=True, max_length=150, verbose_name='first name')
   last_name= models.CharField(blank=True, max_length=150, verbose_name='last name')
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
-  family_health_history = models.ForeignKey(FamilyHealthHistory, on_delete=models.CASCADE)
-  patient_health_history = models.ForeignKey(PatientHealthHistory, on_delete=models.CASCADE)
   cpf = cpffield.CPFField('CPF', max_length=14, unique=True)
   birthday = models.DateField()
   email = models.CharField(max_length=150,db_column='email_patient')

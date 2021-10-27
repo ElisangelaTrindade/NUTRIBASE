@@ -21,10 +21,10 @@ class Employee(models.Model):
   zip_code = models.CharField(max_length=9,default = '')
 
   def label_from_instance(self):
-      return self.user.first_name
+      return self.user.first_name+ " " +self.user.last_name
   
   def __str__(self):
-    return self.user.first_name 
+    return self.user.first_name+ " " +self.user.last_name
   
 
   class Meta:

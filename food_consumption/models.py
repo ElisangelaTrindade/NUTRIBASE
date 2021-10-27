@@ -16,6 +16,14 @@ class FoodConsumption(models.Model):
   fruits = models.BooleanField( db_column='fruits')
   vegetables = models.BooleanField( db_column='vegetables')
   others = models.TextField(db_column='description')
+  
+
+  def label_from_instance(self):
+      return self.patient.first_name+ " " +self.patient.last_name
+  
+  def __str__(self):
+    return self.patient.first_name+ " " +self.patient.last_name
+
   class Meta:
     db_table ='food_consumption' 
 
