@@ -31,6 +31,10 @@ class GastrointestinalTractSymptoms(models.Model):
   nausea= models.BooleanField( db_column='nausea')
   diarrhea= models.BooleanField( db_column='diarrhea')
   others = models.TextField(db_column='description')
+
+  def __str__(self):
+      return self.patient.first_name + " " + self.patient.last_name
+
   class Meta:
     db_table ='gastrointestinalt_tract_symptoms' 
 
@@ -41,5 +45,9 @@ class LabExam (models.Model):
   date_of_exam=models.DateField()
   upload=models.FileField( db_column='upload')
   exam_information= models.TextField(db_column='name_exam ')
+
+  def __str__(self):
+      return self.patient.first_name + " " + self.patient.last_name
+      
   class Meta:
     db_table ='lab_exam'

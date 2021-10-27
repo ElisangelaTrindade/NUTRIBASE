@@ -11,6 +11,9 @@ class DietPlan(models.Model):
   date_of_creation=models.DateField()
   diet_food=models.ManyToManyField(Food,  through=u"DietFood", related_name=u'diet_foods')
 
+  def __str__(self):
+      return self.patient.first_name + " " + self.patient.last_name
+
   class Meta:
     db_table ='diet_plan' 
   

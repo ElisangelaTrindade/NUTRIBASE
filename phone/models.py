@@ -11,4 +11,4 @@ class Phone(models.Model):
   class Meta: 
     db_table ='phone' 
     def __str__(self):
-      return self.phone_number
+      return self.phone_number+" "+self.patient.fist_name
