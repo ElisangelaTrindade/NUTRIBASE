@@ -16,5 +16,9 @@ class AntopometricEvaluation (models.Model):
   date_of_consultation=models.DateField()
   updated=models.DateField()
   additional_information= models.TextField(db_column='additional_information')
+  
+  def __str__(self):
+      return self.patient.first_name + " " + self.patient.last_name
+  
   class Meta:
     db_table ='antopometric_evaluation' 

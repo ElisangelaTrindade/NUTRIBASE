@@ -13,6 +13,10 @@ class ClinicEvaluation (models.Model):
   additional_information= models.TextField(db_column='additional_information')
   date_of_consultation=models.DateField()
   updated=models.DateField()
+
+  def __str__(self):
+    return self.patient.first_name + " " + self.patient.last_name
+    
   class Meta:
     db_table ='clinic_evaluation' 
 

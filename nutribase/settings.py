@@ -57,8 +57,6 @@ INSTALLED_APPS = [
     'employee.apps',
     'meal',
     
-    
-
     #3rd party
     'cpffield',
 ]
