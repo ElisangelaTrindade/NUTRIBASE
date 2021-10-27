@@ -18,11 +18,9 @@ class FoodConsumption(models.Model):
   others = models.TextField(db_column='description')
   
 
-  def label_from_instance(self):
-      return self.patient.first_name+ " " +self.patient.last_name
-  
   def __str__(self):
-    return self.patient.first_name+ " " +self.patient.last_name
+    return self.others
+  
 
   class Meta:
     db_table ='food_consumption' 
@@ -32,8 +30,9 @@ class FoodIntolerance(models.Model):
   intolerance_description= models.TextField(db_column='intolerance_description')
 
   def __str__(self):
-    return self.patient.first_name + " " + self.patient.last_name
-
+    return self.intolerance_description
+  
+  
   class Meta:
     db_table ='food_intolerance' 
 
@@ -42,8 +41,8 @@ class FoodPreferences(models.Model):
   description= models.TextField(db_column='description')
 
   def __str__(self):
-      return self.patient.first_name + " " + self.patient.last_name
-      
+    return self.description
+
   class Meta:
     db_table ='food_preferences' 
 

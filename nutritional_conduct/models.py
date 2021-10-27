@@ -13,5 +13,8 @@ class NutritionalConduct(models.Model):
   caloric_needs = models.DecimalField(max_digits=8, decimal_places=3, db_column='caloric') 
   additional_information= models.TextField(db_column='additional_information')
 
+  
+  
+
   class Meta:
-    db_table ='nutricional_information'
+    db_table ='nutricional_conduct'

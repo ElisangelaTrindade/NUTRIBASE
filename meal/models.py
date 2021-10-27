@@ -11,6 +11,9 @@ class Meal(models.Model):
   type_meal = models.CharField(max_length=50,db_column='type_meal')
   time_meal = models.DateTimeField(db_column='time_meal')
 
+  def __str__(self):
+    return self.type_meal
+
   class Meta:
     db_table ='meal'
 
