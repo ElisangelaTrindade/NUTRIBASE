@@ -22,7 +22,7 @@ class LabExamInline(admin.StackedInline):
     max_num = 1
     min_num = 1
     can_delete= False
-
+    
 class ClinicEvaluationAdmin(admin.ModelAdmin):
     model = ClinicEvaluation
     inlines = (GastrointestinalTractSymptomsInline, LabExamInline,)

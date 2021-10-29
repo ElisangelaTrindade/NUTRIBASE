@@ -27,6 +27,7 @@ class FoodConsumption(models.Model):
 
 class FoodIntolerance(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+  food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)
   intolerance_description= models.TextField(db_column='intolerance_description')
 
   def __str__(self):
@@ -38,6 +39,7 @@ class FoodIntolerance(models.Model):
 
 class FoodPreferences(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+  food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)
   description= models.TextField(db_column='description')
 
   def __str__(self):

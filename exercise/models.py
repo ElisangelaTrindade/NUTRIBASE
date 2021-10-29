@@ -5,6 +5,9 @@ from user.models import User
 class ExerciseType(models.Model):
   name = models.CharField(max_length=255, db_column='type')
 
+ 
+class Meta:
+  db_table ='exercise_type' 
 
 class Exercise(models.Model):
   exercise_type = models.ForeignKey(ExerciseType, on_delete=models.CASCADE)
@@ -12,4 +15,9 @@ class Exercise(models.Model):
   frequency = models.CharField(max_length=255, db_column='frequency')
 
 def __str__(self):
-  return self.patient.first_name+" "+self.exercisetype.name
+  return self.exercisetype.name
+
+class Meta:
+    db_table ='exercise' 
+
+# nao gostei da ordem no admin
