@@ -23,8 +23,9 @@ class ClinicEvaluation (models.Model):
 class GastrointestinalTractSymptoms(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  clinic_evaluation = models.ForeignKey(ClinicEvaluation, on_delete=models.CASCADE)
   dysphagia = models.BooleanField (db_column='dysphagia')
-  pain= models.BooleanField(db_column='pain')
+  pain = models.BooleanField(db_column='pain')
   reflux = models.BooleanField( db_column='reflux')
   heart_burn= models.BooleanField( db_column='heart_burn')
   constipation = models.BooleanField( db_column='constipation')
@@ -41,6 +42,7 @@ class GastrointestinalTractSymptoms(models.Model):
 class LabExam (models.Model): 
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   register_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  clinic_evaluation = models.ForeignKey(ClinicEvaluation, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description')
   date_of_exam=models.DateField()
   upload=models.FileField( db_column='upload')

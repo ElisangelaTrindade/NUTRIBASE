@@ -6,7 +6,7 @@ from user.models import User
 # Create your models here.
 class AntopometricEvaluation (models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  registeres_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
   weight = models.DecimalField(max_digits=6, decimal_places=2, db_column='weight') 
   height = models.CharField(max_length=4,db_column='height')
   BMI = models.DecimalField(max_digits=4, decimal_places=2, db_column='ibm')
