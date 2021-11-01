@@ -19,10 +19,12 @@ class AntopometricEvaluation (models.Model):
   updated=models.DateField()
   additional_information= models.TextField(db_column='additional_information')
  
+  def save_model(self, request, obj, form, change) :
+    obj.registered_by_id = request.User.id
+    #obj.save()
 
   def __str__(self):
       return self.patient.first_name + " " + self.patient.last_name
   
   class Meta:
     db_table ='antopometric_evaluation' 
-
