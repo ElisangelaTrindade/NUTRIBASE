@@ -22,14 +22,9 @@ class MealAdmin(nested_admin.NestedGenericTabularInline):
  
 class DietPlanAdmin(nested_admin.NestedModelAdmin):
   model = DietPlan 
-  exclude = ('registered_by', )
   inlines = [
       MealAdmin,
   ]
-
-  def save_model(self, request, obj, form, change) :
-    obj.registered_by_id = request.user.id
-    obj.save()
 
 admin.site.register(DietPlan, DietPlanAdmin)
 
