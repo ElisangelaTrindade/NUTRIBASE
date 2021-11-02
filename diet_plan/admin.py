@@ -32,3 +32,6 @@ class DietPlanAdmin(nested_admin.NestedModelAdmin):
     obj.save()
 
 admin.site.register(DietPlan, DietPlanAdmin)
+
+
+

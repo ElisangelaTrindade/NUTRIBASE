@@ -14,5 +14,14 @@ class ExerciseInline(admin.StackedInline):
 class ExerciseTypeAdmin(admin.ModelAdmin):
     model = ExerciseType
     inlines = (ExerciseInline,)
+    exclude = ('registered_by', )
+
+    def save_model(self, request, obj, form, change) :
+        obj.registered_by_id = request.user.id
+        obj.save()
 
 admin.site.register(ExerciseType, ExerciseTypeAdmin)
+
+
+
+

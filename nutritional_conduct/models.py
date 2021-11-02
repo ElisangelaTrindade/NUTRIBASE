@@ -11,7 +11,7 @@ class NutritionalConduct(models.Model):
   diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE)
   food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)
   caloric_needs = models.DecimalField(max_digits=8, decimal_places=3, db_column='caloric') 
-  additional_information= models.TextField(db_column='additional_information')
+  additional_information= models.TextField(blank=True, db_column='additional_information')
 
   
   

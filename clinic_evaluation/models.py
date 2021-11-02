@@ -5,12 +5,12 @@ from user.models import User
 # Create your models here.
 class ClinicEvaluation (models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  registered_by = models.ForeignKey(User, on_delete=models.CASCADE)
   nails= models.CharField(max_length=100, db_column='nails')
   skin = models.CharField(max_length=100, db_column='skin')
   bladder_habits = models.CharField(max_length=100, db_column='bladder_habits')
   bowel_habits = models.CharField(max_length=100, db_column='bowel_habits') 
-  additional_information= models.TextField(db_column='additional_information')
+  additional_information= models.TextField(blank=True, db_column='additional_information')
   date_of_consultation=models.DateField()
   updated=models.DateField()
 
@@ -22,7 +22,7 @@ class ClinicEvaluation (models.Model):
 
 class GastrointestinalTractSymptoms(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  registered_by = models.ForeignKey(User, on_delete=models.CASCADE)
   clinic_evaluation = models.ForeignKey(ClinicEvaluation, on_delete=models.CASCADE)
   dysphagia = models.BooleanField (db_column='dysphagia')
   pain = models.BooleanField(db_column='pain')
@@ -31,7 +31,7 @@ class GastrointestinalTractSymptoms(models.Model):
   constipation = models.BooleanField( db_column='constipation')
   nausea= models.BooleanField( db_column='nausea')
   diarrhea= models.BooleanField( db_column='diarrhea')
-  others = models.TextField(db_column='description')
+  others = models.TextField(blank=True, db_column='description')
 
   def __str__(self):
       return self.patient.first_name + " " + self.patient.last_name
@@ -41,7 +41,7 @@ class GastrointestinalTractSymptoms(models.Model):
 
 class LabExam (models.Model): 
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  register_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  register_by = models.ForeignKey(User, on_delete=models.CASCADE)
   clinic_evaluation = models.ForeignKey(ClinicEvaluation, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description')
   date_of_exam=models.DateField()

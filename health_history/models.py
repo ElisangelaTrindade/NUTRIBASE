@@ -23,7 +23,7 @@ class PatientHealthHistory(models.Model):
 
 class FamilyHealthHistory(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  registered_by = models.ForeignKey(User, on_delete=models.CASCADE)
   patient_health_history= models.ForeignKey(PatientHealthHistory, on_delete=models.CASCADE)
   obesity = models.BooleanField(db_column='obesity')
   cardiovascular_disease = models.BooleanField( db_column='cardiovascular_disease')
@@ -31,7 +31,7 @@ class FamilyHealthHistory(models.Model):
   cancer = models.BooleanField (db_column='cancer')
   diabetes = models.BooleanField (db_column='diabetes')
   dyslipidemia = models.BooleanField(db_column='dyslipidemia')
-  others = models.TextField( db_column='others')
+  others = models.TextField(blank=True, db_column='others')
 
   def __str__(self):
     return self.patient.first_name + " " + self.patient.last_name

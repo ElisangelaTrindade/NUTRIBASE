@@ -31,6 +31,5 @@ class FoodDiaryAdmin(nested_admin.NestedModelAdmin):
     obj.registered_by_id = request.user.id
     obj.save()
 
- 
 
 admin.site.register(FoodDiary, FoodDiaryAdmin)

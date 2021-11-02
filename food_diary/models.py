@@ -4,7 +4,7 @@ from user.models import User
 
 # Create your models here.
 class FoodDiary(models.Model):
-  registered_by = models.OneToOneField(User, on_delete=models.CASCADE)
+  registered_by = models.ForeignKey(User, on_delete=models.CASCADE)
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   description= models.TextField(db_column='description')
   date_of_consultation=models.DateField()

@@ -14,5 +14,10 @@ class FamilyHealthHistoryInline(admin.StackedInline):
 class PatientHealthHistoryAdmin(admin.ModelAdmin):
     model = PatientHealthHistory
     inlines = (FamilyHealthHistoryInline,)
+    exclude = ('registered_by', )
+
+    def save_model(self, request, obj, form, change) :
+        obj.registered_by_id = request.user.id
+        obj.save()
 
 admin.site.register(PatientHealthHistory, PatientHealthHistoryAdmin )

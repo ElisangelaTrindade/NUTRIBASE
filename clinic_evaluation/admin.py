@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.db import models
 from clinic_evaluation.models import ClinicEvaluation, GastrointestinalTractSymptoms, LabExam
 
 
@@ -26,6 +25,11 @@ class LabExamInline(admin.StackedInline):
 class ClinicEvaluationAdmin(admin.ModelAdmin):
     model = ClinicEvaluation
     inlines = (GastrointestinalTractSymptomsInline, LabExamInline,)
+    exclude = ('registered_by', )
+
+    def save_model(self, request, obj, form, change) :
+        obj.registered_by_id = request.user.id
+        obj.save()
 
 admin.site.register(ClinicEvaluation, ClinicEvaluationAdmin)
 
