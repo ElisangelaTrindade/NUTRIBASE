@@ -21,8 +21,6 @@ class ClinicEvaluation (models.Model):
     db_table ='clinic_evaluation' 
 
 class GastrointestinalTractSymptoms(models.Model):
-  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  registered_by = models.ForeignKey(User, on_delete=models.CASCADE)
   clinic_evaluation = models.ForeignKey(ClinicEvaluation, on_delete=models.CASCADE)
   dysphagia = models.BooleanField (db_column='dysphagia')
   pain = models.BooleanField(db_column='pain')
@@ -33,23 +31,17 @@ class GastrointestinalTractSymptoms(models.Model):
   diarrhea= models.BooleanField( db_column='diarrhea')
   others = models.TextField(blank=True, db_column='description')
 
-  def __str__(self):
-      return self.patient.first_name + " " + self.patient.last_name
 
   class Meta:
     db_table ='gastrointestinalt_tract_symptoms' 
 
 class LabExam (models.Model): 
-  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-  register_by = models.ForeignKey(User, on_delete=models.CASCADE)
   clinic_evaluation = models.ForeignKey(ClinicEvaluation, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description')
   date_of_exam=models.DateField()
   upload=models.FileField( db_column='upload')
-  exam_information= models.TextField(db_column='name_exam ')
+  exam_information= models.TextField(blank=True, db_column='name_exam ')
 
-  def __str__(self):
-      return self.patient.first_name + " " + self.patient.last_name
       
   class Meta:
     db_table ='lab_exam'
