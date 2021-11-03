@@ -11,9 +11,14 @@ class MealFoodAdmin(nested_admin.NestedStackedInline):
 class MealAdmin(nested_admin.NestedGenericTabularInline):
   model = Meal
   exclude = ('registered_by', )
+  max_num = 6
+  min_num = 3
+  can_delete= False
   inlines = [
       MealFoodAdmin,
+
   ]
+  
 
   def save_model(self, request, obj, form, change) :
     obj.registered_by_id = request.user.id
@@ -27,6 +32,4 @@ class DietPlanAdmin(nested_admin.NestedModelAdmin):
   ]
 
 admin.site.register(DietPlan, DietPlanAdmin)
-
-
 
