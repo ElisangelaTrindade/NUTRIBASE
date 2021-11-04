@@ -9,13 +9,13 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('health_history', '0001_initial'),
         ('patient', '0001_initial'),
+        ('clinic_evaluation', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='patienthealthhistory',
+            model_name='clinicevaluation',
             name='patient',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='patient.patient'),
         ),

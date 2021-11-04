@@ -14,7 +14,6 @@ class State(models.Model):
     db_table ='state'
     
 class City(models.Model):
-
   state = models.ForeignKey(State, on_delete=models.CASCADE)
   city = models.CharField(max_length=100, db_column='city')
 

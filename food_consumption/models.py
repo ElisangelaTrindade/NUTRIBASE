@@ -19,14 +19,13 @@ class FoodConsumption(models.Model):
   
 
   def __str__(self):
-    return self.others
+      return self.patient.first_name + " " + self.patient.last_name
   
 
   class Meta:
     db_table ='food_consumption' 
 
 class FoodIntolerance(models.Model):
-  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)
   intolerance_description= models.TextField(db_column='intolerance_description')
 
@@ -38,7 +37,6 @@ class FoodIntolerance(models.Model):
     db_table ='food_intolerance' 
 
 class FoodPreferences(models.Model):
-  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
   food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE)
   description= models.TextField(blank=True, db_column='description')
 

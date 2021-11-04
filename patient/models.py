@@ -1,7 +1,9 @@
 from django.db import models
 from cpffield import cpffield
 from user.models import User
-from location.models import City
+from location.models import City, State
+
+from smart_selects.db_fields import ChainedForeignKey
 
 
 class Patient(models.Model):
@@ -12,7 +14,8 @@ class Patient(models.Model):
   birthday = models.DateField()
   email = models.CharField(max_length=150,db_column='email_patient')
   street = models.CharField(max_length=50, db_column='street')
-  city = models.ForeignKey(City, on_delete=models.CASCADE)
+  state = models.ForeignKey(State, on_delete=models.CASCADE)
+  city = ChainedForeignKey(City, chained_field="state", chained_model_field="state", show_all = False, auto_choose = True, sort = True)
   zip_code = models.CharField(max_length=15,default = '', db_column='zip_code')
 
   GENDER_CHOICES = (

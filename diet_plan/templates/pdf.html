@@ -63,12 +63,15 @@
     <div class="head">
         <div class="card-header">
             <h3>Plano Alimentar - {{ today | date:"d/m/Y" }}</h3>
+            <img src="logo">
         </div>
 
         <div class="info">
-            <request class= diet_plan >
-                <p> {{diet_plan.patient.first_name}} {{diet_plan.patient.last_name}} </p>
-                <p> {{diet_plan.registered_by.first_name}}</p>
+            <request class="diet_plan">
+                <p> Paciente: {{diet_plan.patient.first_name}} {{diet_plan.patient.last_name}} </p> 
+                <p> IMC: {{evaluation.BMI}} </p>
+                <p> Nutricionista: {{diet_plan.registered_by.first_name}} {{diet_plan.patient.last_name}}</p>
+                <p> Data consulta: {{evaluation.date_of_consultation}} </p>
             </request>
         </div>
 
