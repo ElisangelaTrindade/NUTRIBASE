@@ -21,6 +21,8 @@ class MealFood (models.Model):
   meal = models.ForeignKey(Meal, on_delete=models.CASCADE)
   weight = models.DecimalField(max_digits=8, decimal_places=1, db_column='weight')
 
+  def test():
+    return 10
 
   class Meta:
     db_table ='meal_food' 

@@ -1,7 +1,6 @@
 from django.db import models
 from patient.models import Patient
 from user.models import User
-from fpdf import FPDF
 
 # Create your models here.
 class DietPlan(models.Model):

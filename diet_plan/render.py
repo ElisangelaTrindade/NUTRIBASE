@@ -14,6 +14,7 @@ class Render:
         response = BytesIO()
         pdf = pisa.pisaDocument(BytesIO(html.encode("UTF-8")), response)
         if not pdf.err:
+            #return HttpResponse(html.encode("UTF-8"))
             return HttpResponse(response.getvalue(), content_type='application/pdf')
         else:
             return HttpResponse("Error Rendering PDF", status=400)
