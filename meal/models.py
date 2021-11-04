@@ -12,16 +12,21 @@ class Meal(models.Model):
   object_id = models.PositiveIntegerField()
   content_object = GenericForeignKey('content_type', 'object_id')
 
-  def __str__(self):
-    return self.type_meal
-
   class Meta:
     db_table ='meal'
+
 
 class MealFood (models.Model):
   food = models.ForeignKey(Food, on_delete=models.CASCADE)
   meal = models.ForeignKey(Meal, on_delete=models.CASCADE)
   weight = models.DecimalField(max_digits=8, decimal_places=1, db_column='weight')
 
+
   class Meta:
     db_table ='meal_food' 
+
+  
+  
+
+  
+
