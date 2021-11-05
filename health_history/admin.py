@@ -15,6 +15,7 @@ class PatientHealthHistoryAdmin(admin.ModelAdmin):
     model = PatientHealthHistory
     inlines = (FamilyHealthHistoryInline,)
     exclude = ('registered_by', )
+    search_fields = ['patient__first_name','patient__last_name','patient__cpf', ]
 
     def save_model(self, request, obj, form, change) :
         obj.registered_by_id = request.user.id

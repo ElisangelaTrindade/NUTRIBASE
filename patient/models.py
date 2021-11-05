@@ -2,7 +2,6 @@ from django.db import models
 from cpffield import cpffield
 from user.models import User
 from location.models import City, State
-
 from smart_selects.db_fields import ChainedForeignKey
 
 
@@ -22,6 +21,7 @@ class Patient(models.Model):
       ('M', 'Male'),
       ('F', 'Female'),
     )
+    
   gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
   
   def __str__(self):

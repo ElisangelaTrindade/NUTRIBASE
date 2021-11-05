@@ -20,7 +20,6 @@ class Command(BaseCommand):
     'add_city', 'change_city', 'delete_city', 'view_city', 'add_patient', 'change_patient', 'delete_patient', 'view_patient', 'add_phone','change_phone', 'delete_phone', 'view_phone', 'add_nutritionalconduct',\
     'change_nutritionalconduct', 'delete_nutritionalconduct', 'view_nutritionalconduct', 'add_user', 'change_user', 'delete_user', 'view_user'],
     }
-
     def handle(self, *args, **kwargs):
         for groupName in self.groups:
             new_group, created = Group.objects.get_or_create(name=groupName)

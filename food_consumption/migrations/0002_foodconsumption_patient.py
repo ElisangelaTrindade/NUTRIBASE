@@ -9,13 +9,13 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('diet_plan', '0001_initial'),
+        ('food_consumption', '0001_initial'),
         ('patient', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='dietplan',
+            model_name='foodconsumption',
             name='patient',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='patient.patient'),
         ),

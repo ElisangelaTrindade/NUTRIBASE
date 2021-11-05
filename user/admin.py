@@ -19,11 +19,17 @@ def label_from_instance(self):
 def __str__(self):
     return self.employee
 
+class EmployeeAdmin(admin.ModelAdmin):
+    search_fields = ['first_name','last_name','cpf', ]
+
+admin.site.register(Employee, EmployeeAdmin)
+
+
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin):
     inlines = (EmployeeInline,)
 
-# Register your models here.
+
 
 
 

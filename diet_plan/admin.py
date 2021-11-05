@@ -31,6 +31,8 @@ class DietPlanAdmin(nested_admin.NestedModelAdmin):
   inlines = [
       MealAdmin,
   ]
+  search_fields = ['patient__first_name','patient__last_name','patient__cpf', ]
+  
 
 admin.site.register(DietPlan, DietPlanAdmin)
 

@@ -4,5 +4,9 @@ from django.contrib import admin
 from food_group.models import FoodGroup,Food
 
 
-admin.site.register(FoodGroup)
-admin.site.register(Food)
+class FoodAdmin(admin.ModelAdmin):
+    model = Food
+    search_fields = ['food_name','food_group__group', ]
+
+admin.site.register(Food, FoodAdmin)
+
