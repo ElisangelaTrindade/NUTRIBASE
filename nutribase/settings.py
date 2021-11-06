@@ -136,7 +136,6 @@ LANGUAGE_CODE = 'pt-br'
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
-TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 USE_L10N = True
 
