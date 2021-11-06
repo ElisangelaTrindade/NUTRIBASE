@@ -3,7 +3,6 @@ from exercise.models import Exercise, ExerciseType
 
 class ExerciseInline(admin.StackedInline):
     model = Exercise
-    verbose_name_plural='exercise'
     fieldsets = (('', {
         'fields': ('exercise_type', 'patient', 'frequency')
     }),)

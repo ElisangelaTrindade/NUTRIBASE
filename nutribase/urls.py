@@ -19,11 +19,16 @@ from django.urls import path
 from django.urls.conf import include, include
 from diet_plan.views import Pdf
 from django.conf.urls import url
+from django.conf.urls.i18n import i18n_patterns
+from django.contrib import admin
+from django.urls import path
 
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('render/pdf/<diet_plan_id>/', Pdf.as_view()),
     url(r'^chaining/', include('smart_selects.urls')),
-]
+    prefix_default_language=False
+)
+
 

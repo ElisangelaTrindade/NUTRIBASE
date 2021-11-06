@@ -5,6 +5,7 @@ from django.contrib.auth import admin as auth_admin
 from .models import User
 from employee.models import Employee
 
+
 class EmployeeInline(admin.StackedInline):
     model = Employee
     can_delete = True

@@ -3,552 +3,489 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-06 01:13+0000\n"
-"PO-Revision-Date: 2021-11-06 01:14+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_BR\n"
+"POT-Creation-Date: 2021-11-05 23:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: .\antopometric_evaluation\apps.py:7 .\antopometric_evaluation\models.py:29
 msgid "Antopometric Evaluation"
-msgstr "Avaliação Antopométrica"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:8 .\clinic_evaluation\models.py:8
-#: .\diet_plan\models.py:9 .\exercise\models.py:17
-#: .\food_consumption\models.py:9 .\food_diary\models.py:9
-#: .\health_history\models.py:9 .\nutritional_conduct\models.py:9
+#: .\diet_plan\models.py:9 .\exercise\models.py:17 .\food_diary\models.py:9
+#: .\health_history\models.py:9
 msgid "patient"
-msgstr "Paciente"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:9 .\clinic_evaluation\models.py:9
-#: .\diet_plan\models.py:8 .\employee\models.py:15
-#: .\food_consumption\models.py:10 .\food_diary\models.py:8
+#: .\diet_plan\models.py:8 .\employee\models.py:15 .\food_diary\models.py:8
 #: .\health_history\models.py:10 .\patient\models.py:12
 msgid "registered_by"
-msgstr "Registrado por"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:10 .\food_group\models.py:32
 #: .\meal\models.py:26
 msgid "weight"
-msgstr "Peso"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:11
 msgid "height"
-msgstr "Altura"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:12
 msgid "bmi"
-msgstr "IMC"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:13
 msgid "arm_circumference"
-msgstr "Circunferência de braço"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:14
 msgid "abdomen_circumference"
-msgstr "Circunferência abdominal"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:15
 msgid "wrist_circumference"
-msgstr "Circunferência de  pulso"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:16 .\clinic_evaluation\models.py:15
 #: .\food_diary\models.py:11
 msgid "date_of_consultation"
-msgstr "Data da consulta"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:17 .\clinic_evaluation\models.py:16
 msgid "updated"
-msgstr "Atualizado em"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:18 .\clinic_evaluation\models.py:14
 #: .\nutritional_conduct\models.py:15
 msgid "additional_information"
-msgstr "Informações adicionais"
+msgstr ""
 
 #: .\antopometric_evaluation\models.py:30
 msgid "Antopometric Evaluations"
-msgstr "Avaliações Antopométricas"
+msgstr ""
 
 #: .\clinic_evaluation\apps.py:8 .\clinic_evaluation\models.py:23
 msgid "Clinic Evaluation"
-msgstr "Avaliação Clínica"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:10
 msgid "nails"
-msgstr "Unhas"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:11
 msgid "skin"
-msgstr "Pele"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:12
 msgid "bladder_habits"
-msgstr "Hábito urinário"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:13
 msgid "bowel_habits"
-msgstr "Hábito Intestinal"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:24
 msgid "Clinic Evaluations"
-msgstr "Avaliações Clínicas"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:27
 msgid "clinic_evaluation"
-msgstr "Avaliação Clínica"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:28
 msgid "dysphagia"
-msgstr "Disfagia"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:29
 msgid "pain"
-msgstr "Dor"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:30
 msgid "reflux"
-msgstr "Refluxo"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:31
 msgid "heart_burn"
-msgstr "Azia"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:32
 msgid "constipation"
-msgstr "Constipação"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:33
 msgid "nausea"
-msgstr "Náuseas"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:34
 msgid "diarrhea"
-msgstr "Diarreia"
+msgstr ""
 
-#: .\clinic_evaluation\models.py:35 .\clinic_evaluation\models.py:45
+#: .\clinic_evaluation\models.py:35 .\clinic_evaluation\models.py:43
 #: .\diet_plan\models.py:10 .\food_consumption\models.py:19
-#: .\food_consumption\models.py:46 .\food_diary\models.py:10
+#: .\food_diary\models.py:10
 msgid "description"
-msgstr "Descrição"
+msgstr ""
 
-#: .\clinic_evaluation\models.py:40
-msgid "Gastrointestinal Tract Symptom"
-msgstr "Sintomas do Trato Gastrointestinal"
+#: .\clinic_evaluation\models.py:44
+msgid "date_of_exam"
+msgstr ""
 
-#: .\clinic_evaluation\models.py:41
-msgid "Gastrointestinal Tract Symptoms"
-msgstr "Sintomas do Trato Gastrointestinal"
+#: .\clinic_evaluation\models.py:45
+msgid "upload"
+msgstr ""
 
 #: .\clinic_evaluation\models.py:46
-msgid "date_of_exam"
-msgstr "Data do Exame"
-
-#: .\clinic_evaluation\models.py:47
-msgid "upload"
-msgstr "Anexar Documento"
-
-#: .\clinic_evaluation\models.py:48
 msgid "name_exam"
-msgstr "Nome do Exame"
-
-#: .\clinic_evaluation\models.py:53
-msgid "Laboratorial Exam"
-msgstr "Exame Laboratorial"
-
-#: .\clinic_evaluation\models.py:54
-msgid "Laboratorial Exams"
-msgstr "Exames Laboratoriais"
+msgstr ""
 
 #: .\diet_plan\apps.py:7 .\diet_plan\models.py:18
 msgid "Diet Plan"
-msgstr "Plano Alimentar"
+msgstr ""
 
 #: .\diet_plan\models.py:11
 msgid "date_of_creation"
-msgstr "Data de  Elaboração"
+msgstr ""
 
 #: .\diet_plan\models.py:19
 msgid "Diet Plans"
-msgstr "Planos Alimentares"
+msgstr ""
 
 #: .\employee\apps.py:8 .\employee\models.py:34
 msgid "Employee"
-msgstr "Funcionário"
+msgstr ""
 
 #: .\employee\models.py:16
 msgid "hire_date"
-msgstr "Data de Contratação"
+msgstr ""
 
 #: .\employee\models.py:18 .\patient\models.py:14
 msgid "birthday"
-msgstr "Data de Nascimento"
+msgstr ""
 
 #: .\employee\models.py:19 .\patient\models.py:15
 msgid "email"
-msgstr "email"
+msgstr ""
 
 #: .\employee\models.py:20
 msgid "address"
-msgstr "Endereço"
+msgstr ""
 
 #: .\employee\models.py:21 .\location\models.py:5 .\patient\models.py:17
 msgid "state"
-msgstr "Estado"
+msgstr ""
 
 #: .\employee\models.py:23 .\patient\models.py:19
 msgid "zip code"
-msgstr "CEP"
+msgstr ""
 
 #: .\employee\models.py:35
 msgid "Employees"
-msgstr "Funcionários"
+msgstr ""
 
-#: .\exercise\apps.py:8 .\exercise\models.py:11 .\exercise\models.py:25
+#: .\exercise\apps.py:8
 msgid "Exercise"
-msgstr "Atividade Física"
+msgstr ""
 
-#: .\exercise\models.py:7
-msgid "name_exercise"
-msgstr "Atividade Física"
-
-#: .\exercise\models.py:12 .\exercise\models.py:26
+#: .\exercise\models.py:11 .\exercise\models.py:12
 msgid "Exercises"
-msgstr "Atividades Físicas"
+msgstr ""
 
 #: .\exercise\models.py:16
 msgid "exercise_type"
-msgstr "Tipo de Atividade"
+msgstr ""
 
 #: .\exercise\models.py:18
 msgid "frequency"
-msgstr "Frequência"
+msgstr ""
 
 #: .\food_consumption\apps.py:8
 msgid "Food Comsuption"
-msgstr "Consumo Alimentar"
+msgstr ""
 
 #: .\food_consumption\models.py:11
 msgid "soft_drink"
-msgstr "Refrigerante"
+msgstr ""
 
 #: .\food_consumption\models.py:12
 msgid "candy"
-msgstr "Doces"
+msgstr ""
 
 #: .\food_consumption\models.py:13
 msgid "deep_fried"
-msgstr "Frituras"
+msgstr ""
 
 #: .\food_consumption\models.py:14
 msgid "fast_food"
-msgstr "Fast Food"
+msgstr ""
 
 #: .\food_consumption\models.py:15
 msgid "processed_food"
-msgstr "Alimentos Processados"
+msgstr ""
 
 #: .\food_consumption\models.py:16
 msgid "canned"
-msgstr "Enlatados"
+msgstr ""
 
 #: .\food_consumption\models.py:17
 msgid "fruits"
-msgstr "Frutas"
+msgstr ""
 
 #: .\food_consumption\models.py:18
 msgid "vegetables"
-msgstr "Vegetais"
+msgstr ""
 
 #: .\food_consumption\models.py:28
 msgid "Food Consuption"
-msgstr "Consumo Alimentar"
+msgstr ""
 
 #: .\food_consumption\models.py:29
 msgid "Food Consuptions"
-msgstr "Consumos Alimentares"
-
-#: .\food_consumption\models.py:32 .\food_consumption\models.py:45
-#: .\nutritional_conduct\models.py:13
-msgid "food_consumption"
-msgstr "Consumo Alimentar"
-
-#: .\food_consumption\models.py:33
-msgid "intolerance_description"
-msgstr "Descrição das Intolerância Alimentar"
-
-#: .\food_consumption\models.py:41
-msgid "Food Intolerance"
-msgstr "Intolerância Alimentar"
-
-#: .\food_consumption\models.py:42
-msgid "Food Intolerances"
-msgstr "Intolerâncias Alimentares"
-
-#: .\food_consumption\models.py:53
-msgid "Food Preference"
-msgstr "Preferência Alimentar"
-
-#: .\food_consumption\models.py:54
-msgid "Food Preferences"
-msgstr "Preferências Alimentares"
+msgstr ""
 
 #: .\food_diary\apps.py:8 .\food_diary\models.py:18
 msgid "Food Diary"
-msgstr "Diário alimentar"
+msgstr ""
 
 #: .\food_diary\models.py:19
 msgid "Food Diaries"
-msgstr "Diários alimentares"
+msgstr ""
 
 #: .\food_group\apps.py:7 .\food_group\models.py:17
 msgid "Food Group"
-msgstr "Grupo Alimentar"
+msgstr ""
 
 #: .\food_group\models.py:6
 msgid "group"
-msgstr "Grupos"
+msgstr ""
 
 #: .\food_group\models.py:7 .\food_group\models.py:31
 msgid "calories"
-msgstr "Calorias"
+msgstr ""
 
 #: .\food_group\models.py:18
 msgid "Food Groups"
-msgstr "Grupos Alimentares"
-
-#: .\food_group\models.py:21
-msgid "food_group"
-msgstr "Grupo Alimentar"
+msgstr ""
 
 #: .\food_group\models.py:22
 msgid "food_name"
-msgstr "Nome do Alimento"
+msgstr ""
 
 #: .\food_group\models.py:23
 msgid "protein"
-msgstr "Proteína"
+msgstr ""
 
 #: .\food_group\models.py:24
 msgid "lipids"
-msgstr "Lipídios"
+msgstr ""
 
 #: .\food_group\models.py:25
 msgid "cholesterol"
-msgstr "Colesterol"
+msgstr ""
 
 #: .\food_group\models.py:26
 msgid "carbohydrates"
-msgstr "Carboidratos"
+msgstr ""
 
 #: .\food_group\models.py:27
 msgid "dietary_fiber"
-msgstr "Fibra Alimentar"
+msgstr ""
 
 #: .\food_group\models.py:28
 msgid "iron"
-msgstr "Ferro"
+msgstr ""
 
 #: .\food_group\models.py:29
 msgid "vitamin_C"
-msgstr "Vitamina C"
+msgstr ""
 
 #: .\food_group\models.py:30
 msgid "calcium"
-msgstr "Cálcio"
-
-#: .\food_group\models.py:43
-msgid "Food"
-msgstr "Alimento"
-
-#: .\food_group\models.py:44
-msgid "Foods"
-msgstr "Alimentos"
+msgstr ""
 
 #: .\health_history\apps.py:7
 msgid "Health History"
-msgstr "Histórico de saúde do paciente"
+msgstr ""
 
 #: .\health_history\models.py:11 .\health_history\models.py:29
 msgid "obesity"
-msgstr "Obesidade"
+msgstr ""
 
 #: .\health_history\models.py:12 .\health_history\models.py:30
 msgid "cardiovascular_disease"
-msgstr "Doenças cardiovasculares"
+msgstr ""
 
 #: .\health_history\models.py:13 .\health_history\models.py:31
 msgid "hypertension"
-msgstr "Hipertensão arterial"
+msgstr ""
 
 #: .\health_history\models.py:14 .\health_history\models.py:32
 msgid "cancer"
-msgstr "Câncer"
+msgstr ""
 
 #: .\health_history\models.py:15 .\health_history\models.py:33
 msgid "diabetes"
-msgstr "Diabetes"
+msgstr ""
 
 #: .\health_history\models.py:16 .\health_history\models.py:34
 msgid "dyslipidemia"
-msgstr "Dislipidemia"
+msgstr ""
 
 #: .\health_history\models.py:17
 msgid "other"
-msgstr "Outros"
+msgstr ""
 
 #: .\health_history\models.py:24
 msgid "Patient Health History"
-msgstr "Históricos de saúde do paciente"
+msgstr ""
 
 #: .\health_history\models.py:25
 msgid "Patient Health Histories"
-msgstr "Históricos de saúde dos pacientes"
+msgstr ""
 
 #: .\health_history\models.py:28
 msgid "patient_health_history"
-msgstr "Histórico de saúde do paciente"
+msgstr ""
 
 #: .\health_history\models.py:35
 msgid "others"
-msgstr "Outros"
-
-#: .\health_history\models.py:39
-msgid "Family Health History"
-msgstr "Histórico de saúde do paciente"
-
-#: .\health_history\models.py:40
-msgid "Family Health Histories"
-msgstr "Históricos de saúde familiar"
+msgstr ""
 
 #: .\location\apps.py:8
 msgid "Location"
-msgstr "Locação"
+msgstr ""
 
 #: .\location\models.py:6
 msgid "acrm"
-msgstr "Sigla do estado"
+msgstr ""
 
 #: .\location\models.py:19 .\patient\models.py:18
 msgid "city"
-msgstr "Cidade"
+msgstr ""
 
 #: .\meal\apps.py:8 .\meal\models.py:18
 msgid "Meal"
-msgstr "Refeição"
+msgstr ""
 
 #: .\meal\models.py:10
 msgid "type_meal"
-msgstr "Tipo de Refeição"
+msgstr ""
 
 #: .\meal\models.py:11
 msgid "time_meal"
-msgstr "Horário da Refeição"
+msgstr ""
 
 #: .\meal\models.py:12
 msgid "content_type"
-msgstr "Tipo conteudo"
+msgstr ""
 
 #: .\meal\models.py:13
 msgid "object_id"
-msgstr "id do objeto"
+msgstr ""
 
 #: .\meal\models.py:19
 msgid "Meals"
-msgstr "Refeições"
+msgstr ""
 
 #: .\meal\models.py:24
 msgid "food"
-msgstr "Alimento"
+msgstr ""
 
 #: .\meal\models.py:25
 msgid "meal"
-msgstr "Refeição"
-
-#: .\meal\models.py:33 .\meal\models.py:34
-msgid "Meal Foods"
-msgstr "Alimentos da Refeição"
+msgstr ""
 
 #: .\nutritional_conduct\apps.py:8
 msgid "Nutritional Conduct"
-msgstr "Conduta Nutricional"
+msgstr ""
+
+#: .\nutritional_conduct\models.py:9
+msgid "patientl"
+msgstr ""
 
 #: .\nutritional_conduct\models.py:10
 msgid "food_intolerance"
-msgstr "Intolerância alimentar"
+msgstr ""
 
 #: .\nutritional_conduct\models.py:11
 msgid "food_preferences"
-msgstr "Preferência Alimentar"
+msgstr ""
 
 #: .\nutritional_conduct\models.py:12
 msgid "diet_plan"
-msgstr "Plano Alimentar"
+msgstr ""
+
+#: .\nutritional_conduct\models.py:13
+msgid "food_consumption"
+msgstr ""
 
 #: .\nutritional_conduct\models.py:14
 msgid "caloric_needs"
-msgstr "Necessidade Calórica"
+msgstr ""
 
 #: .\nutritional_conduct\models.py:20
 msgid "Nutricional Conduct"
-msgstr "Conduta Nutricional"
+msgstr ""
 
 #: .\nutritional_conduct\models.py:21
 msgid "Nutricional Conducts"
-msgstr "Condutas Nutricionais"
+msgstr ""
 
 #: .\patient\apps.py:7
 msgid "Patient registration"
-msgstr "Registro de Pacientes"
+msgstr ""
 
 #: .\patient\models.py:10
 msgid "first name"
-msgstr "Primeiro nome"
+msgstr ""
 
 #: .\patient\models.py:11
 msgid "last name"
-msgstr "Sobrenome"
+msgstr ""
 
 #: .\patient\models.py:16
 msgid "street"
-msgstr "Endereço"
+msgstr ""
 
 #: .\patient\models.py:26
 msgid "gender"
-msgstr "Gênero"
+msgstr ""
 
 #: .\patient\models.py:33
 msgid "Patient"
-msgstr "Paciente"
+msgstr ""
 
 #: .\patient\models.py:34
 msgid "Patients"
-msgstr "Pacientes"
+msgstr ""
 
 #: .\phone\apps.py:7
 msgid "Phone number"
-msgstr "Telefone de contato"
+msgstr ""
 
 #: .\phone\models.py:14
 msgid "Phone"
-msgstr "Telefone de contato"
+msgstr ""
 
 #: .\phone\models.py:15
 msgid "Phones"
-msgstr "Telefones para contato"
+msgstr ""
 
 #: .\user\apps.py:7
 msgid "User Management"
-msgstr "Gerenciamento de Usuário"
+msgstr ""
 
 #: .\venv\Lib\site-packages\cpffield\validators.py:6
 msgid "Número de CPF inválido"
@@ -682,7 +619,7 @@ msgstr[1] ""
 #: .\venv\Lib\site-packages\django\forms\fields.py:292
 #: .\venv\Lib\site-packages\django\forms\fields.py:327
 msgid "Enter a number."
-msgstr "Insira um Número"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:434
 #, python-format
@@ -1823,6 +1760,3 @@ msgstr ""
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\tabular.html:33
 msgid "Delete?"
 msgstr ""
-
-#~ msgid "patientl"
-#~ msgstr "Paciente"
