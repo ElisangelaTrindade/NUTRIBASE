@@ -2,7 +2,6 @@ from django.conf.urls import url
 from django.contrib import admin
 from diet_plan.models import DietPlan
 from meal.models import Meal, MealFood
-from .views import Pdf
 import nested_admin
 
 class MealFoodAdmin(nested_admin.NestedStackedInline):

@@ -1,11 +1,12 @@
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
-from patient.models import Patient
-from employee.models import Employee
 from django.utils.translation import gettext_lazy as _
 
 class Phone(models.Model):
-  patient =models.ForeignKey(Patient, on_delete=models.CASCADE, verbose_name=('patient'))
-  employee =models.ForeignKey(Employee, on_delete=models.CASCADE, verbose_name=('employee'))
+  content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, verbose_name = _('content_type'))
+  object_id = models.PositiveIntegerField(verbose_name = _('object_id'))
+  content_object = GenericForeignKey('content_type', 'object_id')
   phone_number = models.CharField(max_length=14, db_column='phone_number', verbose_name=('phone number'))
   description = models.TextField(db_column='description', verbose_name=('description'))
   
