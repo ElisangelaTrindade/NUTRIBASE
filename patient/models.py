@@ -18,10 +18,11 @@ class Patient(models.Model):
   city = ChainedForeignKey(City, chained_field="state", chained_model_field="state", show_all = False, auto_choose = True, sort = True, verbose_name = _('city'))
   zip_code = models.CharField(max_length=15,default = '', db_column='zip_code', verbose_name = _('zip code'))
 
-  GENDER_CHOICES = (
-      ('M', 'Male'),
-      ('F', 'Female'),
+  GENDER_CHOICES = ( 
+      ('M', _('Male')),
+      ('F', _('Female')),
     )
+  
 
   gender = models.CharField(max_length=1, choices=GENDER_CHOICES, verbose_name = _('gender'))
   

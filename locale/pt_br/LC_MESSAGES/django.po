@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-06 01:13+0000\n"
-"PO-Revision-Date: 2021-11-06 01:19+0000\n"
+"POT-Creation-Date: 2021-11-06 02:25+0000\n"
+"PO-Revision-Date: 2021-11-06 02:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -51,15 +51,15 @@ msgstr "IMC"
 
 #: .\antopometric_evaluation\models.py:13
 msgid "arm_circumference"
-msgstr "Circunferência de braço"
+msgstr "Circunferência de Braço"
 
 #: .\antopometric_evaluation\models.py:14
 msgid "abdomen_circumference"
-msgstr "Circunferência abdominal"
+msgstr "Circunferência Abdominal"
 
 #: .\antopometric_evaluation\models.py:15
 msgid "wrist_circumference"
-msgstr "Circunferência de  pulso"
+msgstr "Circunferência de Pulso"
 
 #: .\antopometric_evaluation\models.py:16 .\clinic_evaluation\models.py:15
 #: .\food_diary\models.py:11
@@ -73,7 +73,7 @@ msgstr "Atualizado em"
 #: .\antopometric_evaluation\models.py:18 .\clinic_evaluation\models.py:14
 #: .\nutritional_conduct\models.py:15
 msgid "additional_information"
-msgstr "Informações adicionais"
+msgstr "Informações Adicionais"
 
 #: .\antopometric_evaluation\models.py:30
 msgid "Antopometric Evaluations"
@@ -416,7 +416,7 @@ msgstr "Históricos de Saúde dos Pacientes"
 
 #: .\health_history\models.py:28
 msgid "patient_health_history"
-msgstr "Histórico de saúde do paciente"
+msgstr "Histórico de Saúde do Paciente"
 
 #: .\health_history\models.py:35
 msgid "others"
@@ -424,11 +424,11 @@ msgstr "Outros"
 
 #: .\health_history\models.py:39
 msgid "Family Health History"
-msgstr "Histórico de saúde do paciente"
+msgstr "Histórico de Saúde do Paciente"
 
 #: .\health_history\models.py:40
 msgid "Family Health Histories"
-msgstr "Históricos de saúde familiar"
+msgstr "Históricos de Saúde Familiar"
 
 #: .\location\apps.py:8
 msgid "Location"
@@ -454,11 +454,11 @@ msgstr "Tipo de Refeição"
 msgid "time_meal"
 msgstr "Horário da Refeição"
 
-#: .\meal\models.py:12
+#: .\meal\models.py:12 .\phone\models.py:7
 msgid "content_type"
 msgstr "Tipo conteudo"
 
-#: .\meal\models.py:13
+#: .\meal\models.py:13 .\phone\models.py:8
 msgid "object_id"
 msgstr "id do objeto"
 
@@ -522,27 +522,35 @@ msgstr "Sobrenome"
 msgid "street"
 msgstr "Endereço"
 
-#: .\patient\models.py:26
+#: .\patient\models.py:22
+msgid "Male"
+msgstr "Masculino"
+
+#: .\patient\models.py:23
+msgid "Female"
+msgstr "Feminino"
+
+#: .\patient\models.py:27
 msgid "gender"
 msgstr "Gênero"
 
-#: .\patient\models.py:33
+#: .\patient\models.py:34
 msgid "Patient"
 msgstr "Paciente"
 
-#: .\patient\models.py:34
+#: .\patient\models.py:35
 msgid "Patients"
 msgstr "Pacientes"
 
 #: .\phone\apps.py:7
 msgid "Phone number"
-msgstr "Telefone de contato"
-
-#: .\phone\models.py:14
-msgid "Phone"
-msgstr "Telefone de contato"
+msgstr "Telefone de Contato"
 
 #: .\phone\models.py:15
+msgid "Phone"
+msgstr "Telefone de Contato"
+
+#: .\phone\models.py:16
 msgid "Phones"
 msgstr "Telefones para contato"
 
