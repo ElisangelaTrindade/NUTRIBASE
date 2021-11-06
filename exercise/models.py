@@ -3,6 +3,7 @@ from patient.models import Patient
 from user.models import User
 from django.utils.translation import gettext_lazy as _
 
+
 class ExerciseType(models.Model):
   name = models.CharField(max_length=255, db_column='type', verbose_name = _('name_exercise'))
 

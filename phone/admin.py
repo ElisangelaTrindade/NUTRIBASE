@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from phone.models import Phone
-
-# Register your models here.
-admin.site.register(Phone)
+class PhoneAdmin(admin.ModelAdmin):
+    ...
+    def has_module_permission(self, request):
+        return False

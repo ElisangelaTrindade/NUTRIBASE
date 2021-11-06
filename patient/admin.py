@@ -6,7 +6,8 @@ from django.contrib.contenttypes.admin import GenericTabularInline
 class PhoneAdmin(GenericTabularInline):
   model = Phone
   exclude = ('registered_by', )
-  min_num = 0
+  min_num = 2
+  max_num = 2
   
 
 class PatientAdmin(admin.ModelAdmin):
