@@ -7,8 +7,8 @@ class Phone(models.Model):
   content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, verbose_name = _('content_type'))
   object_id = models.PositiveIntegerField(verbose_name = _('object_id'))
   content_object = GenericForeignKey('content_type', 'object_id')
-  phone_number = models.CharField(max_length=14, db_column='phone_number', verbose_name=('phone number'))
-  description = models.CharField(max_length=200,db_column='description', verbose_name=('description'))
+  phone_number = models.CharField(max_length=14, db_column='phone_number', verbose_name= _('phone number'))
+  description = models.CharField(max_length=200,db_column='description', verbose_name= _('description'))
   
   class Meta: 
     db_table ='phone' 

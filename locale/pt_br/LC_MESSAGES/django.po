@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-06 02:25+0000\n"
-"PO-Revision-Date: 2021-11-06 02:31+0000\n"
+"POT-Creation-Date: 2021-11-06 02:47+0000\n"
+"PO-Revision-Date: 2021-11-06 02:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -138,6 +138,7 @@ msgstr "Diarreia"
 #: .\clinic_evaluation\models.py:35 .\clinic_evaluation\models.py:45
 #: .\diet_plan\models.py:10 .\food_consumption\models.py:19
 #: .\food_consumption\models.py:46 .\food_diary\models.py:10
+#: .\phone\models.py:11
 msgid "description"
 msgstr "Descrição"
 
@@ -204,6 +205,10 @@ msgstr "Endereço"
 #: .\employee\models.py:21 .\location\models.py:5 .\patient\models.py:17
 msgid "state"
 msgstr "Estado"
+
+#: .\employee\models.py:22 .\location\models.py:19 .\patient\models.py:18
+msgid "city"
+msgstr "Cidade"
 
 #: .\employee\models.py:23 .\patient\models.py:19
 msgid "zip code"
@@ -438,10 +443,6 @@ msgstr "Locação"
 msgid "acrm"
 msgstr "Sigla do estado"
 
-#: .\location\models.py:19 .\patient\models.py:18
-msgid "city"
-msgstr "Cidade"
-
 #: .\meal\apps.py:8 .\meal\models.py:18
 msgid "Meal"
 msgstr "Refeição"
@@ -544,6 +545,10 @@ msgstr "Pacientes"
 
 #: .\phone\apps.py:7
 msgid "Phone number"
+msgstr "Telefone de Contato"
+
+#: .\phone\models.py:10
+msgid "phone number"
 msgstr "Telefone de Contato"
 
 #: .\phone\models.py:15

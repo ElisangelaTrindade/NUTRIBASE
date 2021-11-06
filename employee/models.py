@@ -19,7 +19,7 @@ class Employee(models.Model):
   email = models.CharField(max_length=150,db_column='email_patient', verbose_name = _('email'))
   street = models.CharField(max_length=50, db_column='street', verbose_name = _('address'))
   state = models.ForeignKey(State, on_delete=models.CASCADE, verbose_name = _('state'))
-  city = ChainedForeignKey(City, chained_field="state", chained_model_field="state", show_all = False, auto_choose = True, sort = True)
+  city = ChainedForeignKey(City, chained_field="state", chained_model_field="state", show_all = False, auto_choose = True, sort = True, verbose_name = _('city'))
   zip_code = models.CharField(max_length=9,default = '', verbose_name = _('zip code'))
 
   def label_from_instance(self):
