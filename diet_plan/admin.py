@@ -16,8 +16,7 @@ class MealFoodAdmin(nested_admin.NestedStackedInline):
 class MealAdmin(nested_admin.NestedGenericTabularInline):
   model = Meal
   exclude = ('registered_by', )
-  max_num = 6
-  min_num = 3
+  min_num = 1
   can_delete= False
   inlines = [
       MealFoodAdmin,

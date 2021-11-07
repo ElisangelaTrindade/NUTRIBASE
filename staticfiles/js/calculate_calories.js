@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
             $('input[id*="id_meal-meal-content_type-object_id-"]').focusout(function() { 
                 $.calculateTotalOfCalories(django.jQuery)
             })
+            $.calculateTotalOfCalories(django.jQuery)
         });
 
     })(django.jQuery);
