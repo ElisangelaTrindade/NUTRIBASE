@@ -60,10 +60,15 @@ INSTALLED_APPS = [
     'meal',
     
     #3rd party
+    #pip3 install django-cpf
     'cpf_field',
     #pip3 install django-nested-admin
     'nested_admin',
+    #pip3 install django-smart-selects
     'smart_selects',
+
+    #pip3 install xhtml2pdf
+    #No need to omark as installed apps
 ]
 
 MIDDLEWARE = [
