@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'meal',
     
     #3rd party
-    'cpffield',
+    'cpf_field',
     #pip3 install django-nested-admin
     'nested_admin',
     'smart_selects',

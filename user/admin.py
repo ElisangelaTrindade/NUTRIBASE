@@ -15,6 +15,7 @@ class EmployeeInline(admin.StackedInline):
     model = Employee
     can_delete = True
     verbose_name_plural = 'employee'
+    exclude = ('registered_by',)
     fk_name = 'user'
     max_num = 1
     min_num = 1
