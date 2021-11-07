@@ -25,8 +25,8 @@ class MealFood (models.Model):
   meal = models.ForeignKey(Meal, on_delete=models.CASCADE, verbose_name = _('meal'))
   weight = models.DecimalField(max_digits=8, decimal_places=1, db_column='weight', verbose_name = _('weight'))
 
-  def test():
-    return 10
+  def calculate_calories(self):
+    return self.weight * self.food.food_group.calories / self.food.weight  
 
   class Meta:
     db_table ='meal_food' 

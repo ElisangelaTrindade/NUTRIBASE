@@ -94,8 +94,7 @@
                     <td>{{mealfood.food.food_group.group}} </td>
                     <td>{{mealfood.weight}}</td>
                     <td>
-                         mealfood.weight*mealfood.food.food_group.calories/mealfood.food.weight
-
+                        {{mealfood.calculate_calories}}
                     </td>
                 </tr>
                 {% endfor %}
