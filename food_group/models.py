@@ -38,6 +38,9 @@ class Food(models.Model):
   def __str__(self):
     return self.food_name
 
+  def calculate_calories_for(self, weight):
+      return weight * self.food_group.calories / self.weight   
+
   class Meta:
     db_table ='food'
     verbose_name = _('Food')

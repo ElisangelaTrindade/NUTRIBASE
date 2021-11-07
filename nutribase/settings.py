@@ -149,6 +149,9 @@ USE_L10N = True
 
 STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR.joinpath('staticfiles')
+STATICFILES_DIRS = [
+    BASE_DIR.joinpath('staticfiles'),
+]
 
 
 
