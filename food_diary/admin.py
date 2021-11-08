@@ -10,7 +10,7 @@ class MealFoodAdmin(nested_admin.NestedStackedInline):
 
 class MealAdmin(nested_admin.NestedGenericTabularInline):
   model = Meal
-  exclude = ('registered_by', )
+  exclude = ('registered_by',  )
   inlines = [
       MealFoodAdmin,
   ]
