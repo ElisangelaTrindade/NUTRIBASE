@@ -11,19 +11,24 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+        ('exercise', '0001_initial'),
         ('patient', '0001_initial'),
-        ('location', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='patient',
+            model_name='exercisetype',
             name='registered_by',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='registered_by'),
         ),
         migrations.AddField(
-            model_name='patient',
-            name='state',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='location.state', verbose_name='state'),
+            model_name='exercise',
+            name='exercise_type',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='exercise.exercisetype', verbose_name='exercise_type'),
+        ),
+        migrations.AddField(
+            model_name='exercise',
+            name='patient',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='patient.patient', verbose_name='patient'),
         ),
     ]

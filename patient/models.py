@@ -10,7 +10,7 @@ class Patient(models.Model):
   first_name= models.CharField(blank=True, max_length=150, verbose_name=_('first name'))
   last_name= models.CharField(blank=True, max_length=150, verbose_name=_('last name'))
   registered_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name = _('registered_by'))
-  cpf = CPFField('cpf')
+  cpf = CPFField('CPF',max_length=14, unique=True)
   birthday = models.DateField(verbose_name = _('birthday'))
   email = models.CharField(max_length=150,db_column='email_patient', verbose_name = _('email'))
   street = models.CharField(max_length=50, db_column='street', verbose_name = _('street'))

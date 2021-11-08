@@ -9,8 +9,6 @@ class AntopometricEvaluation (models.Model):
   registered_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name = _('registered_by'))
   weight = models.DecimalField(max_digits=6, decimal_places=2, db_column='weight', verbose_name = _('weight')) 
   height = models.DecimalField(max_digits=4, decimal_places=2, db_column='height', verbose_name = _('height'))
-
-  BMI = models.DecimalField(max_digits=4, decimal_places=2, db_column='ibm', verbose_name = _('bmi'))
   arm_circumference = models.DecimalField(max_digits=4, decimal_places=2, db_column='arm_circumference', verbose_name = _('arm_circumference')) 
   abdomen_circumference = models.DecimalField(max_digits=4, decimal_places=2, db_column='abdomen_circumference', verbose_name = _('abdomen_circumference')) 
   wrist_circumference = models.DecimalField(max_digits=4, decimal_places=2, db_column='wrist_circumference', verbose_name = _('wrist_circumference'))
@@ -23,7 +21,7 @@ class AntopometricEvaluation (models.Model):
     obj.save()
 
   def __str__(self):
-      return self.patient.first_name + " " + self.patient.last_name
+      return self.patient.first_name + " " + self.patient.last_name + " " + str(self.updated)
   
   class Meta:
     db_table ='antopometric_evaluation' 
@@ -41,21 +39,21 @@ class AntopometricEvaluation (models.Model):
       return ""
 
     if (bmi <= 16):
-      return _('Underweight 3'),
+      return _('Underweight 3') + " - " + str(bmi)
     elif (bmi <= 17):
-      return _('Underweight 2')
+      return _('Underweight 2') + " - " + str(bmi)
     elif (bmi <= 18.5):
-      return _('Underweight 1')
+      return _('Underweight 1') + " - " + str(bmi)
     elif (bmi <= 25):
-      return _('Normal')
+      return _('Normal') + " - " + str(bmi)
     elif (bmi <= 30):
-      return _('Overweight')
+      return _('Overweight') + " - " + str(bmi)
     elif (bmi <= 35):
-      return _('Obesity')
+      return _('Obesity') + " - " + str(bmi)
     elif (bmi <= 40):
-      return _('Obesity 2')
+      return _('Obesity 2') + " - " + str(bmi)
     #bmi > 40
-    return _('Obesity 3')
+    return _('Obesity 3') + " - " + str(bmi)
 
-  stringify_bmi.short_description = _('Bmi')
+  stringify_bmi.short_description= _('Bmi')
 
