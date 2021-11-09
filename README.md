@@ -1,5 +1,5 @@
-This is my readme
 
+Nutribase
 
 # Pré requisitos:
 Instalação do Python
@@ -10,7 +10,7 @@ Configuração de Ambiente Virtual
 1. Instalando o Python
 Para instalar o Python acesse: https://python.org/downloads/. 
 Verifique a versão do pip, através do comando pip --version, caso não esteja disponível faça o download pelo https://bootstrap.pypa.io/get-pip.py
-Instale. Se a versão instalada estiver atualizada, você pode atualiza-la através do comando :
+Se a versão instalada estiver atualizada, você pode atualiza-la através do comando :
 ```bash 
 $python -m pip install --upgrade pip
 ```
@@ -69,11 +69,11 @@ sequido por :
 ```
 bash $python manage.py migrate
 ```
- Iniciar o servidor #
+ Iniciar o servidor 
 ```
 bash $python manage.py runserver
 ```
- Acesso ao projeto #
+ Acesso ao projeto 
 ```
 bash  http://127.0.0.1:8000/admin/ runserver
 ```
@@ -88,8 +88,10 @@ ________________________________________________________________
 
 1. Installing Python
 To install Python go to: https://python.org/downloads/.
-Check the pip version using the pip --version command, if it is not available, download it from https://bootstrap.pypa.io/get-pip.py
-Install. If the installed version is up to date, you can upgrade it via the command ```bash  python -m pip install --upgrade pip ```
+Check the pip version using the pip --version command, if it is not available, download it from https://bootstrap.pypa.io/get-pip.py. If the installed version is up to date, you can upgrade it via the command :
+```bash  
+python -m pip install --upgrade pip
+```
 
 2. To install Django run the command below at the command prompt (cmd)
 ```bash
@@ -113,11 +115,20 @@ To create the virtual environment run the commands below in cmd.
 2. Installation of APPs used in the project
 
 1. Populating the tables contained in the project
-The ```bash $python manage.py populate_food ``` command should be used to populate the food groups table
-The location table wi ll be populated via the command ```bash $python manage.py populate_locations ```
-The user groups table will be populated using the ```bash $python manage.py populate_create_groups ``` command
+ ```
+bash $python manage.py populate_food 
+``` 
+The command above needs be used to populate the food groups table
+The location table will be populated via the command :
+```
+bash $python manage.py populate_locations
+```
+The user groups table will be populated using the command:
+```
+bash $python manage.py populate_create_groups
+``` 
 
 2. Installation of apps used in the project
-    'cpf_field' - ```bash $pip3 install django-cpf ```
-    'nested_admin' - ```bash $pip3 install django-nested-admin ```
-    'smart_selects'- ```bash $pip3 install django-smart-selects ```
+    'cpf_field' -  $pip3 install django-cpf
+    'nested_admin' - bash $pip3 install django-nested-admin 
+    'smart_selects'- bash $pip3 install django-smart-selects 
