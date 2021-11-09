@@ -83,27 +83,34 @@ class NutritionalConduct(models.Model):
     
   def stringify_bmi(self):
     bmi = self.calculate_bmi()
+    age = (self.patient.birthday - self.date_of_consultation)
     if (bmi == None):
       return ""
     bmi = round(bmi, 2)
-
-    #bmi > 40
     type = _('Obesity 3')
-    if (bmi <= 16):
-      type =  _('Underweight 3') 
-    elif (bmi <= 17):
-      type = _('Underweight 2')
-    elif (bmi <= 18.5):
-      type = _('Underweight 1')
-    elif (bmi <= 25):
+    if (age<=65):
+      if (bmi <= 16):
+        type =  _('Underweight 3') 
+      elif (bmi <= 17):
+        type = _('Underweight 2')
+      elif (bmi <= 18.5):
+        type = _('Underweight 1')
+      elif (bmi <= 25):
+        type = _('Normal')
+      elif (bmi <= 30):
+        type = _('Overweight')
+      elif (bmi <= 35):
+        type = _('Obesity 1')
+      elif (bmi <= 40):
+        type = _('Obesity 2')
+    elif (bmi<22):
+      type = _('Underweight')
+    elif (bmi<=27):
       type = _('Normal')
-    elif (bmi <= 30):
+    else:
       type = _('Overweight')
-    elif (bmi <= 35):
-      type = _('Obesity 1')
-    elif (bmi <= 40):
-      type = _('Obesity 2')
+    
     
     return  type + " - " + str(bmi)
 
-  stringify_bmi.short_description= _('Bmi')
+  stringify_bmi.short_description= _('bmi')

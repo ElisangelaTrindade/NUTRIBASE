@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-09 00:20+0000\n"
-"PO-Revision-Date: 2021-11-09 00:21+0000\n"
+"POT-Creation-Date: 2021-11-09 01:08+0000\n"
+"PO-Revision-Date: 2021-11-09 01:07+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -478,8 +478,6 @@ msgid "Nutritional Conduct"
 msgstr "Conduta Nutricional"
 
 #: .\nutritional_conduct\models.py:11
-#, fuzzy
-#| msgid "Antopometric Evaluation"
 msgid "antopomeetric_evaluation"
 msgstr "Avaliação Antopométrica"
 
@@ -504,20 +502,16 @@ msgid "Intensive"
 msgstr "Intensivo"
 
 #: .\nutritional_conduct\models.py:22
-#, fuzzy
-#| msgid "Exercise"
 msgid "exercise"
-msgstr "Atividade Física"
+msgstr "FA (Fator atividade)"
 
 #: .\nutritional_conduct\models.py:29
 msgid "Nutricional Conducts"
 msgstr "Condutas Nutricionais"
 
 #: .\nutritional_conduct\models.py:76
-#, fuzzy
-#| msgid "caloric_needs"
 msgid "caloric needs"
-msgstr "Necessidade Calórica"
+msgstr "Necessidades Calórica"
 
 #: .\nutritional_conduct\models.py:91
 msgid "Obesity 3"
@@ -552,10 +546,8 @@ msgid "Obesity 2"
 msgstr "Obesidade 2"
 
 #: .\nutritional_conduct\models.py:109
-#, fuzzy
-#| msgid "bmi"
-msgid "Bmi"
-msgstr "IMC"
+msgid "bmi"
+msgstr "IMC (kg/m2)"
 
 #: .\patient\apps.py:7
 msgid "Patient registration"
