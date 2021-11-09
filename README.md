@@ -1,6 +1,4 @@
 
-#Nutribase
-
 Pré requisitos:
 Instalação do Python
 Instalação do Django;
@@ -78,7 +76,9 @@ $python manage.py runserver
 http://127.0.0.1:8000/admin/ runserver
 ```
 
-________________________________________________________________
+___________________________________________________________________________
+
+English version
 
 Pre requirements:
 1. Python Installation
