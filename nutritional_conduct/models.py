@@ -100,7 +100,7 @@ class NutritionalConduct(models.Model):
     elif (bmi <= 30):
       type = _('Overweight')
     elif (bmi <= 35):
-      type = _('Obesity')
+      type = _('Obesity 1')
     elif (bmi <= 40):
       type = _('Obesity 2')
     
