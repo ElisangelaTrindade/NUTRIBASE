@@ -1,8 +1,8 @@
 
 Pré requisitos:
-Instalação do Python
-Instalação do Django;
-Configuração de Ambiente Virtual
+1. Instalação do Python
+2. Instalação do Django;
+3. Configuração de Ambiente Virtual
 
 
 1. Instalando o Python
@@ -36,7 +36,7 @@ Das dependências necessárias para execução  do projeto:
 1. Execução dos comandos para população tabelas de: localização (cidade e estado), grupos de alimentos e grupos de usuários.
 2. Instalação de APPs utilizados no projeto 
 
-1. Populando as tabelas contidas no projeto
+  1. Populando as tabelas contidas no projeto
 A tabela de localidades será populada através do comando:
 ```bash 
 $python manage.py populate_locations
@@ -49,8 +49,7 @@ Já a tabela de grupos de usuários será populada com a utilização do comando
 ```bash
 $python manage.py populate_create_groups
 ```
-
-2. Instalação dos apps utilizados no projeto
+  2. Instalação dos apps utilizados no projeto
     'cpf_field' 
    ```bash
     $pip3 install django-cpf 
@@ -64,11 +63,11 @@ $python manage.py populate_create_groups
     $pip3 install django-smart-selects 
     ```
     
-Para criar super usuário :
+- Para criar super usuário :
 ```bash 
 $python manage.py createsuperuser
 ```
-Para migrar os dados para BD :
+- Para migrar os dados para BD :
 ```bash
 $python manage.py  makemigrations
 ```  
@@ -76,11 +75,11 @@ sequido por :
 ```bash
 $python manage.py migrate
 ```
- Iniciar o servidor 
+- Iniciar o servidor 
 ```bash
 $python manage.py runserver
 ```
- Acesso ao projeto 
+- Acesso ao projeto 
 ```bash 
 http://127.0.0.1:8000/admin/ runserver
 ```
@@ -124,7 +123,7 @@ The dependencies needed to carry out the project:
 1. Execution of commands for population tables of: food groups, user groups and location (city and state)
 2. Installation of APPs used in the project
 
-1. Populating the tables contained in the project
+  1. Populating the tables contained in the project
  ```bash 
  python manage.py populate_food 
 ``` 
@@ -138,7 +137,7 @@ The user groups table will be populated using the command:
 $python manage.py populate_create_groups
 ``` 
 
-2. Installation of apps used in the project
+  2. Installation of apps used in the project
     'cpf_field' 
    ```bash
     $pip3 install django-cpf 
@@ -152,11 +151,11 @@ $python manage.py populate_create_groups
     $pip3 install django-smart-selects 
     ```
     
-To create super user:
+- To create super user:
 ```bash
  $python manage.py createsuperuser
 ```
-To migrate data to DB:
+- To migrate data to DB:
 ```bash
  $python manage.py  makemigrations
 ```  
@@ -164,11 +163,11 @@ followed by:
 ```bash 
 $python manage.py migrate
 ```
-Tostart the server
+- To start the server
 ```bash 
 $python manage.py runserver
 ```
- Acessing the project
+-  Acessing the project
 ```bash 
  http://127.0.0.1:8000/admin/ runserver
 ```
