@@ -11,7 +11,9 @@ Configuração de Ambiente Virtual
 Para instalar o Python acesse: https://python.org/downloads/. 
 Verifique a versão do pip, através do comando pip --version, caso não esteja disponível faça o download pelo https://bootstrap.pypa.io/get-pip.py
 Instale. Se a versão instalada estiver atualizada, você pode atualiza-la através do comando :
-```bash $python -m pip install --upgrade pip ```
+```bash 
+$python -m pip install --upgrade pip
+```
 
 2. Para intalação do Django execute o comando abaixo no prompt de comando (cmd)
 ```bash $ python -m pip install Django```
