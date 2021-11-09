@@ -89,8 +89,8 @@ Pre requirements:
 1. Installing Python
 To install Python go to: https://python.org/downloads/.
 Check the pip version using the pip --version command, if it is not available, download it from https://bootstrap.pypa.io/get-pip.py. If the installed version is up to date, you can upgrade it via the command :
-```
-bash python -m pip install --upgrade pip
+```bash 
+python -m pip install --upgrade pip
 ```
 
 2. To install Django run the command below at the command prompt (cmd)
@@ -106,6 +106,7 @@ To create the virtual environment run the commands below in cmd.
 ```bash
  $python .manage.py -m venv venv 
 ```
+
 ```bash
 .\venv\Scripts\activate
 ```
@@ -115,17 +116,17 @@ The dependencies needed to carry out the project:
 2. Installation of APPs used in the project
 
 1. Populating the tables contained in the project
- ```
-bash $python manage.py populate_food 
+ ```bash 
+ python manage.py populate_food 
 ``` 
 The command above needs be used to populate the food groups table
 The location table will be populated via the command :
-```
-bash $python manage.py populate_locations
+```bash
+$python manage.py populate_locations
 ```
 The user groups table will be populated using the command:
-```
-bash $python manage.py populate_create_groups
+```bash
+$python manage.py populate_create_groups
 ``` 
 
 2. Installation of apps used in the project
