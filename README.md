@@ -78,6 +78,6 @@ The location table wi ll be populated via the command ```bash $python manage.py 
 The user groups table will be populated using the ```bash $python manage.py populate_create_groups ``` command
 
 ## 2. Installation of apps used in the project
-    'cpf_field' - ```bash  $pip3 install django-cpf ```
+    'cpf_field' - ```bash $pip3 install django-cpf ```
     'nested_admin' - ```bash $pip3 install django-nested-admin ```
     'smart_selects'- ```bash $pip3 install django-smart-selects ```
