@@ -51,9 +51,18 @@ $python manage.py populate_create_groups
 ```
 
 2. Instalação dos apps utilizados no projeto
-    'cpf_field' - $pip3 install django-cpf 
-    'nested_admin' - $pip3 install django-nested-admin 
-    'smart_selects'-  $pip3 install django-smart-selects 
+    'cpf_field' 
+   ```bash
+    $pip3 install django-cpf 
+   ```
+    'nested_admin' 
+   ```bash
+    $pip3 install django-nested-admin 
+   ```
+    'smart_selects'
+    ```bash
+    $pip3 install django-smart-selects 
+    ```
     
 Para criar super usuário :
 ```bash 
@@ -130,9 +139,18 @@ $python manage.py populate_create_groups
 ``` 
 
 2. Installation of apps used in the project
-    'cpf_field' -  $pip3 install django-cpf
-    'nested_admin' - bash $pip3 install django-nested-admin 
-    'smart_selects'- bash $pip3 install django-smart-selects 
+    'cpf_field' 
+   ```bash
+    $pip3 install django-cpf 
+   ```
+    'nested_admin' 
+   ```bash
+    $pip3 install django-nested-admin 
+   ```
+    'smart_selects'
+    ```bash
+    $pip3 install django-smart-selects 
+    ```
     
 To create super user:
 ```bash
