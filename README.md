@@ -50,15 +50,15 @@ Já a tabela de grupos de usuários será populada com a utilização do comando
 $python manage.py populate_create_groups
 ```
   2. Instalação dos apps utilizados no projeto
-    'cpf_field' 
+    cpf_field
    ```bash
     $pip3 install django-cpf 
    ```
-    'nested_admin' 
+   nested_admin 
    ```bash
     $pip3 install django-nested-admin 
    ```
-    'smart_selects'
+   smart_selects
     ```bash
     $pip3 install django-smart-selects 
     ```
@@ -138,15 +138,15 @@ $python manage.py populate_create_groups
 ``` 
 
   2. Installation of apps used in the project
-    'cpf_field' 
+   cpf_field 
    ```bash
     $pip3 install django-cpf 
    ```
-    'nested_admin' 
+   nested_admin
    ```bash
     $pip3 install django-nested-admin 
    ```
-    'smart_selects'
+   smart_selects
     ```bash
     $pip3 install django-smart-selects 
     ```
