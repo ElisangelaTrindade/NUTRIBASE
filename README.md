@@ -2,37 +2,37 @@ This is my readme
 
 
 # Pré requisitos:
-1. Instalação do Python
-2. Instalação do Django;
-3. Configuração de Ambiente Virtual
+Instalação do Python
+Instalação do Django;
+Configuração de Ambiente Virtual
 
 
-1. Instalando o Python
+-- Instalando o Python
 Para instalar o Python acesse: https://python.org/downloads/. 
 Verifique a versão do pip, através do comando pip --version, caso não esteja disponível faça o download pelo https://bootstrap.pypa.io/get-pip.py
 Instale. Se a versão instalada estiver atualizada, você pode atualiza-la através do comando :
 ```bash $python -m pip install --upgrade pip ```
 
-2. Para intalação do Django execute o comando abaixo no prompt de comando (cmd)
+-- Para intalação do Django execute o comando abaixo no prompt de comando (cmd)
 ```bash  $ python -m pip install Django ```
 2.1 Para  instalar uma versão do Django fornecida pela sua distribuição do sistema operacional, digite o comando abaixo no prompt de comando 
 ``` bash $sudo apt-get install python-django ```
 
-3. Configurando ambiente virtual (cmd)
+-- Configurando ambiente virtual (cmd)
 Para criação  do ambiente virtual execute os comandos abaixo no cmd.
 ```bash $python .manage.py -m venv venv  ```
 ```bash .\venv\Scripts\activate ```
 
 # Das dependências necessárias para execução  do projeto:
-1. Execução dos comandos para população tabelas de: localização (cidade e estado), grupos de alimentos e grupos de usuários.
-2. Instalação de APPs utilizados no projeto 
+-- Execução dos comandos para população tabelas de: localização (cidade e estado), grupos de alimentos e grupos de usuários.
+-- Instalação de APPs utilizados no projeto 
 
 Populando as tabelas contidas no projeto
 A tabela de localidades será populada através do comando ```bash $python manage.py populate_locations ```
 O comando ```bash $python manage.py populate_food ``` deverá ser utilizado para popular a tabela de grupos de alimentos
 Já a tabela de grupos de usuários será populada com a utilização do comando ```bash $python manage.py populate_create_groups ```
 
-2. Instalação dos apps utilizados no projeto
+Instalação dos apps utilizados no projeto
     'cpf_field' -  $pip3 install django-cpf 
     'nested_admin' - $pip3 install django-nested-admin 
     'smart_selects'-  $pip3 install django-smart-selects 
