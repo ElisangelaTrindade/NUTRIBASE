@@ -89,8 +89,8 @@ Pre requirements:
 1. Installing Python
 To install Python go to: https://python.org/downloads/.
 Check the pip version using the pip --version command, if it is not available, download it from https://bootstrap.pypa.io/get-pip.py. If the installed version is up to date, you can upgrade it via the command :
-```bash  
-python -m pip install --upgrade pip
+```
+bash python -m pip install --upgrade pip
 ```
 
 2. To install Django run the command below at the command prompt (cmd)
