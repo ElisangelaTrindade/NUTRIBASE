@@ -27,33 +27,3 @@ class AntopometricEvaluation (models.Model):
     db_table ='antopometric_evaluation' 
     verbose_name = _('Antopometric Evaluation')
     verbose_name_plural = _('Antopometric Evaluations')
-
-  def calculate_bmi(self):
-    if (self.pk is None):
-      return None
-    return self.weight / (self.height * self.height)
-    
-  def stringify_bmi(self):
-    bmi = self.calculate_bmi()
-    if (bmi == None):
-      return ""
-
-    if (bmi <= 16):
-      return _('Underweight 3') + " - " + str(bmi)
-    elif (bmi <= 17):
-      return _('Underweight 2') + " - " + str(bmi)
-    elif (bmi <= 18.5):
-      return _('Underweight 1') + " - " + str(bmi)
-    elif (bmi <= 25):
-      return _('Normal') + " - " + str(bmi)
-    elif (bmi <= 30):
-      return _('Overweight') + " - " + str(bmi)
-    elif (bmi <= 35):
-      return _('Obesity') + " - " + str(bmi)
-    elif (bmi <= 40):
-      return _('Obesity 2') + " - " + str(bmi)
-    #bmi > 40
-    return _('Obesity 3') + " - " + str(bmi)
-
-  stringify_bmi.short_description= _('Bmi')
-

@@ -7,7 +7,7 @@ from nutritional_conduct.models import NutritionalConduct
 class NutritionalConductAdmin(admin.ModelAdmin):
   model = NutritionalConduct
   exclude = ('registered_by',)
-  readonly_fields = ('stringify_calory_need',)
+  readonly_fields = ('stringify_calory_need', 'stringify_bmi', )
 
   def save_model(self, request, obj, form, change) :
     obj.registered_by_id = request.user.id

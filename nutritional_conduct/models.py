@@ -68,9 +68,42 @@ class NutritionalConduct(models.Model):
   def stringify_calory_need(self):
     ecb = self.essential_calorie_basal()
     factor = self.activity_factor()
-    if (self.caloric_needs == None):
+    if (ecb == None or factor == None):
       return " "
-    return str(ecb * factor)
+    return str(round(ecb * factor, 2))
 
 
   stringify_calory_need.short_description = _('caloric needs') 
+
+  
+  def calculate_bmi(self):
+    if (self.pk is None):
+      return None
+    return self.antopometric_evaluation.weight / (self.antopometric_evaluation.height * self.antopometric_evaluation.height)
+    
+  def stringify_bmi(self):
+    bmi = self.calculate_bmi()
+    if (bmi == None):
+      return ""
+    bmi = round(bmi, 2)
+
+    #bmi > 40
+    type = _('Obesity 3')
+    if (bmi <= 16):
+      type =  _('Underweight 3') 
+    elif (bmi <= 17):
+      type = _('Underweight 2')
+    elif (bmi <= 18.5):
+      type = _('Underweight 1')
+    elif (bmi <= 25):
+      type = _('Normal')
+    elif (bmi <= 30):
+      type = _('Overweight')
+    elif (bmi <= 35):
+      type = _('Obesity')
+    elif (bmi <= 40):
+      type = _('Obesity 2')
+    
+    return  type + " - " + str(bmi)
+
+  stringify_bmi.short_description= _('Bmi')
