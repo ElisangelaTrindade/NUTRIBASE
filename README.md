@@ -1,7 +1,7 @@
 This is my readme
 
 
-## Pré requisitos:
+# Pré requisitos:
 Instalação do Python
 Instalação do Django;
 Configuração de Ambiente Virtual
@@ -24,7 +24,7 @@ Para criação  do ambiente virtual execute os comandos abaixo no cmd.
 Para ativar o ambiente virtual
 ```bash .\venv\Scripts\activate ```
 
-## Das dependências necessárias para execução  do projeto:
+# Das dependências necessárias para execução  do projeto:
 1. Execução dos comandos para população tabelas de: localização (cidade e estado), grupos de alimentos e grupos de usuários.
 2. Instalação de APPs utilizados no projeto 
 
@@ -38,8 +38,8 @@ Já a tabela de grupos de usuários será populada com a utilização do comando
     'nested_admin' - $pip3 install django-nested-admin 
     'smart_selects'-  $pip3 install django-smart-selects 
     
-# Para criar super usuário ```bash $python manage.py createsuperuser```
-# Migrar dados para BD 
+Para criar super usuário ```bash $python manage.py createsuperuser```
+Para igrar dados para BD 
 ```bash $python manage.py  makemigrations ```  
 sequido do :
 ```bash $python manage.py migrate ```
