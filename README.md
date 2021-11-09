@@ -14,38 +14,42 @@ Instale. Se a versão instalada estiver atualizada, você pode atualiza-la atrav
 ```bash $python -m pip install --upgrade pip ```
 
 2. Para intalação do Django execute o comando abaixo no prompt de comando (cmd)
-```bash  $ python -m pip install Django ```
+```bash $ python -m pip install Django```
 2.1 Para  instalar uma versão do Django fornecida pela sua distribuição do sistema operacional, digite o comando abaixo no prompt de comando 
-``` bash $sudo apt-get install python-django ```
+```bash $sudo apt-get install python-django```
 
 3. Configurando ambiente virtual (cmd)
 Para criação  do ambiente virtual execute os comandos abaixo no cmd.
-```bash $python .manage.py -m venv venv  ```
+```bash $python .manage.py -m venv venv ```
 Para ativar o ambiente virtual
-```bash .\venv\Scripts\activate ```
+```bash .\venv\Scripts\activate```
 
 # Das dependências necessárias para execução  do projeto:
 1. Execução dos comandos para população tabelas de: localização (cidade e estado), grupos de alimentos e grupos de usuários.
 2. Instalação de APPs utilizados no projeto 
 
 1. Populando as tabelas contidas no projeto
-A tabela de localidades será populada através do comando ```bash $python manage.py populate_locations ```
-O comando ```bash $python manage.py populate_food ``` deverá ser utilizado para popular a tabela de grupos de alimentos
-Já a tabela de grupos de usuários será populada com a utilização do comando ```bash $python manage.py populate_create_groups ```
+A tabela de localidades será populada através do comando:
+```bash $python manage.py populate_locations ```
+O comando  utilizado para popular a tabela de grupos de alimentos:
+```bash $python manage.py populate_food ``` 
+Já a tabela de grupos de usuários será populada com a utilização do comando 
+```bash $python manage.py populate_create_groups ```
 
 2. Instalação dos apps utilizados no projeto
-    'cpf_field' -  $pip3 install django-cpf 
+    'cpf_field' - $pip3 install django-cpf 
     'nested_admin' - $pip3 install django-nested-admin 
     'smart_selects'-  $pip3 install django-smart-selects 
     
-Para criar super usuário ```bash $python manage.py createsuperuser```
-Para igrar dados para BD 
+Para criar super usuário :
+```bash $python manage.py createsuperuser```
+Para migrar os dados para BD :
 ```bash $python manage.py  makemigrations ```  
 sequido do :
 ```bash $python manage.py migrate ```
-# Iniciar o servidor 
+# Iniciar o servidor #
 ```bash $python manage.py runserver ```
-# Acesso ao projeto 
+# Acesso ao projeto #
 ```bash  http://127.0.0.1:8000/admin/ runserver ```
 
 ________________________________________________________________
