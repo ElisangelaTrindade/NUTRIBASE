@@ -59,9 +59,9 @@ $python manage.py populate_create_groups
     $pip3 install django-nested-admin 
    ```
    smart_selects
-    ```bash
+   ```bash
     $pip3 install django-smart-selects 
-    ```
+   ```
     
 - Para criar super usuário :
 ```bash 
@@ -147,9 +147,9 @@ $python manage.py populate_create_groups
     $pip3 install django-nested-admin 
    ```
    smart_selects
-    ```bash
+   ```bash
     $pip3 install django-smart-selects 
-    ```
+   ```
     
 - To create super user:
 ```bash
