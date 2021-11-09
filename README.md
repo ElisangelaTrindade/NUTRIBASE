@@ -1,7 +1,7 @@
 
-Nutribase
+#Nutribase
 
-# Pré requisitos:
+Pré requisitos:
 Instalação do Python
 Instalação do Django;
 Configuração de Ambiente Virtual
@@ -34,7 +34,7 @@ Para ativar o ambiente virtual
 bash .\venv\Scripts\activate
 ```
 
-# Das dependências necessárias para execução  do projeto:
+Das dependências necessárias para execução  do projeto:
 1. Execução dos comandos para população tabelas de: localização (cidade e estado), grupos de alimentos e grupos de usuários.
 2. Instalação de APPs utilizados no projeto 
 
@@ -80,7 +80,7 @@ bash  http://127.0.0.1:8000/admin/ runserver
 
 ________________________________________________________________
 
-## Pre requirements:
+Pre requirements:
 1. Python Installation
 2.Installation of Django;
 3.Configuration of Virtual Environment
@@ -110,7 +110,7 @@ To create the virtual environment run the commands below in cmd.
 .\venv\Scripts\activate
 ```
 
-## The dependencies needed to carry out the project:
+The dependencies needed to carry out the project:
 1. Execution of commands for population tables of: food groups, user groups and location (city and state)
 2. Installation of APPs used in the project
 
@@ -132,3 +132,24 @@ bash $python manage.py populate_create_groups
     'cpf_field' -  $pip3 install django-cpf
     'nested_admin' - bash $pip3 install django-nested-admin 
     'smart_selects'- bash $pip3 install django-smart-selects 
+    
+To create super user:
+```bash
+ $python manage.py createsuperuser
+```
+To migrate data to DB:
+```bash
+ $python manage.py  makemigrations
+```  
+followed by:
+```bash 
+$python manage.py migrate
+```
+Tostart the server
+```bash 
+$python manage.py runserver
+```
+ Acessing the project
+```bash 
+ http://127.0.0.1:8000/admin/ runserver
+```
