@@ -81,7 +81,7 @@ $python manage.py runserver
 ```
 - Acesso ao projeto 
 ```bash 
-http://127.0.0.1:8000/admin/ runserver
+http://127.0.0.1:8000/admin/
 ```
 
 ___________________________________________________________________________
@@ -169,5 +169,5 @@ $python manage.py runserver
 ```
 - Acessing the project
 ```bash 
- http://127.0.0.1:8000/admin/runserver
+ http://127.0.0.1:8000/admin
 ```
