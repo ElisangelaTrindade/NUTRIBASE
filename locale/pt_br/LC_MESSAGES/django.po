@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-09 01:08+0000\n"
-"PO-Revision-Date: 2021-11-09 01:07+0000\n"
+"POT-Creation-Date: 2021-11-10 19:41+0000\n"
+"PO-Revision-Date: 2021-11-10 19:43+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -23,14 +23,14 @@ msgid "Antopometric Evaluation"
 msgstr "Avaliação Antopométrica"
 
 #: .\antopometric_evaluation\models.py:8 .\clinic_evaluation\models.py:8
-#: .\diet_plan\models.py:9 .\exercise\models.py:22
+#: .\diet_plan\models.py:12 .\exercise\models.py:22
 #: .\food_consumption\models.py:9 .\food_diary\models.py:9
 #: .\health_history\models.py:9 .\nutritional_conduct\models.py:10
 msgid "patient"
 msgstr "Paciente"
 
 #: .\antopometric_evaluation\models.py:9 .\clinic_evaluation\models.py:9
-#: .\diet_plan\models.py:8 .\employee\models.py:15 .\exercise\models.py:9
+#: .\diet_plan\models.py:11 .\employee\models.py:15 .\exercise\models.py:9
 #: .\food_consumption\models.py:10 .\food_diary\models.py:8
 #: .\health_history\models.py:10 .\patient\models.py:12
 msgid "registered_by"
@@ -131,7 +131,7 @@ msgid "diarrhea"
 msgstr "Diarreia"
 
 #: .\clinic_evaluation\models.py:35 .\clinic_evaluation\models.py:45
-#: .\diet_plan\models.py:10 .\food_consumption\models.py:19
+#: .\diet_plan\models.py:13 .\food_consumption\models.py:19
 #: .\food_consumption\models.py:46 .\food_diary\models.py:10
 #: .\phone\models.py:11
 msgid "description"
@@ -165,15 +165,19 @@ msgstr "Exame Laboratorial"
 msgid "Laboratorial Exams"
 msgstr "Exames Laboratoriais"
 
-#: .\diet_plan\apps.py:7 .\diet_plan\models.py:18
+#: .\diet_plan\admin.py:58 .\diet_plan\admin.py:61
+msgid "Generate PDF"
+msgstr ""
+
+#: .\diet_plan\apps.py:7 .\diet_plan\models.py:21
 msgid "Diet Plan"
 msgstr "Plano Alimentar"
 
-#: .\diet_plan\models.py:11
+#: .\diet_plan\models.py:14
 msgid "date_of_creation"
 msgstr "Data de  Elaboração"
 
-#: .\diet_plan\models.py:19
+#: .\diet_plan\models.py:22
 msgid "Diet Plans"
 msgstr "Planos Alimentares"
 
@@ -485,7 +489,7 @@ msgstr "Avaliação Antopométrica"
 msgid "diet_plan"
 msgstr "Plano Alimentar"
 
-#: .\nutritional_conduct\models.py:13 .\nutritional_conduct\models.py:28
+#: .\nutritional_conduct\models.py:13 .\nutritional_conduct\models.py:29
 msgid "Nutricional Conduct"
 msgstr "Conduta Nutricional"
 
@@ -505,49 +509,68 @@ msgstr "Intensivo"
 msgid "exercise"
 msgstr "FA (Fator atividade)"
 
-#: .\nutritional_conduct\models.py:29
+#: .\nutritional_conduct\models.py:30
 msgid "Nutricional Conducts"
 msgstr "Condutas Nutricionais"
 
-#: .\nutritional_conduct\models.py:76
+#: .\nutritional_conduct\models.py:77
 msgid "caloric needs"
 msgstr "Necessidades Calórica"
 
-#: .\nutritional_conduct\models.py:91
+#: .\nutritional_conduct\models.py:92
 msgid "Obesity 3"
 msgstr "Obesidade 3"
 
-#: .\nutritional_conduct\models.py:93
+#: .\nutritional_conduct\models.py:95
 msgid "Underweight 3"
 msgstr "Abaixo do peso 3"
 
-#: .\nutritional_conduct\models.py:95
+#: .\nutritional_conduct\models.py:97
 msgid "Underweight 2"
 msgstr "Abaixo do peso 2"
 
-#: .\nutritional_conduct\models.py:97
+#: .\nutritional_conduct\models.py:99
 msgid "Underweight 1"
 msgstr "Abaixo do peso 1"
 
-#: .\nutritional_conduct\models.py:99
+#: .\nutritional_conduct\models.py:101 .\nutritional_conduct\models.py:112
+#: .\nutritional_conduct\models.py:122
 msgid "Normal"
 msgstr "Normal"
 
-#: .\nutritional_conduct\models.py:101
+#: .\nutritional_conduct\models.py:103 .\nutritional_conduct\models.py:114
 msgid "Overweight"
 msgstr "Sobrepeso"
 
-#: .\nutritional_conduct\models.py:103
+#: .\nutritional_conduct\models.py:105
 msgid "Obesity 1"
 msgstr "Obesidade 1"
 
-#: .\nutritional_conduct\models.py:105
+#: .\nutritional_conduct\models.py:107
 msgid "Obesity 2"
 msgstr "Obesidade 2"
 
-#: .\nutritional_conduct\models.py:109
+#: .\nutritional_conduct\models.py:110
+#, fuzzy
+#| msgid "Underweight 3"
+msgid "Underweight"
+msgstr "Abaixo do peso 3"
+
+#: .\nutritional_conduct\models.py:119
 msgid "bmi"
 msgstr "IMC (kg/m2)"
+
+#: .\nutritional_conduct\models.py:125
+msgid "High risk for cardiovascular disease "
+msgstr "Risco elevado para doenças cardiovasculares"
+
+#: .\nutritional_conduct\models.py:128
+msgid "High risk of cardiovascular disease "
+msgstr "Risco elevado para doenças cardiovasculares"
+
+#: .\nutritional_conduct\models.py:130
+msgid "Abdominal circunference"
+msgstr "Circunferência Abdominal"
 
 #: .\patient\apps.py:7
 msgid "Patient registration"

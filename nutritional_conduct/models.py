@@ -117,3 +117,17 @@ class NutritionalConduct(models.Model):
     return  type + " - " + str(bmi)
 
   stringify_bmi.short_description= _('bmi')
+
+  def stringify_cir_abdominal(self):
+    type = _('Normal')
+    if (self.patient.gender == 'F'):
+      if float((self.antopometric_evaluation.abdomen_circumference>80)):
+        type=_('High risk for cardiovascular disease ')
+    else:
+      if float((self.antopometric_evaluation.abdomen_circumference>94)):
+        type=_('High risk of cardiovascular disease ')
+    return  type 
+  stringify_cir_abdominal.short_description= _('Abdominal circunference')
+
+  
+  
