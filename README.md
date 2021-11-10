@@ -1,7 +1,7 @@
 
 Pré requisitos:
 1. Instalação do Python
-2. Instalação do Django;
+2. Instalação do Django
 3. Configuração de Ambiente Virtual
 
 
@@ -90,10 +90,9 @@ ___________________________________________________________________________
 English version
 
 Pre requirements:
-1. Python Installation
+1. Python Installation;
 2.Installation of Django;
 3.Configuration of Virtual Environment
-
 
 - Installing Python
 To install Python go to: https://python.org/downloads/.
