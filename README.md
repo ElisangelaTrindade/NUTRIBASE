@@ -95,22 +95,22 @@ Pre requirements:
 3.Configuration of Virtual Environment
 
 
-1. Installing Python
+- Installing Python
 To install Python go to: https://python.org/downloads/.
 Check the pip version using the pip --version command, if it is not available, download it from https://bootstrap.pypa.io/get-pip.py. If the installed version is up to date, you can upgrade it via the command :
 ```bash 
 python -m pip install --upgrade pip
 ```
 
-2. To install Django run the command below at the command prompt (cmd)
+-  To install Django run the command below at the command prompt (cmd)
 ```bash
 $ python -m pip install Django
 ```
-2.1 To install a version of Django provided by your operating system distribution, type the command below at the command prompt
+  To install a version of Django provided by your operating system distribution, type the command below at the command prompt
 ```bash
 $sudo apt-get install python-django
 ```
-3. Setting up virtual environment (cmd)
+- Setting up virtual environment (cmd)
 To create the virtual environment run the commands below in cmd.
 ```bash
  $python .manage.py -m venv venv 
@@ -120,7 +120,7 @@ To create the virtual environment run the commands below in cmd.
 .\venv\Scripts\activate
 ```
 
-The dependencies needed to carry out the project:
+- The dependencies needed to carry out the project:
 1. Execution of commands for population tables of: food groups, user groups and location (city and state)
 2. Installation of APPs used in the project
 
