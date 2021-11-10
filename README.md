@@ -6,6 +6,7 @@ Pré requisitos:
 
 
 1. Instalando o Python
+
 Para instalar o Python acesse: https://python.org/downloads/. 
 Verifique a versão do pip, através do comando pip --version, caso não esteja disponível faça o download pelo https://bootstrap.pypa.io/get-pip.py
 Se a versão instalada estiver atualizada, você pode atualiza-la através do comando :
