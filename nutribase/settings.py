@@ -66,6 +66,8 @@ INSTALLED_APPS = [
     'nested_admin',
     #pip3 install django-smart-selects
     'smart_selects',
+    #pip install django-object-actions
+    'django_object_actions',
 
     #pip3 install xhtml2pdf
     #No need to omark as installed apps

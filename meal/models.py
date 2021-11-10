@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 class Meal(models.Model):
   type_meal = models.CharField(max_length=50,db_column='type_meal', verbose_name = _('type_meal'))
-  time_meal = models.DateTimeField(db_column='time_meal', verbose_name = _('time_meal'))
+  time_meal = models.TimeField(db_column='time_meal', verbose_name = _('time_meal'))
   content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, verbose_name = _('content_type'))
   object_id = models.PositiveIntegerField(verbose_name = _('object_id'))
   content_object = GenericForeignKey('content_type', 'object_id')
@@ -26,7 +26,7 @@ class MealFood (models.Model):
   weight = models.DecimalField(max_digits=8, decimal_places=1, db_column='weight', verbose_name = _('weight'))
 
   def calculate_calories(self):
-    return self.weight * self.food.food_group.calories / self.food.weight  
+    return round(self.weight * self.food.food_group.calories / self.food.weight, 2)
 
   class Meta:
     db_table ='meal_food' 

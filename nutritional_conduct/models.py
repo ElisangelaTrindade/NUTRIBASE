@@ -9,7 +9,7 @@ from django.utils.translation import gettext_lazy as _
 class NutritionalConduct(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE, verbose_name = _('patient'))
   antopometric_evaluation = ChainedForeignKey(AntopometricEvaluation, chained_field="patient", chained_model_field="patient", show_all = False, auto_choose = True, sort = True, verbose_name = _('antopomeetric_evaluation'))
-  diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE, verbose_name = _('diet_plan'))
+  diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE, verbose_name = _('diet_plan'), unique=True)
   description_nutricional_conduct= models.TextField(blank=True, db_column='description_nutricional_conduct', verbose_name = _('Nutricional Conduct'))
   date_of_consultation=models.DateField( verbose_name = _('date_of_consultation'))
 
@@ -24,12 +24,13 @@ class NutritionalConduct(models.Model):
   def __str__(self):
     return self.patient.first_name + " " + self.patient.last_name
   class Meta:
+    unique_together = ['patient', 'antopometric_evaluation']
     db_table ='nutricional_conduct'
     verbose_name = _('Nutricional Conduct')
     verbose_name_plural = _('Nutricional Conducts')
 
   def essential_calorie_basal(self):
-    if (self.pk is None):
+    if (self.pk is None or self.date_of_consultation  is None or self.patient.birthday is None):
       return None
     age = int((self.date_of_consultation - self.patient.birthday).days/365)
     if (self.patient.gender == 'F'):
@@ -83,9 +84,10 @@ class NutritionalConduct(models.Model):
     
   def stringify_bmi(self):
     bmi = self.calculate_bmi()
-    age = int((self.date_of_consultation - self.patient.birthday).days/365)
-    if (bmi == None):
+    if (bmi == None  or self.date_of_consultation is None or self.patient.birthday is None):
       return ""
+    
+    age = int((self.date_of_consultation - self.patient.birthday).days/365)
     bmi = round(bmi, 2)
     type = _('Obesity 3')
     if ((age in range(18, 65))):

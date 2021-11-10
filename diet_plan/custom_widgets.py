@@ -1,5 +1,4 @@
 from django import forms
-from string import Template
 from django.utils.safestring import mark_safe
 from django.utils.encoding import smart_text
 from django.forms.utils import flatatt

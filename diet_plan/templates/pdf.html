@@ -69,7 +69,7 @@
         <div class="info">
             <request class="diet_plan">
                 <p> Paciente: {{diet_plan.patient.first_name}} {{diet_plan.patient.last_name}} </p> 
-                <p> IMC: {{evaluation.BMI}} </p>
+                <p> IMC: {{conduct.stringify_bmi}} </p>
                 <p> Nutricionista: {{diet_plan.registered_by.first_name}} {{diet_plan.patient.last_name}}</p>
                 <p> Data consulta: {{evaluation.date_of_consultation}} </p>
             </request>
@@ -101,6 +101,7 @@
             {% endfor %}
             </tbody>
         </table>
+        Total de calorias: {{ diet_plan.calculate_total_of_calories }}
     </div>
 </div>
 

@@ -1,6 +1,9 @@
 from django.db import models
 from patient.models import Patient
 from user.models import User
+from meal.models import Meal
+from django.contrib.contenttypes.models import ContentType
+
 from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
@@ -17,3 +20,13 @@ class DietPlan(models.Model):
     db_table ='diet_plan' 
     verbose_name = _('Diet Plan')
     verbose_name_plural = _('Diet Plans')
+
+  def calculate_total_of_calories(self):
+    #We rely here on another select, this is due to the content_type_id dependency lacking a meal_set
+    meals = Meal.objects.filter(object_id = self.id, content_type_id = ContentType.objects.get_for_model(self).id)
+    total = 0
+    for meal in meals:
+       for mealfood in meal.mealfood_set.all():
+         total += mealfood.calculate_calories()
+    
+    return round(total, 2)
