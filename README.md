@@ -5,7 +5,7 @@ Pré requisitos:
 3. Configuração de Ambiente Virtual
 
 
-1. Instalando o Python
+- Instalando o Python
 
 Para instalar o Python acesse: https://python.org/downloads/. 
 Verifique a versão do pip, através do comando pip --version, caso não esteja disponível faça o download pelo https://bootstrap.pypa.io/get-pip.py
@@ -14,7 +14,7 @@ Se a versão instalada estiver atualizada, você pode atualiza-la através do co
 $python -m pip install --upgrade pip
 ```
 
-2. Para intalação do Django execute o comando abaixo no prompt de comando (cmd)
+- Para intalação do Django execute o comando abaixo no prompt de comando (cmd)
 ```bash
 $ python -m pip install Django
 ```
