@@ -18,12 +18,12 @@ $python -m pip install --upgrade pip
 ```bash
 $ python -m pip install Django
 ```
-2.1 Para  instalar uma versão do Django fornecida pela sua distribuição do sistema operacional, digite o comando abaixo no prompt de comando 
+  Para  instalar uma versão do Django fornecida pela sua distribuição do sistema operacional, digite o comando abaixo no prompt de comando 
 ```bash 
 $sudo apt-get install python-django
 ```
 
-3. Configurando ambiente virtual (cmd)
+- Configurando ambiente virtual (cmd)
 Para criação  do ambiente virtual execute os comandos abaixo no cmd.
 ```bash
 $python .manage.py -m venv venv
@@ -33,7 +33,7 @@ Para ativar o ambiente virtual
 .\venv\Scripts\activate
 ```
 
-Das dependências necessárias para execução  do projeto:
+- Das dependências necessárias para execução  do projeto:
 1. Execução dos comandos para população tabelas de: localização (cidade e estado), grupos de alimentos e grupos de usuários.
 2. Instalação de APPs utilizados no projeto 
 
