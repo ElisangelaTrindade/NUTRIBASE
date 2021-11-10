@@ -29,9 +29,3 @@ class Command(BaseCommand):
             for permission in self.groups[groupName]:
                 proj_add_perm = Permission.objects.get(codename=permission)
                 new_group.permissions.add(proj_add_perm)
-
-'add_antopometric_evaluation', 'view_antopometric_evaluation', 'delete_add_antopometric_evaluation', 'change_antopometric_evaluation'
-
-  <option value="23">antopometric_evaluation | Avaliação Antopométrica | Can delete Antopometric Evaluation</option>
-
-  <option value="24">antopometric_evaluation | Avaliação Antopométrica | Can view Antopometric Evaluation

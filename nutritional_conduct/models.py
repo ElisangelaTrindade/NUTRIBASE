@@ -31,7 +31,7 @@ class NutritionalConduct(models.Model):
   def essential_calorie_basal(self):
     if (self.pk is None):
       return None
-    age = (self.patient.birthday - self.date_of_consultation)
+    age = int((self.date_of_consultation - self.patient.birthday).days/365)
     if (self.patient.gender == 'F'):
       if (age in range(18, 30)):
         return (14.70 * float(self.antopometric_evaluation.weight) + 496)
@@ -83,12 +83,12 @@ class NutritionalConduct(models.Model):
     
   def stringify_bmi(self):
     bmi = self.calculate_bmi()
-    age = (self.patient.birthday - self.date_of_consultation)
+    age = int((self.date_of_consultation - self.patient.birthday).days/365)
     if (bmi == None):
       return ""
     bmi = round(bmi, 2)
     type = _('Obesity 3')
-    if (age<=65):
+    if ((age in range(18, 65))):
       if (bmi <= 16):
         type =  _('Underweight 3') 
       elif (bmi <= 17):
@@ -103,12 +103,13 @@ class NutritionalConduct(models.Model):
         type = _('Obesity 1')
       elif (bmi <= 40):
         type = _('Obesity 2')
-    elif (bmi<22):
-      type = _('Underweight')
-    elif (bmi<=27):
-      type = _('Normal')
-    else:
-      type = _('Overweight')
+    if ((age in range(66, 100))):
+      if (bmi<22):
+        type = _('Underweight')
+      elif (bmi<=27):
+        type = _('Normal')
+      else:
+        type = _('Overweight')
     
     
     return  type + " - " + str(bmi)
