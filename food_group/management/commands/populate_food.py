@@ -8,6 +8,9 @@ class Command(BaseCommand):
     help = 'Create base groups'
 
     def handle(self, *args, **kwargs):
+        self.populateDatabase()
+
+    def populateDatabase(self):
         path = os.path.join(os.path.abspath(os.path.dirname('manage.py')), 'tables')
         for file in os.listdir(path):
             file_path = os.path.join(path, file)

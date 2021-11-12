@@ -9,13 +9,13 @@ from .render import Render
 
 class Pdf(View):
     def get(self, request, diet_plan_id):
-        date_of_consultation = timezone.now()
+        date_of_consultation = timezone.now()       
         bmi = ""
         diet_plan = DietPlan.objects.get(pk=diet_plan_id)
         meals = Meal.objects.filter(object_id = diet_plan.id, content_type_id = ContentType.objects.get_for_model(diet_plan).id)
 
         # Sanity check, we cannot have more than one
-        if diet_plan.nutritionalconduct_set.all().count() is 1:
+        if diet_plan.nutritionalconduct_set.all().count() == 1:
             conduct = diet_plan.nutritionalconduct_set.first()
             bmi = conduct.stringify_bmi()
             if conduct.antopometric_evaluation is not None:
