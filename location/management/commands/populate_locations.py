@@ -7,7 +7,7 @@ class Command(BaseCommand):
     locations = {
     'Acre':
     {
-        'acronym' : 'AC',
+        'acronym' : 'AC',   
         'cities': ['Acrelandia', 'Assis Brasil', 'Brasileia', 'Bujari', 'Capixaba', 'Cruzeiro do Sul', 'Epitaciolandia', 'Feijo', 'Jordao', 'Mancio Lima', 'Manoel Urbano', 'Marechal Thaumaturgo', 'Placido de Castro', 'Porto Acre', 'Porto Walter', 'Rio Branco', 'Rodrigues Alves', 'Santa Rosa', 'Sena Madureira', 'Senador Guiomard', 'Tarauaca', 'Xapuri']
     },
     'Alagoas':{
@@ -311,7 +311,10 @@ class Command(BaseCommand):
     }
 
     def handle(self, *args, **kwargs):
+        self.populateDatabase()
+
+    def populateDatabase(self):
         for state in self.locations:
-            new_state, created = State.objects.get_or_create(name=state, acrm=self.locations[state]['acronym'])
+            new_state, _ = State.objects.get_or_create(name=state, acrm=self.locations[state]['acronym'])
             for city in self.locations[state]['cities']:
                 City.objects.get_or_create(city=city, state=new_state)
