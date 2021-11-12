@@ -26,13 +26,14 @@ class PatientTest(TestCase):
         self.assertEqual(patient.first_name, 'Cris', 'The name was not registered correctly')
         self.assertEqual(patient.last_name, 'Silva', 'The surname was not registered correctly')
         
-    #def cpf_validation(self):
-    #    Patient.objects.create(cpf="06768725815")
-    #    field = CPFField()
-    #    self.assertIsNone(field.validate("06768725815"))
-    #    self.assertIsNone(field.validate("067.687.258-15"))
-    #    self.assertIsNone(field.validate("067-687-258.15"))
-    #    self.assertEqual("CPF must 11 characters", field.validate("0676872581"))
-    #    self.assertEqual("CPF must 11 characters", field.validate("067687258155"))
-    #    self.assertEqual("Invalid CPF", field.validate("067.687.258-00"))
+    def cpf_validation(self):
+        
+        Patient.objects.create(cpf="06768725815")
+        field = CPFField()
+        self.assertIsNone(field.validate("06768725815"))
+        self.assertIsNone(field.validate("067.687.258-15"))
+        self.assertIsNone(field.validate("067-687-258.15"))
+        self.assertEqual("CPF must 11 characters", field.validate("0676872581"))
+        self.assertEqual("CPF must 11 characters", field.validate("067687258155"))
+        self.assertEqual("Invalid CPF", field.validate("067.687.258-00"))
   
