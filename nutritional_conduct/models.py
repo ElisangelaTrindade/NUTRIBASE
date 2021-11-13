@@ -114,7 +114,6 @@ class NutritionalConduct(models.Model):
       else:
         type = _('Overweight')
     
-    
     return  type + " - " + str(bmi)
 
   stringify_bmi.short_description= _('bmi')
