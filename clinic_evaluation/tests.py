@@ -22,18 +22,18 @@ class ClinicEvaluationTest(TestCase):
         patient1= Patient.objects.create(first_name="Cris", last_name="Silva",registered_by=user, cpf="06768725815",  birthday="1990-04-17", email= "teste@test@gmail.com", street= "Rua das flores 123", city=City.objects.first(), state=State.objects.first(), zip_code="000000")
         patient1.save()
         
-        clinic_evaluation=ClinicEvaluation.objects.create(patient=patient1, registered_by=user, nails="forte", skin= "normal", bladder_habits="normal", bowel_habits="normal", additional_information="teste", date_of_consultation="2021-11-12", updated="2021-11-12")
+        clinic_evaluation=ClinicEvaluation.objects.create(patient=patient1, registered_by=user, nails="strong", skin= "normal", bladder_habits="normal", bowel_habits="normal", additional_information="test", date_of_consultation="2021-11-12", updated="2021-11-12")
         clinic_evaluation.save()
 
     def test_clinic_evaluation(self):
         clinic_evaluation = ClinicEvaluation.objects.first()
-        self.assertEqual(clinic_evaluation.nails, "forte", "The nails field was  registered correctly")
+        self.assertEqual(clinic_evaluation.nails, "strong", "The nails field was  registered correctly")
         self.assertEqual(clinic_evaluation.skin, "normal", "The skins field was registered correctly")
         self.assertEqual(clinic_evaluation.bladder_habits, "normal", "The bladder habits was registered correctly")
         self.assertEqual(clinic_evaluation.bowel_habits, "normal", "The bowel habits registered correctly")
         self.assertEqual(clinic_evaluation.date_of_consultation, datetime.date(2021, 11, 12), "The date of consultation registered correctly")
         self.assertEqual(clinic_evaluation.updated, datetime.date(2021, 11, 12), "This field registered correctly")
-        self.assertEqual(clinic_evaluation.additional_information, "teste", "This fiels was registered correctly")
+        self.assertEqual(clinic_evaluation.additional_information, "test", "This fiels was registered correctly")
 
     def test_lab_exam(self):
         lab_exam=LabExam.objects.create( name_exam ="exame de sangue", date_of_exam="2021-11-12", upload="test", exam_information= "exemplo glicemia=180", clinic_evaluation=ClinicEvaluation.objects.first() )
