@@ -81,7 +81,7 @@ class NutritionalConduct(models.Model):
   def calculate_bmi(self):
     if (self.pk is None):
       return None
-    return self.antopometric_evaluation.weight / (self.antopometric_evaluation.height * self.antopometric_evaluation.height)
+    return float(round(self.antopometric_evaluation.weight / (self.antopometric_evaluation.height * self.antopometric_evaluation.height), 2))
     
   def stringify_bmi(self):
     bmi = self.calculate_bmi()

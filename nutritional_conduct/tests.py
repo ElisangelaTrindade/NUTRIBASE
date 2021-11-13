@@ -59,13 +59,23 @@ class NutricionalConductTest(TestCase):
         self.assertEqual(conduct.activity_factor(), 1.56)
 
         
-
     def test_essential_calorie_basal(self):
         antopometric_evaluation = AntopometricEvaluation.objects.first()
         antopometric_evaluation.patient.gender='M'
-        conduct2 = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
+        conduct_cal_basal = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
             diet_plan=DietPlan.objects.first(), date_of_consultation=datetime.date(2021, 11, 12))
-        self.assertEqual(conduct2.essential_calorie_basal(), 1575.0)
+        self.assertEqual(conduct_cal_basal.essential_calorie_basal(), 1575.0)
+
+    
+    def test_conduct_bmi(self):
+        antopometric_evaluation = AntopometricEvaluation.objects.first()
+        test_conduct_bmi = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
+            diet_plan=DietPlan.objects.first(), date_of_consultation=datetime.date(2021, 11, 12))
+        self.assertEqual(test_conduct_bmi.calculate_bmi(), 19.59)
 
 
-     
+
+
+
+
+      
