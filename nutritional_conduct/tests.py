@@ -13,6 +13,7 @@ from food_group.models import FoodGroup
 from location.management.commands.populate_locations import Command as PopulateLocationCommand
 from food_group.management.commands.populate_food import Command as PopulateFoodCommand
 from django.contrib.contenttypes.models import ContentType
+from django.utils.translation import gettext_lazy as _
 import datetime
 
 # Create your tests here.
@@ -40,28 +41,28 @@ class NutricionalConductTest(TestCase):
     def test_exercise_activity_factor(self):
         antopometric_evaluation = AntopometricEvaluation.objects.first()
         conduct = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
-            diet_plan=DietPlan.objects.first(), exercise_type='L', date_of_consultation=datetime.date(2021, 11, 12))
+            diet_plan=DietPlan.objects.first(), exercise_type="L", date_of_consultation=datetime.date(2021, 11, 12))
         self.assertEqual(conduct.activity_factor(), 1.56)
 
-        conduct.exercise_type='M'
+        conduct.exercise_type="M"
         self.assertEqual(conduct.activity_factor(), 1.64)
 
-        conduct.exercise_type='I'
+        conduct.exercise_type="I"
         self.assertEqual(conduct.activity_factor(), 1.82)
 
-        conduct.patient.gender='M'
+        conduct.patient.gender="M"
         self.assertEqual(conduct.activity_factor(), 2.10)
 
-        conduct.exercise_type='M'
+        conduct.exercise_type="M"
         self.assertEqual(conduct.activity_factor(), 1.78)
 
-        conduct.exercise_type='L'
+        conduct.exercise_type="L"
         self.assertEqual(conduct.activity_factor(), 1.56)
 
         
     def test_essential_calorie_basal(self):
         antopometric_evaluation = AntopometricEvaluation.objects.first()
-        antopometric_evaluation.patient.gender='M'
+        antopometric_evaluation.patient.gender="M"
         conduct_cal_basal = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
             diet_plan=DietPlan.objects.first(), date_of_consultation=datetime.date(2021, 11, 12))
         self.assertEqual(conduct_cal_basal.essential_calorie_basal(), 1575.0)
@@ -69,13 +70,45 @@ class NutricionalConductTest(TestCase):
     
     def test_conduct_bmi(self):
         antopometric_evaluation = AntopometricEvaluation.objects.first()
-        test_conduct_bmi = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
+        conduct_bmi = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
             diet_plan=DietPlan.objects.first(), date_of_consultation=datetime.date(2021, 11, 12))
-        self.assertEqual(test_conduct_bmi.calculate_bmi(), 19.59)
+        self.assertEqual(conduct_bmi.calculate_bmi(), 19.59)
+
+    def test_stringify_bmi(self):
+        antopometric_evaluation = AntopometricEvaluation.objects.first()
+        conduct_bmi= NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
+            diet_plan=DietPlan.objects.first(), date_of_consultation=datetime.date(2021, 11, 12))
+        self.assertEqual(conduct_bmi.stringify_bmi(), "Normal - 19.59")
 
 
+        conduct_bmi.antopometric_evaluation.weight = 40
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Underweight 3") + " - 13.06")
 
+        conduct_bmi.antopometric_evaluation.weight = 50
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Underweight 2") + " - 16.33")
 
+        conduct_bmi.antopometric_evaluation.weight = 55
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Underweight") + " - 17.96")
 
+        conduct_bmi.antopometric_evaluation.weight = 82
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Overweight") + " - 26.78")
 
-      
+        conduct_bmi.antopometric_evaluation.weight = 104
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Obesity 1") + " - 33.96")
+
+        conduct_bmi.antopometric_evaluation.weight = 125
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Obesity 3") + " - 40.82")
+
+        conduct_bmi.patient.birthday=datetime.date(1943, 9, 11)
+        conduct_bmi.antopometric_evaluation.weight = 60
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Underweight") +" - 19.59")
+        conduct_bmi.antopometric_evaluation.weight = 78
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Normal") +" - 25.47")
+        conduct_bmi.antopometric_evaluation.weight = 100
+        self.assertEqual(conduct_bmi.stringify_bmi(), _("Overweight") +" - 32.65")
+
+       
+
+        
+
+       
