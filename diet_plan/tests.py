@@ -43,7 +43,6 @@ class DietPlanTest(TestCase):
     def test_diet_plan(self):
         diet_plan = DietPlan.objects.first()
         calories = diet_plan.calculate_total_of_calories()
-        print (calories)
         self.assertEqual(calories, 560)
      
 
