@@ -5,15 +5,13 @@ from location.models import City, State
 from patient.models import Patient
 from antopometric_evaluation.models import AntopometricEvaluation
 
-
-# Create your tests here.
 class AntopometricEvaluationTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         #registered by
         user = User.objects.create_user(username="Ana", email="ana@gmail.net", password= "password")
         user.is_superuser = True
-        user.save()
+        
 
         if City.objects.count() == 0:
             PopulateLocationCommand().populateDatabase()
