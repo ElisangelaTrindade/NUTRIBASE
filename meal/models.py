@@ -3,12 +3,13 @@ from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from food_group.models import Food
 from django.utils.translation import gettext_lazy as _
+from nutribase.validators import validate_greater_than_zero
 
 
 # Create your models here.
 class Meal(models.Model):
   type_meal = models.CharField(max_length=50,db_column='type_meal', verbose_name = _('type_meal'))
-  time_meal = models.TimeField(db_column='time_meal', verbose_name = _('time_meal'))
+  time_meal = models.TimeField(db_column='time_meal', verbose_name = _('time_meal'), )
   content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, verbose_name = _('content_type'))
   object_id = models.PositiveIntegerField(verbose_name = _('object_id'))
   content_object = GenericForeignKey('content_type', 'object_id')
@@ -23,7 +24,7 @@ class Meal(models.Model):
 class MealFood (models.Model):
   food = models.ForeignKey(Food, on_delete=models.CASCADE, verbose_name = _('food'))
   meal = models.ForeignKey(Meal, on_delete=models.CASCADE, verbose_name = _('meal'))
-  weight = models.DecimalField(max_digits=8, decimal_places=1, db_column='weight', verbose_name = _('weight'))
+  weight = models.DecimalField(max_digits=8, decimal_places=1, db_column='weight', verbose_name = _('weight'), validators=[validate_greater_than_zero])
 
   def calculate_calories(self):
     return round(self.weight * self.food.food_group.calories / self.food.weight, 2)
@@ -32,6 +33,7 @@ class MealFood (models.Model):
     db_table ='meal_food' 
     verbose_name = _('Meal Foods')
     verbose_name_plural = _('Meal Foods')
+
 
   
   

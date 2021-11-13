@@ -11,6 +11,7 @@ from food_group.models import FoodGroup
 from location.management.commands.populate_locations import Command as PopulateLocationCommand
 from food_group.management.commands.populate_food import Command as PopulateFoodCommand
 from django.contrib.contenttypes.models import ContentType
+from django.core.exceptions import ValidationError
 
 # Create your tests here.
 class MealFoodTest(TestCase):
@@ -31,8 +32,10 @@ class MealFoodTest(TestCase):
         meal_food = MealFood.objects.create(food=Food.objects.first(), meal=Meal.objects.first(), weight=140)
         self.assertGreater(meal_food.weight,0 ,"The weight must be greater than 0")
         self.assertGreater(meal_food.food.food_group.calories, 0, "The calories must be greater than 0")
-      
-    #def test_joe_must_have_a_website(self):
-    #    p = Person(name='Joe')
-    #    with self.assertRaises(ValidationError):
-    #        p.full_clean()
+
+    def test_meal_food_must_have(self):
+        meal_food = MealFood.objects.create(food=Food.objects.first(), meal=Meal.objects.first(), weight=0)
+        with self.assertRaises(ValidationError):
+           meal_food.full_clean()
+
+       
