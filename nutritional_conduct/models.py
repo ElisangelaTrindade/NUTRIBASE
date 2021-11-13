@@ -23,6 +23,7 @@ class NutritionalConduct(models.Model):
 
   def __str__(self):
     return self.patient.first_name + " " + self.patient.last_name
+
   class Meta:
     unique_together = ['patient', 'antopometric_evaluation']
     db_table ='nutricional_conduct'
@@ -127,7 +128,7 @@ class NutritionalConduct(models.Model):
       if float((self.antopometric_evaluation.abdomen_circumference>94)):
         type=_('High risk of cardiovascular disease ')
     return  type 
-  stringify_cir_abdominal.short_description= _('Abdominal circunference')
+  stringify_cir_abdominal.short_description=_('Abdominal circunference')
 
   
   
