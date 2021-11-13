@@ -8,7 +8,7 @@ from food_group.management.commands.populate_food import Command as PopulateFood
 class FoodGroupTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-    #populate foods group
+    
         if FoodGroup.objects.count() == 0:
             PopulateFoodCommand().populateDatabase()
         
