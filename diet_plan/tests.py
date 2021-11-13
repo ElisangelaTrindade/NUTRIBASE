@@ -12,6 +12,7 @@ from clinic_evaluation.models import ClinicEvaluation
 from location.management.commands.populate_locations import Command as PopulateLocationCommand
 from food_group.management.commands.populate_food import Command as PopulateFoodCommand
 from django.contrib.contenttypes.models import ContentType
+from django.core.exceptions import ValidationError
 
 class DietPlanTest(TestCase):
     @classmethod
@@ -35,7 +36,7 @@ class DietPlanTest(TestCase):
         diet_plan = DietPlan.objects.create(patient=patient1, registered_by=user, description= "diet plan 1.500 calories", date_of_creation="2021-11-12")
         diet_plan.save()
         
-        meal1=Meal.objects.create(type_meal= "Jantar", time_meal=timezone.now(), object_id = diet_plan.id, content_type_id = ContentType.objects.get_for_model(diet_plan).id)
+        meal1=Meal.objects.create(type_meal= "Jantar", time_meal=timezone.now(), object_id = diet_plan.id, content_type_id = ContentType.objects.get_for_model(diet_plan).id, )
         meal1.save()
         MealFood.objects.create(food=Food.objects.first(), meal=Meal.objects.first(), weight= 140)
 
@@ -44,7 +45,13 @@ class DietPlanTest(TestCase):
         diet_plan = DietPlan.objects.first()
         calories = diet_plan.calculate_total_of_calories()
         self.assertEqual(calories, 560)
+
+    def test_meal_food_must_have(self):
+        meal_food = MealFood.objects.create(food=Food.objects.first(), meal=Meal.objects.first(), weight=0)
+        with self.assertRaises(ValidationError):
+           meal_food.full_clean()
      
+    
 
 
 
