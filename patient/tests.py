@@ -5,6 +5,7 @@ from user.models import User
 from location.models import City, State
 from location.management.commands.populate_locations import Command as PopulateCommand
 
+
 class PatientTest(TestCase):
     @classmethod
     def setUpTestData(cls):
@@ -22,8 +23,8 @@ class PatientTest(TestCase):
        
     def test_patient_created(self):
         patient = Patient.objects.get(first_name="Cris")
-        self.assertEqual(patient.first_name, 'Cris', 'The name was not registered correctly')
-        self.assertEqual(patient.last_name, 'Silva', 'The surname was not registered correctly')
+        self.assertEqual(patient.first_name, "Cris", "The first name registered correctly")
+        self.assertEqual(patient.last_name, "Silva", "The surname was registered correctly")
         
     def cpf_validation(self):
         
