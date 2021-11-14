@@ -46,3 +46,5 @@ class ClinicEvaluationTest(TestCase):
 
 
         
+    #TODO: Lab exam field no null
+    

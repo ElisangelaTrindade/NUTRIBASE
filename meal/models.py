@@ -19,8 +19,6 @@ class Meal(models.Model):
     verbose_name = _('Meal')
     verbose_name_plural = _('Meals')
 
-
-
 class MealFood (models.Model):
   food = models.ForeignKey(Food, on_delete=models.CASCADE, verbose_name = _('food'))
   meal = models.ForeignKey(Meal, on_delete=models.CASCADE, verbose_name = _('meal'))
@@ -33,10 +31,3 @@ class MealFood (models.Model):
     db_table ='meal_food' 
     verbose_name = _('Meal Foods')
     verbose_name_plural = _('Meal Foods')
-
-
-  
-  
-
-  
-

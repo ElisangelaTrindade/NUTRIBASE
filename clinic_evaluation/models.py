@@ -44,8 +44,8 @@ class LabExam (models.Model):
   clinic_evaluation = models.ForeignKey(ClinicEvaluation, on_delete=models.CASCADE)
   name_exam =models.CharField(max_length=100, db_column='description', verbose_name =_('description'))
   date_of_exam=models.DateField(verbose_name =_('date_of_exam'))
-  upload=models.FileField( db_column='upload', verbose_name =_('upload'))
-  exam_information= models.TextField(blank=True, db_column='name_exam ', verbose_name =_('name_exam'))
+  upload=models.FileField(db_column='upload', verbose_name =_('upload'))
+  exam_information = models.TextField(blank=True, db_column='name_exam ', verbose_name =_('name_exam'))
 
       
   class Meta:

@@ -66,7 +66,7 @@ class NutricionalConductTest(TestCase):
         conduct_cal_basal = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
             diet_plan=DietPlan.objects.first(), date_of_consultation=datetime.date(2021, 11, 12))
         self.assertEqual(conduct_cal_basal.essential_calorie_basal(), 1575.0)
-
+        #TODO: check other if statements
     
     def test_conduct_bmi(self):
         antopometric_evaluation = AntopometricEvaluation.objects.first()
@@ -107,8 +107,8 @@ class NutricionalConductTest(TestCase):
         conduct_bmi.antopometric_evaluation.weight = 100
         self.assertEqual(conduct_bmi.stringify_bmi(), _("Overweight") +" - 32.65")
 
-       
+       #TODO: test stringify_cir_abdominal
 
-        
+       #TODO: test uniqueness of fields
 
        

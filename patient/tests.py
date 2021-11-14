@@ -9,16 +9,10 @@ from location.management.commands.populate_locations import Command as PopulateC
 class PatientTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        
-        
         if City.objects.count() == 0:
             PopulateCommand().populateDatabase()
         
-        #Strong assumption that the database will start at an empty state here
-        user = User.objects.create_user(username='Ana', email='ana@gmail.net', password= 'password')
-        user.is_superuser = True
-        user.save()
-
+        user = User.objects.create_user(username='Ana', email='ana@gmail.net', password= 'password', is_superuser=True)
         Patient.objects.create(first_name="Cris", last_name="Silva",registered_by=user, cpf="06768725815",  birthday="1990-04-17", email= "teste@test@gmail.com", street= "Rua das flores 123", city=City.objects.first(), state=State.objects.first(), zip_code='000000', gender="F" )
        
     def test_patient_created(self):
@@ -27,8 +21,6 @@ class PatientTest(TestCase):
         self.assertEqual(patient.last_name, "Silva", "The surname was registered correctly")
         
     def cpf_validation(self):
-        
-        Patient.objects.create(cpf="06768725815")
         field = CPFField()
         self.assertIsNone(field.validate("06768725815"))
         self.assertIsNone(field.validate("067.687.258-15"))

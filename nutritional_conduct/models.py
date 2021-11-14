@@ -76,7 +76,6 @@ class NutritionalConduct(models.Model):
 
 
   stringify_calory_need.short_description = _("caloric needs") 
-
   
   def calculate_bmi(self):
     if (self.pk is None):
@@ -126,7 +125,8 @@ class NutritionalConduct(models.Model):
     else:
       if float((self.antopometric_evaluation.abdomen_circumference>94)):
         type=_("High risk of cardiovascular disease")
-    return  type 
+    return type
+
   stringify_cir_abdominal.short_description=_("Abdominal circunference")
 
   

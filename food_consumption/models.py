@@ -17,12 +17,10 @@ class FoodConsumption(models.Model):
   fruits = models.BooleanField( db_column='fruits', verbose_name = _('fruits'))
   vegetables = models.BooleanField( db_column='vegetables', verbose_name = _('vegetables'))
   others = models.TextField(blank=True, db_column='description', verbose_name = _('description'))
-  
 
   def __str__(self):
       return self.patient.first_name + " " + self.patient.last_name
   
-
   class Meta:
     db_table ='food_consumption' 
     verbose_name = _('Food Consuption')
@@ -30,7 +28,7 @@ class FoodConsumption(models.Model):
 
 class FoodIntolerance(models.Model):
   food_consumption = models.ForeignKey(FoodConsumption, on_delete=models.CASCADE, verbose_name = _('food_consumption'))
-  intolerance_description= models.TextField(db_column='intolerance_description', verbose_name = _('intolerance_description'))
+  intolerance_description = models.TextField(db_column='intolerance_description', verbose_name = _('intolerance_description'))
 
   def __str__(self):
     return self.intolerance_description
