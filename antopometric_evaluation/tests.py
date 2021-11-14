@@ -31,11 +31,8 @@ class AntopometricEvaluationTest(TestCase):
         self.assertGreater(antopometric_evaluation.arm_circumference,0, "The arm circumference must be greater than 0")
         self.assertGreater(antopometric_evaluation.abdomen_circumference,0, "The abdomen circumference must be greater than 0")
         self.assertGreater(antopometric_evaluation.wrist_circumference,0, "The abdomen circumference must be greater than 0")
-
-    #TODO: Test for failure on zero
-
     
-    def test_meal_food_must_have(self):
+    def antopometric_evaluation_must_have(self):
         antopometric_evaluation = AntopometricEvaluation.objects.create(patient=Patient.objects.first(), registered_by=User.objects.first(), weight=0, height= 0, arm_circumference=0, abdomen_circumference=0, wrist_circumference=0, date_of_consultation=datetime.date(2021, 11 , 14), updated=datetime.date(2021, 11 , 14))
         with self.assertRaises(ValidationError):
            antopometric_evaluation.full_clean()

@@ -47,4 +47,9 @@ class ClinicEvaluationTest(TestCase):
 
         
     #TODO: Lab exam field no null
-    
+
+    def test_meal_food_must_have(self):
+        antopometric_evaluation = AntopometricEvaluation.objects.create(patient=Patient.objects.first(), registered_by=User.objects.first(), weight=0, height= 0, arm_circumference=0, abdomen_circumference=0, wrist_circumference=0, date_of_consultation=datetime.date(2021, 11 , 14), updated=datetime.date(2021, 11 , 14))
+        with self.assertRaises(ValidationError):
+           antopometric_evaluation.full_clean()
+     
