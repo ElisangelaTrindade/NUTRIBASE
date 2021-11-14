@@ -95,7 +95,7 @@ Pre requirements:
 -Configuration of Virtual Environment
 ___
 
-- Installing Python:
+Installing Python:
 - To install Python go to: https://python.org/downloads/.
 Check the pip version using the pip --version command, if it is not available, download it from https://bootstrap.pypa.io/get-pip.py. If the installed version is up to date, you can upgrade it via the command :
 ```bash 
