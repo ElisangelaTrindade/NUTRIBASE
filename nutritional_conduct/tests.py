@@ -37,6 +37,11 @@ class NutricionalConductTest(TestCase):
         meal1=Meal.objects.create(type_meal= "Jantar", time_meal=timezone.now(), object_id = diet_plan.id, content_type_id = ContentType.objects.get_for_model(diet_plan).id, )
         MealFood.objects.create(food=Food.objects.first(), meal=meal1, weight= 140)
 
+    def test_diet_plan(self):
+        antopometric_evaluation = AntopometricEvaluation.objects.first()
+        conduct_diet = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
+            diet_plan=DietPlan.objects.first(), exercise_type="L", date_of_consultation=datetime.date(2021, 11, 12))
+        self.assertEqual(conduct_diet.activity_factor(), 1.56)
         
     def test_exercise_activity_factor(self):
         antopometric_evaluation = AntopometricEvaluation.objects.first()
@@ -166,6 +171,6 @@ class NutricionalConductTest(TestCase):
 
 
 
-       #TODO: test uniqueness of fields
+       
 
        

@@ -10,7 +10,7 @@ class NutritionalConduct(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE, verbose_name = _("patient"))
   antopometric_evaluation = ChainedForeignKey(AntopometricEvaluation, chained_field="patient", chained_model_field="patient", show_all = False, auto_choose = True, sort = True, verbose_name = _("antopomeetric_evaluation"))
   diet_plan = models.ForeignKey(DietPlan, on_delete=models.CASCADE, verbose_name = _("diet_plan"), unique=True)
-  description_nutricional_conduct= models.TextField(blank=True, db_column="description_nutricional_conduct", verbose_name = _("Nutricional Conduct"))
+  description_nutritional_conduct= models.TextField(blank=True, db_column="description_nutritional_conduct", verbose_name = _("Nutricional Conduct"))
   date_of_consultation=models.DateField( verbose_name = _("date_of_consultation"))
 
   EXERCISE_CHOICES = ( 
@@ -26,7 +26,7 @@ class NutritionalConduct(models.Model):
 
   class Meta:
     unique_together = ['patient', 'antopometric_evaluation']
-    db_table ='nutricional_conduct'
+    db_table ='nutritional_conduct'
     verbose_name = _('Nutricional Conduct')
     verbose_name_plural = _('Nutricional Conducts')
 
