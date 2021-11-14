@@ -45,28 +45,23 @@ class NutricionalConductTest(TestCase):
         self.assertEqual(conduct.activity_factor(), 1.56)
 
 
-        antopometric_evaluation.patient.gender="F"
+        conduct.antopometric_evaluation.patient.gender="F"
         conduct.exercise_type="L"
         self.assertEqual(conduct.activity_factor(), 1.56)
 
-        antopometric_evaluation.patient.gender="F"
         conduct.exercise_type="M"
         self.assertEqual(conduct.activity_factor(), 1.64)
 
-        antopometric_evaluation.patient.gender="F"
         conduct.exercise_type="I"
         self.assertEqual(conduct.activity_factor(), 1.82)
 
-        antopometric_evaluation.patient.gender="M"
+        conduct.antopometric_evaluation.patient.gender="M"
         conduct.patient.gender="M"
         self.assertEqual(conduct.activity_factor(), 2.10)
 
-        antopometric_evaluation.patient.gender="M"
         conduct.exercise_type="M"
         self.assertEqual(conduct.activity_factor(), 1.78)
 
-
-        antopometric_evaluation.patient.gender="M"
         conduct.exercise_type="L"
         self.assertEqual(conduct.activity_factor(), 1.56)
 
@@ -79,24 +74,33 @@ class NutricionalConductTest(TestCase):
         self.assertEqual(conduct_cal_basal.essential_calorie_basal(), 1575.0)
         
 
-        antopometric_evaluation.patient.gender="F"
+        conduct_cal_basal.antopometric_evaluation.patient.gender="F"
         self.assertEqual(conduct_cal_basal.essential_calorie_basal(), 1351.0)
 
 
     def test_stringify_calory_need(self):
         antopometric_evaluation = AntopometricEvaluation.objects.first()
-        antopometric_evaluation.patient.gender="M"
+        antopometric_evaluation.patient.gender="F"
         conduct_cal_basal = NutritionalConduct.objects.create(patient=antopometric_evaluation.patient, antopometric_evaluation=antopometric_evaluation, \
             diet_plan=DietPlan.objects.first(), date_of_consultation=datetime.date(2021, 11, 12))
-        conduct_cal_basal.diet_plan.exercise_type= "L"
-        self.assertEqual(conduct_cal_basal.stringify_calory_need(), ('3307.5'))
+        conduct_cal_basal.exercise_type = "L"
+        self.assertEqual(conduct_cal_basal.stringify_calory_need(), ('2107.56'))
 
-
-        antopometric_evaluation.patient.gender="F"
-        conduct_cal_basal.diet_plan.exercise_type= "L"
-        self.assertEqual(conduct_cal_basal.stringify_calory_need(), ('2458.82'))
+        conduct_cal_basal.exercise_type = "M"
+        self.assertEqual(conduct_cal_basal.stringify_calory_need(), ('2215.64'))
        
-    # ALGO ERRADO
+        conduct_cal_basal.exercise_type = "I"
+        self.assertEqual(conduct_cal_basal.stringify_calory_need(), ('2458.82'))
+
+        conduct_cal_basal.antopometric_evaluation.patient.gender="M"
+        conduct_cal_basal.exercise_type = "L"
+        self.assertEqual(conduct_cal_basal.stringify_calory_need(), ('2457.0'))
+
+        conduct_cal_basal.exercise_type = "M"
+        self.assertEqual(conduct_cal_basal.stringify_calory_need(), ('2803.5'))
+       
+        conduct_cal_basal.exercise_type = "I"
+        self.assertEqual(conduct_cal_basal.stringify_calory_need(), ('3307.5'))
 
     def test_conduct_bmi(self):
         antopometric_evaluation = AntopometricEvaluation.objects.first()
