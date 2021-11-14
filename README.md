@@ -106,7 +106,7 @@ python -m pip install --upgrade pip
 ```bash
 $ python -m pip install Django
 ```
-  To install a version of Django provided by your operating system distribution, type the command below at the command prompt
+- To install a version of Django provided by your operating system distribution, type the command below at the command prompt
 ```bash
 $sudo apt-get install python-django
 ```
