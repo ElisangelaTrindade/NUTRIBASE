@@ -16,7 +16,6 @@ class Employee(models.Model):
   hire_date = models.DateField(db_column='hire_date', verbose_name = _('hire_date'))
   cpf = cpffield.CPFField('CPF', max_length=14, unique=True)
   birthday = models.DateField(verbose_name = _('birthday'))
-  email = models.CharField(max_length=150,db_column='email_patient', verbose_name = _('email'))
   street = models.CharField(max_length=50, db_column='street', verbose_name = _('address'))
   state = models.ForeignKey(State, on_delete=models.CASCADE, verbose_name = _('state'))
   city = ChainedForeignKey(City, chained_field="state", chained_model_field="state", show_all = False, auto_choose = True, sort = True, verbose_name = _('city'))
