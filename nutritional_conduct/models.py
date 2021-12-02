@@ -60,12 +60,13 @@ class NutritionalConduct(models.Model):
       else:
         return 1.82
     else:
-      if (self.exercise_type == "L"):
-        return 1.56
-      elif (self.exercise_type == "M"):
-        return 1.78
-      else:
-        return 2.10
+      if (self.patient.gender == "M"):
+        if (self.exercise_type == "L"):
+          return 1.56
+        elif (self.exercise_type == "M"):
+          return 1.78
+        else:
+          return 2.10
 
   def stringify_calory_need(self):
     ecb = self.essential_calorie_basal()
