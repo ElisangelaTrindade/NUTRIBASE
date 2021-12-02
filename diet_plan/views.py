@@ -15,13 +15,12 @@ class Pdf(View):
         meals = Meal.objects.filter(object_id = diet_plan.id, content_type_id = ContentType.objects.get_for_model(diet_plan).id)
 
         # Sanity check, we cannot have more than one
-        if diet_plan.nutritionalconduct_set.all().count() == 1:
-            conduct = diet_plan.nutritionalconduct_set.first()
+        if diet_plan.nutritionalconduct is not None:
+            conduct = diet_plan.nutritionalconduct
             bmi = conduct.stringify_bmi()
             if conduct.antopometric_evaluation is not None:
                 #By design we can only have one assigned here due to the dependency on the nutritional conduct
-                date_of_consultation = diet_plan.nutritionalconduct_set.first() \
-                    .antopometric_evaluation.date_of_consultation
+                date_of_consultation = diet_plan.nutritionalconduct.antopometric_evaluation.date_of_consultation
 
         params = {
             'diet_plan': diet_plan,
