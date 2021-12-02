@@ -19,7 +19,7 @@ class FoodGroup(models.Model):
     verbose_name_plural = _('Food Groups')
 
 class Food(models.Model):
-  food_group = models.ForeignKey( FoodGroup, on_delete=models.CASCADE, verbose_name = _('food_group'))
+  food_group = models.ForeignKey(FoodGroup, on_delete=models.CASCADE, verbose_name = _('food_group'))
   food_name = models.CharField(max_length=50, db_column='food_name', verbose_name = _('food_name'))
   protein = models.DecimalField(default=0.0,max_digits=8, decimal_places=2, db_column='protein', verbose_name = _('protein'))
   lipids = models.DecimalField(default=0.0, max_digits=8, decimal_places=2, db_column='lipids', verbose_name = _('lipids'))
