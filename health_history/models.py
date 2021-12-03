@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 class PatientHealthHistory(models.Model):
   patient = models.ForeignKey(Patient, on_delete=models.CASCADE, verbose_name = _('patient'))
-  registered_by = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name = _('registered_by'))
+  registered_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name = _('registered_by'))
   obesity = models.BooleanField(db_column='obesity', verbose_name = _('obesity'))
   cardiovascular_disease = models.BooleanField( db_column='cardiovascular_disease', verbose_name = _('cardiovascular_disease'))
   hypertension = models.BooleanField(db_column='hypertension', verbose_name = _('hypertension'))
