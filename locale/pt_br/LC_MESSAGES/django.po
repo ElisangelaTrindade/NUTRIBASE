@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 19:41+0000\n"
-"PO-Revision-Date: 2021-11-10 19:43+0000\n"
+"POT-Creation-Date: 2021-12-03 18:57+0000\n"
+"PO-Revision-Date: 2021-12-03 19:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -18,59 +18,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.0\n"
 
-#: .\antopometric_evaluation\apps.py:7 .\antopometric_evaluation\models.py:28
+#: .\antopometric_evaluation\apps.py:7 .\antopometric_evaluation\models.py:29
 msgid "Antopometric Evaluation"
 msgstr "Avaliação Antopométrica"
 
-#: .\antopometric_evaluation\models.py:8 .\clinic_evaluation\models.py:8
+#: .\antopometric_evaluation\models.py:9 .\clinic_evaluation\models.py:8
 #: .\diet_plan\models.py:12 .\exercise\models.py:22
 #: .\food_consumption\models.py:9 .\food_diary\models.py:9
 #: .\health_history\models.py:9 .\nutritional_conduct\models.py:10
 msgid "patient"
 msgstr "Paciente"
 
-#: .\antopometric_evaluation\models.py:9 .\clinic_evaluation\models.py:9
+#: .\antopometric_evaluation\models.py:10 .\clinic_evaluation\models.py:9
 #: .\diet_plan\models.py:11 .\employee\models.py:15 .\exercise\models.py:9
 #: .\food_consumption\models.py:10 .\food_diary\models.py:8
 #: .\health_history\models.py:10 .\patient\models.py:12
 msgid "registered_by"
 msgstr "Registrado por"
 
-#: .\antopometric_evaluation\models.py:10 .\food_group\models.py:32
-#: .\meal\models.py:26
+#: .\antopometric_evaluation\models.py:11 .\food_group\models.py:33
+#: .\meal\models.py:25
 msgid "weight"
 msgstr "Peso"
 
-#: .\antopometric_evaluation\models.py:11
+#: .\antopometric_evaluation\models.py:12
 msgid "height"
 msgstr "Altura"
 
-#: .\antopometric_evaluation\models.py:12
+#: .\antopometric_evaluation\models.py:13
 msgid "arm_circumference"
 msgstr "Circunferência de Braço"
 
-#: .\antopometric_evaluation\models.py:13
+#: .\antopometric_evaluation\models.py:14
 msgid "abdomen_circumference"
 msgstr "Circunferência Abdominal"
 
-#: .\antopometric_evaluation\models.py:14
+#: .\antopometric_evaluation\models.py:15
 msgid "wrist_circumference"
 msgstr "Circunferência de Pulso"
 
-#: .\antopometric_evaluation\models.py:15 .\clinic_evaluation\models.py:15
+#: .\antopometric_evaluation\models.py:16 .\clinic_evaluation\models.py:15
 #: .\food_diary\models.py:11 .\nutritional_conduct\models.py:14
 msgid "date_of_consultation"
 msgstr "Data da consulta"
 
-#: .\antopometric_evaluation\models.py:16 .\clinic_evaluation\models.py:16
+#: .\antopometric_evaluation\models.py:17 .\clinic_evaluation\models.py:16
 msgid "updated"
 msgstr "Atualizado em"
 
-#: .\antopometric_evaluation\models.py:17 .\clinic_evaluation\models.py:14
+#: .\antopometric_evaluation\models.py:18 .\clinic_evaluation\models.py:14
 msgid "additional_information"
 msgstr "Informações Adicionais"
 
-#: .\antopometric_evaluation\models.py:29
+#: .\antopometric_evaluation\models.py:30
 msgid "Antopometric Evaluations"
 msgstr "Avaliações Antopométricas"
 
@@ -132,7 +132,7 @@ msgstr "Diarreia"
 
 #: .\clinic_evaluation\models.py:35 .\clinic_evaluation\models.py:45
 #: .\diet_plan\models.py:13 .\food_consumption\models.py:19
-#: .\food_consumption\models.py:46 .\food_diary\models.py:10
+#: .\food_consumption\models.py:44 .\food_diary\models.py:10
 #: .\phone\models.py:11
 msgid "description"
 msgstr "Descrição"
@@ -165,9 +165,9 @@ msgstr "Exame Laboratorial"
 msgid "Laboratorial Exams"
 msgstr "Exames Laboratoriais"
 
-#: .\diet_plan\admin.py:58 .\diet_plan\admin.py:61
+#: .\diet_plan\admin.py:59 .\diet_plan\admin.py:62
 msgid "Generate PDF"
-msgstr ""
+msgstr "Gerar PDF"
 
 #: .\diet_plan\apps.py:7 .\diet_plan\models.py:21
 msgid "Diet Plan"
@@ -181,7 +181,7 @@ msgstr "Data de  Elaboração"
 msgid "Diet Plans"
 msgstr "Planos Alimentares"
 
-#: .\employee\apps.py:8 .\employee\models.py:34
+#: .\employee\apps.py:8 .\employee\models.py:33
 msgid "Employee"
 msgstr "Funcionário"
 
@@ -193,27 +193,23 @@ msgstr "Data de Contratação"
 msgid "birthday"
 msgstr "Data de Nascimento"
 
-#: .\employee\models.py:19 .\patient\models.py:15
-msgid "email"
-msgstr "email"
-
-#: .\employee\models.py:20
+#: .\employee\models.py:19
 msgid "address"
 msgstr "Endereço"
 
-#: .\employee\models.py:21 .\location\models.py:5 .\patient\models.py:17
+#: .\employee\models.py:20 .\location\models.py:5 .\patient\models.py:17
 msgid "state"
 msgstr "Estado"
 
-#: .\employee\models.py:22 .\location\models.py:19 .\patient\models.py:18
+#: .\employee\models.py:21 .\location\models.py:19 .\patient\models.py:18
 msgid "city"
 msgstr "Cidade"
 
-#: .\employee\models.py:23 .\patient\models.py:19
+#: .\employee\models.py:22 .\patient\models.py:19
 msgid "zip code"
 msgstr "CEP"
 
-#: .\employee\models.py:35
+#: .\employee\models.py:34
 msgid "Employees"
 msgstr "Funcionários"
 
@@ -273,35 +269,35 @@ msgstr "Frutas"
 msgid "vegetables"
 msgstr "Vegetais"
 
-#: .\food_consumption\models.py:28
+#: .\food_consumption\models.py:26
 msgid "Food Consuption"
 msgstr "Consumo Alimentar"
 
-#: .\food_consumption\models.py:29
+#: .\food_consumption\models.py:27
 msgid "Food Consuptions"
 msgstr "Consumos Alimentares"
 
-#: .\food_consumption\models.py:32 .\food_consumption\models.py:45
+#: .\food_consumption\models.py:30 .\food_consumption\models.py:43
 msgid "food_consumption"
 msgstr "Consumo Alimentar"
 
-#: .\food_consumption\models.py:33
+#: .\food_consumption\models.py:31
 msgid "intolerance_description"
 msgstr "Descrição das Intolerância Alimentar"
 
-#: .\food_consumption\models.py:41
+#: .\food_consumption\models.py:39
 msgid "Food Intolerance"
 msgstr "Intolerância Alimentar"
 
-#: .\food_consumption\models.py:42
+#: .\food_consumption\models.py:40
 msgid "Food Intolerances"
 msgstr "Intolerâncias Alimentares"
 
-#: .\food_consumption\models.py:53
+#: .\food_consumption\models.py:51
 msgid "Food Preference"
 msgstr "Preferência Alimentar"
 
-#: .\food_consumption\models.py:54
+#: .\food_consumption\models.py:52
 msgid "Food Preferences"
 msgstr "Preferências Alimentares"
 
@@ -313,67 +309,67 @@ msgstr "Diário Alimentar"
 msgid "Food Diaries"
 msgstr "Diários Alimentares"
 
-#: .\food_group\apps.py:7 .\food_group\models.py:17
+#: .\food_group\apps.py:7 .\food_group\models.py:18
 msgid "Food Group"
 msgstr "Grupo Alimentar"
 
-#: .\food_group\models.py:6
+#: .\food_group\models.py:7
 msgid "group"
 msgstr "Grupos"
 
-#: .\food_group\models.py:7 .\food_group\models.py:31
+#: .\food_group\models.py:8 .\food_group\models.py:32
 msgid "calories"
 msgstr "Calorias"
 
-#: .\food_group\models.py:18
+#: .\food_group\models.py:19
 msgid "Food Groups"
 msgstr "Grupos Alimentares"
 
-#: .\food_group\models.py:21
+#: .\food_group\models.py:22
 msgid "food_group"
 msgstr "Grupo Alimentar"
 
-#: .\food_group\models.py:22
+#: .\food_group\models.py:23
 msgid "food_name"
 msgstr "Nome do Alimento"
 
-#: .\food_group\models.py:23
+#: .\food_group\models.py:24
 msgid "protein"
 msgstr "Proteína"
 
-#: .\food_group\models.py:24
+#: .\food_group\models.py:25
 msgid "lipids"
 msgstr "Lipídios"
 
-#: .\food_group\models.py:25
+#: .\food_group\models.py:26
 msgid "cholesterol"
 msgstr "Colesterol"
 
-#: .\food_group\models.py:26
+#: .\food_group\models.py:27
 msgid "carbohydrates"
 msgstr "Carboidratos"
 
-#: .\food_group\models.py:27
+#: .\food_group\models.py:28
 msgid "dietary_fiber"
 msgstr "Fibra Alimentar"
 
-#: .\food_group\models.py:28
+#: .\food_group\models.py:29
 msgid "iron"
 msgstr "Ferro"
 
-#: .\food_group\models.py:29
+#: .\food_group\models.py:30
 msgid "vitamin_C"
 msgstr "Vitamina C"
 
-#: .\food_group\models.py:30
+#: .\food_group\models.py:31
 msgid "calcium"
 msgstr "Cálcio"
 
-#: .\food_group\models.py:46
+#: .\food_group\models.py:47
 msgid "Food"
 msgstr "Alimento"
 
-#: .\food_group\models.py:47
+#: .\food_group\models.py:48
 msgid "Foods"
 msgstr "Alimentos"
 
@@ -441,41 +437,45 @@ msgstr "Locação"
 msgid "acrm"
 msgstr "Sigla do estado"
 
-#: .\meal\apps.py:8 .\meal\models.py:18
+#: .\meal\apps.py:8 .\meal\models.py:19
 msgid "Meal"
 msgstr "Refeição"
 
-#: .\meal\models.py:10
+#: .\meal\models.py:11
 msgid "type_meal"
 msgstr "Tipo de Refeição"
 
-#: .\meal\models.py:11
+#: .\meal\models.py:12
 msgid "time_meal"
 msgstr "Horário da Refeição"
 
-#: .\meal\models.py:12 .\phone\models.py:7
+#: .\meal\models.py:13 .\phone\models.py:7
 msgid "content_type"
 msgstr "Tipo conteudo"
 
-#: .\meal\models.py:13 .\phone\models.py:8
+#: .\meal\models.py:14 .\phone\models.py:8
 msgid "object_id"
 msgstr "id do objeto"
 
-#: .\meal\models.py:19
+#: .\meal\models.py:20
 msgid "Meals"
 msgstr "Refeições"
 
-#: .\meal\models.py:24
+#: .\meal\models.py:23
 msgid "food"
 msgstr "Alimento"
 
-#: .\meal\models.py:25
+#: .\meal\models.py:24
 msgid "meal"
 msgstr "Refeição"
 
-#: .\meal\models.py:33 .\meal\models.py:34
+#: .\meal\models.py:32 .\meal\models.py:33
 msgid "Meal Foods"
 msgstr "Alimentos da Refeição"
+
+#: .\nutribase\validators.py:9
+msgid "%(value) must be greater than zero"
+msgstr ""
 
 #: .\nutritional_conduct\apps.py:8
 msgid "Nutritional Conduct"
@@ -489,7 +489,7 @@ msgstr "Avaliação Antopométrica"
 msgid "diet_plan"
 msgstr "Plano Alimentar"
 
-#: .\nutritional_conduct\models.py:13 .\nutritional_conduct\models.py:29
+#: .\nutritional_conduct\models.py:13 .\nutritional_conduct\models.py:30
 msgid "Nutricional Conduct"
 msgstr "Conduta Nutricional"
 
@@ -509,66 +509,68 @@ msgstr "Intensivo"
 msgid "exercise"
 msgstr "FA (Fator atividade)"
 
-#: .\nutritional_conduct\models.py:30
+#: .\nutritional_conduct\models.py:31
 msgid "Nutricional Conducts"
 msgstr "Condutas Nutricionais"
 
-#: .\nutritional_conduct\models.py:77
+#: .\nutritional_conduct\models.py:79
 msgid "caloric needs"
 msgstr "Necessidades Calórica"
 
-#: .\nutritional_conduct\models.py:92
+#: .\nutritional_conduct\models.py:93 .\nutritional_conduct\tests.py:139
 msgid "Obesity 3"
 msgstr "Obesidade 3"
 
-#: .\nutritional_conduct\models.py:95
+#: .\nutritional_conduct\models.py:96 .\nutritional_conduct\tests.py:124
 msgid "Underweight 3"
 msgstr "Abaixo do peso 3"
 
-#: .\nutritional_conduct\models.py:97
+#: .\nutritional_conduct\models.py:98 .\nutritional_conduct\tests.py:127
 msgid "Underweight 2"
 msgstr "Abaixo do peso 2"
 
-#: .\nutritional_conduct\models.py:99
-msgid "Underweight 1"
-msgstr "Abaixo do peso 1"
-
-#: .\nutritional_conduct\models.py:101 .\nutritional_conduct\models.py:112
-#: .\nutritional_conduct\models.py:122
-msgid "Normal"
-msgstr "Normal"
-
-#: .\nutritional_conduct\models.py:103 .\nutritional_conduct\models.py:114
-msgid "Overweight"
-msgstr "Sobrepeso"
-
-#: .\nutritional_conduct\models.py:105
-msgid "Obesity 1"
-msgstr "Obesidade 1"
-
-#: .\nutritional_conduct\models.py:107
-msgid "Obesity 2"
-msgstr "Obesidade 2"
-
-#: .\nutritional_conduct\models.py:110
-#, fuzzy
-#| msgid "Underweight 3"
+#: .\nutritional_conduct\models.py:100 .\nutritional_conduct\models.py:111
+#: .\nutritional_conduct\tests.py:130 .\nutritional_conduct\tests.py:143
 msgid "Underweight"
 msgstr "Abaixo do peso 3"
 
-#: .\nutritional_conduct\models.py:119
+#: .\nutritional_conduct\models.py:102 .\nutritional_conduct\models.py:123
+#: .\nutritional_conduct\tests.py:145
+msgid "Normal"
+msgstr "Normal"
+
+#: .\nutritional_conduct\models.py:104 .\nutritional_conduct\models.py:115
+#: .\nutritional_conduct\tests.py:133 .\nutritional_conduct\tests.py:147
+msgid "Overweight"
+msgstr "Sobrepeso"
+
+#: .\nutritional_conduct\models.py:106 .\nutritional_conduct\tests.py:136
+msgid "Obesity 1"
+msgstr "Obesidade 1"
+
+#: .\nutritional_conduct\models.py:108
+msgid "Obesity 2"
+msgstr "Obesidade 2"
+
+#: .\nutritional_conduct\models.py:113
+msgid "BMI Normal"
+msgstr "Eutrofia"
+
+#: .\nutritional_conduct\models.py:117
+msgid "Impossible to calculate ibm"
+msgstr ""
+"O IMC não será calculado, pois o paciente é menor de 18 anos, portanto os "
+"valores de referência para o IMC não serão válidos para ele."
+
+#: .\nutritional_conduct\models.py:120
 msgid "bmi"
 msgstr "IMC (kg/m2)"
 
-#: .\nutritional_conduct\models.py:125
-msgid "High risk for cardiovascular disease "
+#: .\nutritional_conduct\models.py:126 .\nutritional_conduct\models.py:129
+msgid "High risk of cardiovascular disease"
 msgstr "Risco elevado para doenças cardiovasculares"
 
-#: .\nutritional_conduct\models.py:128
-msgid "High risk of cardiovascular disease "
-msgstr "Risco elevado para doenças cardiovasculares"
-
-#: .\nutritional_conduct\models.py:130
+#: .\nutritional_conduct\models.py:132
 msgid "Abdominal circunference"
 msgstr "Circunferência Abdominal"
 
@@ -583,6 +585,10 @@ msgstr "Primeiro nome"
 #: .\patient\models.py:11
 msgid "last name"
 msgstr "Sobrenome"
+
+#: .\patient\models.py:15
+msgid "email"
+msgstr "email"
 
 #: .\patient\models.py:16
 msgid "street"
@@ -1901,6 +1907,12 @@ msgstr ""
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\tabular.html:33
 msgid "Delete?"
 msgstr ""
+
+#~ msgid "Underweight 1"
+#~ msgstr "Abaixo do peso 1"
+
+#~ msgid "High risk for cardiovascular disease "
+#~ msgstr "Risco elevado para doenças cardiovasculares"
 
 #, fuzzy
 #~| msgid "obesity"

@@ -3,4 +3,3 @@ from meal.models import Meal
 
 # Register your models here.
 
-

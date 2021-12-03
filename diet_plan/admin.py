@@ -34,6 +34,7 @@ class MealAdmin(nested_admin.NestedGenericTabularInline):
  
 class DietPlanAdmin(nested_admin.NestedModelAdmin):
   model = DietPlan 
+  min_num = 3
   inlines = [
       MealAdmin,
   ]

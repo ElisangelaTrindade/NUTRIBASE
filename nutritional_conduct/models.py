@@ -91,14 +91,14 @@ class NutritionalConduct(models.Model):
     age = int((self.date_of_consultation - self.patient.birthday).days/365)
     bmi = round(bmi, 2)
     type = _("Obesity 3")
-    if ((age in range(18, 65))):
+    if ((age in range(18, 66))):
       if (bmi <= 16):
         type =  _("Underweight 3") 
       elif (bmi <= 17):
         type = _("Underweight 2")
       elif (bmi <= 18.5):
         type = _("Underweight")
-      elif (bmi <= 25):
+      elif (bmi <=25):
         type = _("Normal")
       elif (bmi <= 30):
         type = _("Overweight")
@@ -106,14 +106,15 @@ class NutritionalConduct(models.Model):
         type = _("Obesity 1")
       elif (bmi <= 40):
         type = _("Obesity 2")
-    if ((age in range(66, 110))):
+    elif ((age in range(66, 110))):
       if (bmi<22):
         type = _("Underweight")
       elif (bmi<=27):
-        type = _("Normal")
+        type = _("BMI Normal")
       else:
         type = _("Overweight")
-    
+    else:
+      return _("Impossible to calculate ibm")
     return  type + " - " + str(bmi)
 
   stringify_bmi.short_description= _("bmi")
