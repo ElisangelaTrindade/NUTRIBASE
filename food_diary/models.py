@@ -2,6 +2,8 @@ from django.db import models
 from patient.models import Patient
 from user.models import User
 from django.utils.translation import gettext_lazy as _
+from meal.models import Meal
+from django.contrib.contenttypes.models import ContentType
 
 # Create your models here.
 class FoodDiary(models.Model):
@@ -17,3 +19,6 @@ class FoodDiary(models.Model):
     db_table ='food_diary'
     verbose_name = _('Food Diary')
     verbose_name_plural = _('Food Diaries')
+
+ 
+    

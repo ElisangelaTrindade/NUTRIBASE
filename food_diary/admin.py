@@ -10,6 +10,8 @@ class MealFoodAdmin(nested_admin.NestedStackedInline):
 
 class MealAdmin(nested_admin.NestedGenericTabularInline):
   model = Meal
+  min_num= 1
+  max_num= 3
   exclude = ('registered_by',  )
   inlines = [
       MealFoodAdmin,
@@ -22,6 +24,8 @@ class MealAdmin(nested_admin.NestedGenericTabularInline):
  
 class FoodDiaryAdmin(nested_admin.NestedModelAdmin):
   model = FoodDiary
+  min_num= 1
+  max_num= 3
   exclude = ('registered_by', )
   inlines = [
       MealAdmin,
