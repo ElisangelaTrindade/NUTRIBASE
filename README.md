@@ -48,7 +48,7 @@ $python manage.py populate_food
 ``` 
 Já a tabela de grupos de usuários será populada com a utilização do comando 
 ```bash
-$python manage.py populate_create_groups
+$python manage.py create_groups
 ```
   2. Instalação dos apps utilizados no projeto
     cpf_field
