@@ -38,7 +38,7 @@ class DietPlanAdmin(nested_admin.NestedModelAdmin):
   inlines = [
       MealAdmin,
   ]
-  search_fields = ['patient__first_name','patient__last_name','patient__cpf', ]
+  search_fields = ['patient__first_name','patient__last_name','patient__cpf', 'description']
   readonly_fields = ('generate_pdf', )
   def save_model(self, request, obj, form, change) :
         obj.registered_by_id = request.user.id

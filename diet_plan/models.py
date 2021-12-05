@@ -14,7 +14,7 @@ class DietPlan(models.Model):
   date_of_creation = models.DateField(verbose_name = _('date_of_creation'))
 
   def __str__(self):
-      return self.patient.first_name + " " + self.patient.last_name + " - " + self.description
+      return self.patient.first_name + " " + self.patient.last_name
 
   class Meta:
     db_table ='diet_plan' 
