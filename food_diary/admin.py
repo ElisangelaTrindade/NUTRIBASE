@@ -1,11 +1,16 @@
 from django.contrib.contenttypes.admin import GenericTabularInline
 from django.contrib import admin
+from diet_plan.custom_widgets import MealSelectWidget 
 from food_diary.models import FoodDiary
 from meal.models import Meal, MealFood
 import nested_admin
 
 class MealFoodAdmin(nested_admin.NestedStackedInline):
   model = MealFood
+  def formfield_for_dbfield(self, db_field, **kwargs):
+    if db_field.name == 'food':
+        kwargs['widget'] = MealSelectWidget 
+    return super(MealFoodAdmin, self).formfield_for_dbfield(db_field,**kwargs) 
 
 
 class MealAdmin(nested_admin.NestedGenericTabularInline):
@@ -31,6 +36,10 @@ class FoodDiaryAdmin(nested_admin.NestedModelAdmin):
       MealAdmin,
   ]
   search_fields = ['patient__first_name','patient__last_name','patient__cpf', ]
+  class Media:
+    js = (
+      'js/calculate_calories.js',
+    )
 
   def save_model(self, request, obj, form, change) :
     obj.registered_by_id = request.user.id
