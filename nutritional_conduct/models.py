@@ -77,7 +77,7 @@ class NutritionalConduct(models.Model):
 
 
   stringify_calory_need.short_description = _("caloric needs") 
-  
+
   def calculate_bmi(self):
     if (self.pk is None):
       return None

@@ -33,4 +33,6 @@ urlpatterns = i18n_patterns(
     prefix_default_language=False
 )
 
+admin.site.site_header = 'NutriBase'
+
 
