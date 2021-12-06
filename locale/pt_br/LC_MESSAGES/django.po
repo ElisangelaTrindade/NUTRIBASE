@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-03 18:57+0000\n"
-"PO-Revision-Date: 2021-12-03 19:49+0000\n"
+"POT-Creation-Date: 2021-12-06 01:31+0000\n"
+"PO-Revision-Date: 2021-12-06 01:37+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -22,16 +22,17 @@ msgstr ""
 msgid "Antopometric Evaluation"
 msgstr "Avaliação Antopométrica"
 
-#: .\antopometric_evaluation\models.py:9 .\clinic_evaluation\models.py:8
-#: .\diet_plan\models.py:12 .\exercise\models.py:22
-#: .\food_consumption\models.py:9 .\food_diary\models.py:9
-#: .\health_history\models.py:9 .\nutritional_conduct\models.py:10
+#: .\antopometric_evaluation\models.py:9 .\appointment\models.py:8
+#: .\clinic_evaluation\models.py:8 .\diet_plan\models.py:12
+#: .\exercise\models.py:22 .\food_consumption\models.py:9
+#: .\food_diary\models.py:11 .\health_history\models.py:9
+#: .\nutritional_conduct\models.py:10
 msgid "patient"
 msgstr "Paciente"
 
 #: .\antopometric_evaluation\models.py:10 .\clinic_evaluation\models.py:9
 #: .\diet_plan\models.py:11 .\employee\models.py:15 .\exercise\models.py:9
-#: .\food_consumption\models.py:10 .\food_diary\models.py:8
+#: .\food_consumption\models.py:10 .\food_diary\models.py:10
 #: .\health_history\models.py:10 .\patient\models.py:12
 msgid "registered_by"
 msgstr "Registrado por"
@@ -57,8 +58,9 @@ msgstr "Circunferência Abdominal"
 msgid "wrist_circumference"
 msgstr "Circunferência de Pulso"
 
-#: .\antopometric_evaluation\models.py:16 .\clinic_evaluation\models.py:15
-#: .\food_diary\models.py:11 .\nutritional_conduct\models.py:14
+#: .\antopometric_evaluation\models.py:16 .\appointment\models.py:9
+#: .\clinic_evaluation\models.py:15 .\food_diary\models.py:13
+#: .\nutritional_conduct\models.py:14
 msgid "date_of_consultation"
 msgstr "Data da consulta"
 
@@ -73,6 +75,22 @@ msgstr "Informações Adicionais"
 #: .\antopometric_evaluation\models.py:30
 msgid "Antopometric Evaluations"
 msgstr "Avaliações Antopométricas"
+
+#: .\appointment\models.py:10
+msgid "duration (minutes)"
+msgstr "Duração (Minutos)"
+
+#: .\appointment\models.py:11
+msgid "reason"
+msgstr "Motivo da Consulta"
+
+#: .\appointment\models.py:15
+msgid "Appointment"
+msgstr "Agendamento"
+
+#: .\appointment\models.py:16
+msgid "Appointments"
+msgstr "Agendamentos"
 
 #: .\clinic_evaluation\apps.py:8 .\clinic_evaluation\models.py:23
 msgid "Clinic Evaluation"
@@ -132,7 +150,7 @@ msgstr "Diarreia"
 
 #: .\clinic_evaluation\models.py:35 .\clinic_evaluation\models.py:45
 #: .\diet_plan\models.py:13 .\food_consumption\models.py:19
-#: .\food_consumption\models.py:44 .\food_diary\models.py:10
+#: .\food_consumption\models.py:44 .\food_diary\models.py:12
 #: .\phone\models.py:11
 msgid "description"
 msgstr "Descrição"
@@ -301,11 +319,11 @@ msgstr "Preferência Alimentar"
 msgid "Food Preferences"
 msgstr "Preferências Alimentares"
 
-#: .\food_diary\apps.py:8 .\food_diary\models.py:18
+#: .\food_diary\apps.py:8 .\food_diary\models.py:20
 msgid "Food Diary"
 msgstr "Diário Alimentar"
 
-#: .\food_diary\models.py:19
+#: .\food_diary\models.py:21
 msgid "Food Diaries"
 msgstr "Diários Alimentares"
 
@@ -475,7 +493,7 @@ msgstr "Alimentos da Refeição"
 
 #: .\nutribase\validators.py:9
 msgid "%(value) must be greater than zero"
-msgstr ""
+msgstr "valor deve ser maior que zero"
 
 #: .\nutritional_conduct\apps.py:8
 msgid "Nutritional Conduct"

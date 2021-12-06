@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'user',
     'employee.apps',
     'meal',
+    'appointment',
     
     #3rd party
     #pip3 install django-cpf
