@@ -12,6 +12,7 @@ class FoodIntoleranceInline(admin.StackedInline):
     max_num = 1
     min_num = 1
     can_delete= False
+    search_fields = ['intolerance_description', ]
 
 class FoodPreferencesInline(admin.StackedInline):
     model = FoodPreferences

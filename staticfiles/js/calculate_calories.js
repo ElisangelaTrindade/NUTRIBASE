@@ -16,11 +16,14 @@ window.addEventListener("load", function() {
 
 
 $.calculateTotalOfCalories = function($) {
+    console.log("called")
     var total=0
     $('select[id*="id_meal-meal-content_type-object_id-"]').each(function(){
         var calories=$(this).find(":selected").attr('calories')
         var base_weight=$(this).find(":selected").attr('base_weight')
         if (calories && base_weight) {
+            console.log(calories)
+            console.log(base_weight)
             const re = /id_meal-meal-content_type-object_id-(\d+)-mealfood_set-(\d+)-food/gi
             var result=re.exec($(this).attr('id'))
             var group_expected_id=result[1]

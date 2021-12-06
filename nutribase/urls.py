@@ -34,5 +34,8 @@ urlpatterns = i18n_patterns(
 )
 
 admin.site.site_header = 'NutriBase'
+admin.site.site_title = 'NutriBase'
+admin.sites.AdminSite.index_title = 'Administração do Sistema'
+
 
 

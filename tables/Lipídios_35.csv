@@ -1,14 +1,14 @@
-'Azeite dendê',0,4,0,0,0,0,0,0,0,35,4
-'Azeite extra virgem',0,4,0,0,0,0,0,0,0,35,4
-'Manteiga com sal',0,3.3,8,0,0,0,23.2,0,0.36,35,4.8
-'Manteiga sem sal',0,3.4,8,0,0,0,0.2,0,0.16,35,4.6
-'Margarina hidrogenda com sal',0,2.7,0,0,0,0,35.8,0,0.24,35,5.9
-'Margarina hidrogenada sem sal',0,3.3,0,0,0,0,3.1,0,0.12,35,4.8
-'Margarina com oleo interesterificado com sal',0,2.7,0,0,0,0,22.4,0,0.2,35,5.9
-'Margarina com oleo interesterificado sem sal',0,2.7,0,0,0,0,1.3,0,0.2,35,5.9
-'Óleo de babaçu',0,4,0,0,0,0,0,0,0,35,4
-'Óleo de canola',0,4,0,0,0,0,0,0,0,35,4
-'Óleo de girassol',0,4,0,0,0,0,0,0,0,35,4
-'Óleo de milho',0,4,0,0,0,0,0,0,0,35,4
-'Óleo de pequi',0,4,0,0,0,0,0,0,0,35,4
-'Óleo de soja',0,4,0,0,0,0,0,0,0,35,4
+﻿"Azeite, de dendê",884,0,100,0,0,0,0,0,0,0,100
+"Azeite, de oliva, extra virgem",884,0,100,0,0,0,0,0,0,0,100
+"Manteiga, com sal",726,0,82.4,0,0,0,0.2,579,0,9,100
+"Manteiga, sem sal",758,0,86,0,0,0,0.2,4,0,4,100
+"Margarina, com óleo hidrogenado, com sal (65% de lipídeos)",596,0,67.4,0,0,0,0.1,894,0,6,100
+"Margarina, com óleo hidrogenado, sem sal (80% de lipídeos)",723,0,81.7,0,0,0,0.1,78,0,3,100
+"Margarina, com óleo interesterificado, com sal (65%de lipídeos)",594,0,67.2,0,0,0,0,561,0,5,100
+"Margarina, com óleo interesterificado, sem sal (65% de lipídeos)",593,0,67.1,0,0,0,0.1,33,0,5,100
+"Óleo, de babaçu",884,0,100,0,0,0,0.1,0,0,0,100
+"Óleo, de canola",884,0,100,0,0,0,0.1,0,0,0,100
+"Óleo, de girassol",884,0,100,0,0,0,0.1,0,0,0,100
+"Óleo, de milho",884,0,100,0,0,0,0.1,0,0,0,100
+"Óleo, de pequi",884,0,100,0,0,0,0.1,0,0,0,100
+"Óleo, de soja",884,0,100,0,0,0,0.1,0,0,0,100

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 01:31+0000\n"
-"PO-Revision-Date: 2021-12-06 01:37+0000\n"
+"POT-Creation-Date: 2021-12-06 21:13+0000\n"
+"PO-Revision-Date: 2021-12-06 21:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -76,6 +76,10 @@ msgstr "Informações Adicionais"
 msgid "Antopometric Evaluations"
 msgstr "Avaliações Antopométricas"
 
+#: .\appointment\apps.py:7 .\appointment\models.py:15
+msgid "Appointment"
+msgstr "Agendamento"
+
 #: .\appointment\models.py:10
 msgid "duration (minutes)"
 msgstr "Duração (Minutos)"
@@ -83,10 +87,6 @@ msgstr "Duração (Minutos)"
 #: .\appointment\models.py:11
 msgid "reason"
 msgstr "Motivo da Consulta"
-
-#: .\appointment\models.py:15
-msgid "Appointment"
-msgstr "Agendamento"
 
 #: .\appointment\models.py:16
 msgid "Appointments"
@@ -531,64 +531,68 @@ msgstr "FA (Fator atividade)"
 msgid "Nutricional Conducts"
 msgstr "Condutas Nutricionais"
 
-#: .\nutritional_conduct\models.py:79
+#: .\nutritional_conduct\models.py:77
+msgid "bmr"
+msgstr "Taxa Metabólica Basal "
+
+#: .\nutritional_conduct\models.py:87
 msgid "caloric needs"
 msgstr "Necessidades Calórica"
 
-#: .\nutritional_conduct\models.py:93 .\nutritional_conduct\tests.py:139
+#: .\nutritional_conduct\models.py:102 .\nutritional_conduct\tests.py:139
 msgid "Obesity 3"
 msgstr "Obesidade 3"
 
-#: .\nutritional_conduct\models.py:96 .\nutritional_conduct\tests.py:124
+#: .\nutritional_conduct\models.py:105 .\nutritional_conduct\tests.py:124
 msgid "Underweight 3"
 msgstr "Abaixo do peso 3"
 
-#: .\nutritional_conduct\models.py:98 .\nutritional_conduct\tests.py:127
+#: .\nutritional_conduct\models.py:107 .\nutritional_conduct\tests.py:127
 msgid "Underweight 2"
 msgstr "Abaixo do peso 2"
 
-#: .\nutritional_conduct\models.py:100 .\nutritional_conduct\models.py:111
+#: .\nutritional_conduct\models.py:109 .\nutritional_conduct\models.py:120
 #: .\nutritional_conduct\tests.py:130 .\nutritional_conduct\tests.py:143
 msgid "Underweight"
 msgstr "Abaixo do peso 3"
 
-#: .\nutritional_conduct\models.py:102 .\nutritional_conduct\models.py:123
+#: .\nutritional_conduct\models.py:111 .\nutritional_conduct\models.py:132
 #: .\nutritional_conduct\tests.py:145
 msgid "Normal"
 msgstr "Normal"
 
-#: .\nutritional_conduct\models.py:104 .\nutritional_conduct\models.py:115
+#: .\nutritional_conduct\models.py:113 .\nutritional_conduct\models.py:124
 #: .\nutritional_conduct\tests.py:133 .\nutritional_conduct\tests.py:147
 msgid "Overweight"
 msgstr "Sobrepeso"
 
-#: .\nutritional_conduct\models.py:106 .\nutritional_conduct\tests.py:136
+#: .\nutritional_conduct\models.py:115 .\nutritional_conduct\tests.py:136
 msgid "Obesity 1"
 msgstr "Obesidade 1"
 
-#: .\nutritional_conduct\models.py:108
+#: .\nutritional_conduct\models.py:117
 msgid "Obesity 2"
 msgstr "Obesidade 2"
 
-#: .\nutritional_conduct\models.py:113
+#: .\nutritional_conduct\models.py:122
 msgid "BMI Normal"
 msgstr "Eutrofia"
 
-#: .\nutritional_conduct\models.py:117
+#: .\nutritional_conduct\models.py:126
 msgid "Impossible to calculate ibm"
 msgstr ""
 "O IMC não será calculado, pois o paciente é menor de 18 anos, portanto os "
 "valores de referência para o IMC não serão válidos para ele."
 
-#: .\nutritional_conduct\models.py:120
+#: .\nutritional_conduct\models.py:129
 msgid "bmi"
 msgstr "IMC (kg/m2)"
 
-#: .\nutritional_conduct\models.py:126 .\nutritional_conduct\models.py:129
+#: .\nutritional_conduct\models.py:135 .\nutritional_conduct\models.py:138
 msgid "High risk of cardiovascular disease"
 msgstr "Risco elevado para doenças cardiovasculares"
 
-#: .\nutritional_conduct\models.py:132
+#: .\nutritional_conduct\models.py:141
 msgid "Abdominal circunference"
 msgstr "Circunferência Abdominal"
 
@@ -1640,7 +1644,7 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\text.py:240
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #. Translators: This string is used as a separator between list elements
 #: .\venv\Lib\site-packages\django\utils\text.py:259
@@ -1866,11 +1870,11 @@ msgstr ""
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\tabular.html:122
 #, python-format
 msgid "Add another %(verbose_name)s"
-msgstr ""
+msgstr "Addicionar outro %(verbose_name)s"
 
 #: .\venv\Lib\site-packages\nested_admin\nested.py:170
 msgid "Remove"
-msgstr ""
+msgstr "Remover"
 
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\includes\grappelli_inline_tabular.html:38
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\grappelli_stacked.html:50
@@ -1885,17 +1889,17 @@ msgstr ""
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\polymorphic_grappelli_stacked.html:51
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\polymorphic_grappelli_stacked.html:55
 msgid "Delete Item"
-msgstr ""
+msgstr "Deletar Item"
 
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\grappelli_stacked.html:15
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\polymorphic_grappelli_stacked.html:14
 msgid "Open All Items"
-msgstr ""
+msgstr "Abrir todos os Itens"
 
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\grappelli_stacked.html:16
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\polymorphic_grappelli_stacked.html:15
 msgid "Close All Items"
-msgstr ""
+msgstr "Fechar Todos"
 
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\grappelli_stacked.html:17
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\grappelli_stacked.html:97
@@ -1903,7 +1907,7 @@ msgstr ""
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\polymorphic_grappelli_stacked.html:16
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\polymorphic_grappelli_stacked.html:94
 msgid "Add Item"
-msgstr ""
+msgstr "Adicionar Item"
 
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\grappelli_stacked.html:46
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\polymorphic_grappelli_stacked.html:40
@@ -1915,16 +1919,16 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\grappelli_tabular.html:17
 msgid "Add Another"
-msgstr ""
+msgstr "Adicionar Outro"
 
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\stacked.html:34
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\tabular.html:59
 msgid "View"
-msgstr ""
+msgstr "Vizualizar"
 
 #: .\venv\Lib\site-packages\nested_admin\templates\nesting\admin\inlines\tabular.html:33
 msgid "Delete?"
-msgstr ""
+msgstr "Apagar?"
 
 #~ msgid "Underweight 1"
 #~ msgstr "Abaixo do peso 1"
@@ -1945,3 +1949,4 @@ msgstr ""
 
 #~ msgid "patientl"
 #~ msgstr "Paciente"
+

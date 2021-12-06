@@ -68,6 +68,14 @@ class NutritionalConduct(models.Model):
         else:
           return 2.10
 
+  def stringify_bmr(self): 
+    bmr = self.essential_calorie_basal()
+    if (bmr == None):
+      return " "
+    return str(round(bmr, 2))
+
+  stringify_bmr.short_description = _("bmr") 
+
   def stringify_calory_need(self):
     ecb = self.essential_calorie_basal()
     factor = self.activity_factor()
@@ -77,6 +85,7 @@ class NutritionalConduct(models.Model):
 
 
   stringify_calory_need.short_description = _("caloric needs") 
+
 
   def calculate_bmi(self):
     if (self.pk is None):
