@@ -135,7 +135,7 @@ $python manage.py populate_locations
 ```
 The user groups table will be populated using the command:
 ```bash
-$python manage.py populate_create_groups
+$python manage.py create_groups
 ``` 
 
   2. Installation of apps used in the project
